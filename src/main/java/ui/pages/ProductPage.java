@@ -1,5 +1,6 @@
 package ui.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
@@ -24,6 +25,9 @@ public class ProductPage extends BasePageObject {
     @FindBy(xpath = "//span[contains(text(),'Ok')]")
     WebElement OkBtn;
 
+    @FindBy(xpath = "//span[contains(text(), 'product1')]")
+    WebElement displayProduct;
+
     public ProductPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
@@ -42,6 +46,7 @@ public class ProductPage extends BasePageObject {
 
     public MainPage clickOk(){
         OkBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(displayProduct));
         return new MainPage();
     }
 }

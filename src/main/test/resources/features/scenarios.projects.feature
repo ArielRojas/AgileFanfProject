@@ -7,10 +7,9 @@ Feature: Projects
 
   Scenario Outline: Create a project
     When I create a project "<project>" inside of the product
-    And I select the product "<product>"
+    And I select the product
     Then verify that the project has the name entered
-    And Verify that is located in the Backlog option
 
     Examples:
-      | project  |  product   |
-      | projectA |  product1  |
+      | project  |
+      | projectA |

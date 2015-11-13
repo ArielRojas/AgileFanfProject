@@ -20,6 +20,7 @@ public class Product {
         mainPage = new MainPage();
         productPage = mainPage.clickCreateNew().clickCreateNewProduct();
         mainPage = productPage.setProductName(product).clickOk();
+
     }
 
     @Then("^verify that the product has the name entered$")

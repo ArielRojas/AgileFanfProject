@@ -16,7 +16,6 @@ public class Test {
 
     @Given("^I go to page of agilefant$")
     public void iGoToPageOfAgilefant(){
-        //loginPage = new LoginPage1();
         PageTransporter.getInstance().navigateToLoginPage();
     }
 

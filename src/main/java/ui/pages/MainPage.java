@@ -9,9 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import ui.BasePageObject;
 import org.openqa.selenium.By;
 
-import java.util.concurrent.TimeUnit;
-
-
 /**
  * Created by ArielWagner on 11/11/2015.
  */
@@ -29,12 +26,26 @@ public class MainPage extends BasePageObject{
     @CacheLookup
     WebElement createNewProject;
 
+    @FindBy(id = "'createNewIteration")
+    @CacheLookup
+    WebElement createNewIteration;
+
     @FindBy(xpath = "//span[contains(text(), 'product1')]")
     WebElement productTitle;
+
+    @FindBy(xpath = "//a[contains(text(), 'projectA')]")
+    WebElement linkProject;
 
     By displayAdmin = By.xpath("//span[contains(text(), '(Admin)')]");
 
     By displayProduct = By.xpath("//span[contains(text(), 'product1')]");
+
+    By displayProject = By.xpath("//a[contains(text(), 'projectA')]");
+
+    public MainPage(){
+        PageFactory.initElements(driver, this);
+        waitUntilPageObjectIsLoaded();
+    }
 
     @Override
     public void waitUntilPageObjectIsLoaded() {
@@ -56,16 +67,20 @@ public class MainPage extends BasePageObject{
         return new ProjectPage();
     }
 
+    public IterationPage clickCreateNewIteration(){
+        createNewIteration.click();
+        return new IterationPage();
+    }
+
     public Boolean getNameIsDisplayed(){
         return UIMethods.isElementDisplayed(displayAdmin);
     }
 
     public Boolean getProductName(){
-        waitUntilPageObjectIsLoaded();
         return UIMethods.isElementDisplayed(displayProduct);
     }
 
-    public void loadDisplayProduct(){
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(displayProduct)));
+    public Boolean getProjectName(){
+        return UIMethods.isElementDisplayed(displayProject);
     }
 }

@@ -5,21 +5,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import ui.BasePageObject;
-import framework.UIMethods;
 
 /**
  * Created by ArielWagner on 12/11/2015.
  */
 public class ProjectPage extends BasePageObject {
 
-    //@FindBy(id = "projectnameinput")
-    //WebElement projectNameInput;
-
     @FindBy(xpath = "//input[@id = 'projectnameinput']")
     WebElement projectNameInput;
-
-    @FindBy(xpath = "//span[contains(text(),'Ok')]")
-    WebElement OkBtn;
 
     @FindBy(xpath = "//input[@id='productinput']")
     WebElement productInput;
@@ -30,6 +23,12 @@ public class ProjectPage extends BasePageObject {
     @FindBy (xpath = "//span[contains(text(),'Create a new project')]")
     WebElement titleName;
 
+    @FindBy(xpath = "//span[contains(text(),'Ok')]")
+    WebElement OkBtn;
+
+    @FindBy(xpath = "//span[contains(text(), 'product1')]")
+    WebElement displayProduct;
+
     public ProjectPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
@@ -37,26 +36,24 @@ public class ProjectPage extends BasePageObject {
 
     @Override
     public void waitUntilPageObjectIsLoaded() {
-        //wait.until(ExpectedConditions.visibilityOf(titleName));
+        wait.until(ExpectedConditions.visibilityOf(titleName));
     }
 
     public ProjectPage setProjectName(String project){
-        //projectNameInput.clear();
+        projectNameInput.clear();
         projectNameInput.sendKeys(project);
         return this;
     }
 
-    public ProjectPage setProductName(String product){
-        //productInput.click();
-        //UIMethods.doubleClick(productInput);
-        //UIMethods.doubleClick(productSelect);
-        //productSelect.click();
-        productInput.sendKeys(product);
+    public ProjectPage setProductName(){
+        productInput.click();
+        productSelect.click();
         return this;
     }
 
     public MainPage clickOk(){
         OkBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(displayProduct));
         return new MainPage();
     }
 }
