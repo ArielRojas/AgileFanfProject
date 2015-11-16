@@ -17,7 +17,7 @@ public class IterationPage extends BasePageObject{
     @FindBy(xpath = "//input[@id = 'projectinput']")
     WebElement projectInput;
 
-    @FindBy(xpath = "//li[@tabindex='-1']")
+    @FindBy(xpath = "//li[@data-value='projectA']//a[contains(text(), 'projectA')]")
     WebElement projectSelect;
 
     @FindBy (xpath = "//span[contains(text(),'Create a new iteration')]")
@@ -25,9 +25,6 @@ public class IterationPage extends BasePageObject{
 
     @FindBy(xpath = "//span[contains(text(),'Ok')]")
     WebElement OkBtn;
-
-    @FindBy(xpath = "//span[contains(text(), 'product1')]")
-    WebElement displayProduct;
 
     public IterationPage(){
         PageFactory.initElements(driver, this);
@@ -53,7 +50,6 @@ public class IterationPage extends BasePageObject{
 
     public MainPage clickOk(){
         OkBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(displayProduct));
         return new MainPage();
     }
 }

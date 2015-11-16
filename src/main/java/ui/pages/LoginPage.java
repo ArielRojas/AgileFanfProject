@@ -91,8 +91,4 @@ public class LoginPage extends BasePageObject {
     public Boolean getErrorIsDisplayed(){
         return UIMethods.isElementDisplayed(error);
     }
-
-    //public String getErrorMessage() {
-       //return loginErrorMessage.getText();
-    //}
 }

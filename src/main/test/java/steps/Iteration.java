@@ -7,6 +7,8 @@ import cucumber.api.java.en.When;
 import ui.pages.IterationPage;
 import ui.pages.MainPage;
 
+import static org.testng.Assert.assertTrue;
+
 /**
  * Created by ArielWagner on 13/11/2015.
  */
@@ -30,5 +32,6 @@ public class Iteration {
 
     @Then("^verify that the iteration has the name entered$")
     public void verifyThatTheIterationHasTheNameEntered(){
+        assertTrue(mainPage.getIterationName(), "iteration1");
     }
 }

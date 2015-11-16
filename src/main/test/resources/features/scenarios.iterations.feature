@@ -5,6 +5,7 @@ Feature: Iterations
     And I login as "arielwagnerrojas@gmail.com" with password "nemo100"
     And I create a product "product1"
     And I create a project "projectA" inside of the product
+    And I select the product
 
   Scenario Outline: Create an iteration
     When I create an iteration "<iteration>" inside of the project

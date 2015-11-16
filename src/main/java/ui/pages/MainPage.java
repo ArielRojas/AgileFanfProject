@@ -1,6 +1,7 @@
 package ui.pages;
 
 import framework.UIMethods;
+import org.apache.log4j.chainsaw.Main;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.CacheLookup;
@@ -26,9 +27,13 @@ public class MainPage extends BasePageObject{
     @CacheLookup
     WebElement createNewProject;
 
-    @FindBy(id = "'createNewIteration")
+    @FindBy(id = "createNewIteration")
     @CacheLookup
     WebElement createNewIteration;
+
+    @FindBy(id = "createNewStory")
+    @CacheLookup
+    WebElement createNewStory;
 
     @FindBy(xpath = "//span[contains(text(), 'product1')]")
     WebElement productTitle;
@@ -36,11 +41,28 @@ public class MainPage extends BasePageObject{
     @FindBy(xpath = "//a[contains(text(), 'projectA')]")
     WebElement linkProject;
 
+    @FindBy(xpath = "//a[contains(text(), 'iteration1')]")
+    WebElement linkIteration;
+
+    @FindBy(xpath = "//span[@title='Click to edit value']")
+    WebElement editValue;
+
+    @FindBy(xpath = "//a[@data-tab='board']")
+    WebElement linkBoard;
+
+    @FindBy(xpath = "//span[@title='Click to edit iteration name']")
+    WebElement titleIteration;
+
     By displayAdmin = By.xpath("//span[contains(text(), '(Admin)')]");
 
     By displayProduct = By.xpath("//span[contains(text(), 'product1')]");
 
     By displayProject = By.xpath("//a[contains(text(), 'projectA')]");
+
+    By displayIteration = By.xpath("//a[contains(text(), 'iteration1')]");
+
+    By displayStory = By.xpath("//span[@title='Name']");
+
 
     public MainPage(){
         PageFactory.initElements(driver, this);
@@ -72,6 +94,25 @@ public class MainPage extends BasePageObject{
         return new IterationPage();
     }
 
+    public StoryPage clickCreateNewStory(){
+        createNewStory.click();
+        return new StoryPage();
+    }
+
+    public void clickLinkIteration(){
+        linkIteration.click();
+        wait.until(ExpectedConditions.visibilityOf(titleIteration));
+    }
+
+    public void clickLinkBoard(){
+        linkBoard.click();
+    }
+
+    public void setEditValue(){
+        editValue.click();
+        editValue.sendKeys("3");
+    }
+
     public Boolean getNameIsDisplayed(){
         return UIMethods.isElementDisplayed(displayAdmin);
     }
@@ -82,5 +123,13 @@ public class MainPage extends BasePageObject{
 
     public Boolean getProjectName(){
         return UIMethods.isElementDisplayed(displayProject);
+    }
+
+    public Boolean getIterationName(){
+        return UIMethods.isElementDisplayed(displayIteration);
+    }
+
+    public Boolean getStoryName(){
+        return UIMethods.isElementDisplayed(displayStory);
     }
 }
