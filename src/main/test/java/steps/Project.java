@@ -1,11 +1,12 @@
 package steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import ui.pages.MainPage;
 import ui.pages.ProjectPage;
+
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 /**
@@ -15,21 +16,24 @@ public class Project {
 
     MainPage mainPage;
     ProjectPage projectPage;
+    String projectName;
 
     @When("^I create a project \"([^\"]*)\" inside of the product$")
-    public void iCreateAProjectInsideOfTheProduct(String project){
+    public void createProject(String project){
+        projectName = project;
         mainPage = new MainPage().clickCreateNew();
         projectPage = mainPage.clickCreateNewProject().setProjectName(project);
     }
 
     @And("^I select the product$")
-    public void iSelectTheProduct(){
-        projectPage = projectPage.setProductName();
+    public void selectProduct(){
+        projectPage = projectPage.selectProduct();
         mainPage = projectPage.clickOk();
     }
 
     @Then("^verify that the project has the name entered$")
-    public void verifyThatTheProjectHasTheNameEntered(){
-        assertTrue(mainPage.getProjectName(), "projectA");
+    public void verifyProjectHasTheNameEntered(){
+        assertTrue(mainPage.isProjectNameDisplayed(), projectName);
+        assertEquals(mainPage.getProjectItemName(), projectName);
     }
 }

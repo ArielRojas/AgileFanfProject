@@ -25,7 +25,7 @@ public class ProductPage extends BasePageObject {
     @FindBy(xpath = "//span[contains(text(),'Ok')]")
     WebElement OkBtn;
 
-    @FindBy(xpath = "//span[contains(text(), 'product1')]")
+    @FindBy(xpath = "//span[contains(@title, 'edit product')]")
     WebElement displayProduct;
 
     public ProductPage(){

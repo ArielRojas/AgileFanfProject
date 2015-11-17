@@ -35,8 +35,8 @@ public class MainPage extends BasePageObject{
     @CacheLookup
     WebElement createNewStory;
 
-    @FindBy(xpath = "//span[contains(text(), 'product1')]")
-    WebElement productTitle;
+    @FindBy(xpath = "//span[contains(@title, 'edit product')]")
+    WebElement productNameLabel;
 
     @FindBy(xpath = "//a[contains(text(), 'projectA')]")
     WebElement linkProject;
@@ -44,25 +44,34 @@ public class MainPage extends BasePageObject{
     @FindBy(xpath = "//a[contains(text(), 'iteration1')]")
     WebElement linkIteration;
 
-    @FindBy(xpath = "//span[@title='Click to edit value']")
+    @FindBy(xpath = "//span[@title=''Click to edit value'']")
     WebElement editValue;
 
     @FindBy(xpath = "//a[@data-tab='board']")
     WebElement linkBoard;
 
-    @FindBy(xpath = "//span[@title='Click to edit iteration name']")
-    WebElement titleIteration;
+    @FindBy(xpath = "//a[@data-tab='list']")
+    WebElement linkList;
 
-    By displayAdmin = By.xpath("//span[contains(text(), '(Admin)')]");
+    @FindBy(xpath = "//option[@value='0']")
+    WebElement usernameDisplay;
 
-    By displayProduct = By.xpath("//span[contains(text(), 'product1')]");
+    @FindBy(xpath = "//a[contains(@class, 'node-type-project')]")
+    WebElement projectItemName;
 
-    By displayProject = By.xpath("//a[contains(text(), 'projectA')]");
+    @FindBy(xpath = "//a[contains(@class, 'node-type-iteration')]")
+    WebElement iterationItemName;
 
-    By displayIteration = By.xpath("//a[contains(text(), 'iteration1')]");
+    @FindBy(xpath = "//span[@title='Name']")
+    WebElement storyName;
+
+    By displayProduct = By.xpath("//span[contains(@title, 'edit product')]");
+
+    By displayProject = By.xpath("//a[contains(@class, 'node-type-project')]");
+
+    By displayIteration = By.xpath("//a[contains(@class, 'node-type-iteration')]");
 
     By displayStory = By.xpath("//span[@title='Name']");
-
 
     public MainPage(){
         PageFactory.initElements(driver, this);
@@ -101,7 +110,7 @@ public class MainPage extends BasePageObject{
 
     public void clickLinkIteration(){
         linkIteration.click();
-        wait.until(ExpectedConditions.visibilityOf(titleIteration));
+        linkList.click();
     }
 
     public void clickLinkBoard(){
@@ -113,23 +122,39 @@ public class MainPage extends BasePageObject{
         editValue.sendKeys("3");
     }
 
-    public Boolean getNameIsDisplayed(){
-        return UIMethods.isElementDisplayed(displayAdmin);
+    public String getUsername(){
+        return usernameDisplay.getText();
     }
 
-    public Boolean getProductName(){
+    public String getProductName(){
+        return productNameLabel.getText();
+    }
+
+    public String getProjectItemName(){
+        return projectItemName.getText();
+    }
+
+    public String getIterationItemName(){
+        return iterationItemName.getText();
+    }
+
+    public String getStoryName(){
+        return storyName.getText();
+    }
+
+    public Boolean isProductNameDisplayed(){
         return UIMethods.isElementDisplayed(displayProduct);
     }
 
-    public Boolean getProjectName(){
+    public Boolean isProjectNameDisplayed(){
         return UIMethods.isElementDisplayed(displayProject);
     }
 
-    public Boolean getIterationName(){
+    public Boolean isIterationNameDisplayed(){
         return UIMethods.isElementDisplayed(displayIteration);
     }
 
-    public Boolean getStoryName(){
+    public Boolean isStoryNameDisplayed(){
         return UIMethods.isElementDisplayed(displayStory);
     }
 }

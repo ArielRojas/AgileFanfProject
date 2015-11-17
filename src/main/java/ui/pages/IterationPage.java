@@ -17,7 +17,7 @@ public class IterationPage extends BasePageObject{
     @FindBy(xpath = "//input[@id = 'projectinput']")
     WebElement projectInput;
 
-    @FindBy(xpath = "//li[@data-value='projectA']//a[contains(text(), 'projectA')]")
+    @FindBy(xpath = "//li[@data-value='projectA']//a[contains(text(), 'projectA')]//span[contains(text(), 'in')]")
     WebElement projectSelect;
 
     @FindBy (xpath = "//span[contains(text(),'Create a new iteration')]")

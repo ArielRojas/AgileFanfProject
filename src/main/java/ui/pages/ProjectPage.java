@@ -26,7 +26,7 @@ public class ProjectPage extends BasePageObject {
     @FindBy(xpath = "//span[contains(text(),'Ok')]")
     WebElement OkBtn;
 
-    @FindBy(xpath = "//span[contains(text(), 'product1')]")
+    @FindBy(xpath = "//span[contains(@title, 'edit product')]")
     WebElement displayProduct;
 
     public ProjectPage(){
@@ -45,7 +45,7 @@ public class ProjectPage extends BasePageObject {
         return this;
     }
 
-    public ProjectPage setProductName(){
+    public ProjectPage selectProduct(){
         productInput.click();
         productSelect.click();
         return this;

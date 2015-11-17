@@ -1,11 +1,11 @@
 package steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import ui.pages.MainPage;
 import ui.pages.StoryPage;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 /**
@@ -15,9 +15,11 @@ public class Story {
 
     MainPage mainPage;
     StoryPage storyPage;
+    String storyName;
 
     @And("^I create a story \"([^\"]*)\" inside of the iteration$")
     public void iCreateAStoryInsideOfTheIteration(String story){
+        storyName = story;
         mainPage = new MainPage().clickCreateNew();
         storyPage = mainPage
                 .clickCreateNewStory()
@@ -29,9 +31,11 @@ public class Story {
 
     @Then("^the story has the name entered$")
     public void theStoryHasTheNameEntered(){
-        assertTrue(mainPage.getStoryName(), "story1");
+        assertTrue(mainPage.isStoryNameDisplayed(), storyName);
+        assertEquals(mainPage.getStoryName(), storyName);
         mainPage.clickLinkIteration();
-        mainPage.setEditValue();
+        mainPage.clickLinkIteration();
+        //mainPage.setEditValue();
         mainPage.clickLinkBoard();
     }
 

@@ -30,7 +30,10 @@ public class LoginPage extends BasePageObject {
     @FindBy(xpath = "//a[contains(text(),'Logout')]")
     WebElement logoutBtn;
 
-    By error = By.xpath("//p[contains(text(), 'Invalid username or password,')]");
+    @FindBy(xpath = "//p[@class='login-form--error-title']")
+    WebElement errorField;
+
+    By error = By.xpath("//p[@class='login-form--error-title']");
 
     public LoginPage() {
         PageFactory.initElements(driver, this);
@@ -79,7 +82,7 @@ public class LoginPage extends BasePageObject {
         return clickLoginBtnFailed();
     }
 
-    public LoginPage logout(){
+    public LoginPage logOut(){
         logoutBtn.click();
         return this;
     }
@@ -88,7 +91,11 @@ public class LoginPage extends BasePageObject {
         driver.quit();
     }
 
-    public Boolean getErrorIsDisplayed(){
+    public String getError(){
+        return errorField.getText();
+    }
+
+    public Boolean isErrorDisplayed(){
         return UIMethods.isElementDisplayed(error);
     }
 }
