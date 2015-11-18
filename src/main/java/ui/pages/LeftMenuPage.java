@@ -1,5 +1,6 @@
 package ui.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
@@ -32,8 +33,15 @@ public class LeftMenuPage extends BasePageObject {
     @CacheLookup
     WebElement createNewStory;
 
-    @FindBy(xpath = "//a[contains(text(), 'iteration1')]")
-    WebElement linkIteration;
+    @FindBy(xpath = "//a[contains(@class, 'node-type-project')]")
+    WebElement projectItemName;
+
+    @FindBy(xpath = "//a[contains(@class, 'node-type-iteration')]")
+    WebElement iterationItemName;
+
+    By displayProject = By.xpath("//a[contains(@class, 'node-type-project')]");
+
+    By displayIteration = By.xpath("//a[contains(@class, 'node-type-iteration')]");
 
     public LeftMenuPage(){
         PageFactory.initElements(driver, this);

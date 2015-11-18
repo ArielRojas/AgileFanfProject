@@ -18,3 +18,14 @@ Feature: Stories
       |  story   |
       |  story1  |
 
+    Scenario Outline: Change the state of one story to In Progress
+      When I create a story "<story>" inside of the iteration
+      And  I change story state to In progress
+      Then the state of the story is In Progress
+      And The story should be located in the In Progress section
+
+      Examples:
+        |  story   |
+        |  story1  |
+
+

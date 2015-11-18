@@ -17,16 +17,16 @@ public class StoryPage extends BasePageObject {
     @FindBy(xpath = "//input[@id='backloginput']")
     WebElement backlogInput;
 
-    @FindBy(xpath = "//li[@data-value='iteration1']//a[contains(text(), 'iteration1')]")
+    @FindBy(xpath = "//a[contains(text(), 'iteration')]//span[contains(text(), 'in')]")
     WebElement selectIteration;
 
     @FindBy(xpath = "//input[@type='number']")
     WebElement setPoints;
 
-    @FindBy(xpath = "//input[@id='dp1447683353472']")
+    @FindBy(xpath = "//input[contains(@class, 'hasDatepicker')]")
     WebElement openCalendar;
 
-    @FindBy(xpath = "//a[contains(text(),'19')]")
+    @FindBy(xpath = "//a[contains(text(),'29')]")
     WebElement selectDate;
 
     @FindBy (xpath = "//span[contains(text(),'Create a new story')]")

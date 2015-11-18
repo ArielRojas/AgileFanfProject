@@ -38,20 +38,8 @@ public class MainPage extends BasePageObject{
     @FindBy(xpath = "//span[contains(@title, 'edit product')]")
     WebElement productNameLabel;
 
-    @FindBy(xpath = "//a[contains(text(), 'projectA')]")
-    WebElement linkProject;
-
-    @FindBy(xpath = "//a[contains(text(), 'iteration1')]")
-    WebElement linkIteration;
-
     @FindBy(xpath = "//span[@title=''Click to edit value'']")
     WebElement editValue;
-
-    @FindBy(xpath = "//a[@data-tab='board']")
-    WebElement linkBoard;
-
-    @FindBy(xpath = "//a[@data-tab='list']")
-    WebElement linkList;
 
     @FindBy(xpath = "//option[@value='0']")
     WebElement usernameDisplay;
@@ -61,6 +49,9 @@ public class MainPage extends BasePageObject{
 
     @FindBy(xpath = "//a[contains(@class, 'node-type-iteration')]")
     WebElement iterationItemName;
+
+    @FindBy(xpath = "//span[contains(@title, 'iteration name')]")
+    WebElement iterationName;
 
     @FindBy(xpath = "//span[@title='Name']")
     WebElement storyName;
@@ -108,13 +99,10 @@ public class MainPage extends BasePageObject{
         return new StoryPage();
     }
 
-    public void clickLinkIteration(){
-        linkIteration.click();
-        linkList.click();
-    }
-
-    public void clickLinkBoard(){
-        linkBoard.click();
+    public IterationEditPage clickLinkIteration(){
+        iterationItemName.click();
+        wait.until(ExpectedConditions.visibilityOf(iterationName));
+        return new IterationEditPage();
     }
 
     public void setEditValue(){

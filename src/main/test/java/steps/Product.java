@@ -1,5 +1,6 @@
 package steps;
 
+import cucumber.api.java.After;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import ui.pages.MainPage;
@@ -33,5 +34,10 @@ public class Product {
     public void verifyProductHasTheNameEntered(){
         assertTrue(mainPage.isProductNameDisplayed(), productName);
         assertEquals(mainPage.getProductName(), productName);
+    }
+
+    @After
+    public void deleteProject(){
+
     }
 }
