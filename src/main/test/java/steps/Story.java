@@ -4,6 +4,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import ui.pages.BoardPage;
 import ui.pages.MainPage;
 import ui.pages.IterationEditPage;
@@ -25,6 +26,7 @@ public class Story {
 
     @And("^I create a story \"([^\"]*)\" inside of the iteration$")
     public void createStory(String story){
+        //mainPage.clickLinkProduct();
         storyName = story;
         mainPage = new MainPage().clickCreateNew();
         storyPage = mainPage
@@ -54,10 +56,6 @@ public class Story {
         assertEquals(boardPage.getStateInProgress(), "In Progress");
     }
 
-    @And("^The story should be located in the In Progress section$")
-    public void verifyStoryLocatedInTheInProgressSection(){
-    }
-
     @And("^I change story state to Pending$")
     public void changeStoryStateToPending(){
         iterationEditPage = mainPage.clickLinkIteration();
@@ -71,7 +69,31 @@ public class Story {
         assertEquals(boardPage.getStatePending(), "Pending");
     }
 
-    @And("^The story should be located in the Pending section$")
-    public void verifyStoryLocatedInThePendingSection(){
+    @After(value = "@createStory", order = 999)
+    public void deleteStory(){
+        mainPage.clickLinkProduct();
+        //mainPage.deleteProduct();
+        //mainPage.logOut();
+    }
+
+    @When("^I change story state to Bloqued$")
+    public void changeStoryStateToBloqued(){
+    }
+
+    @Then("^the state of the story is Bloqued$")
+    public void verifyStateOfTheStoryIsBloqued(){
+    }
+
+    @And("^The story should be located in the Bloqued section$")
+    public void verifyStoryLocatedInTheBloquedSection(){
+    }
+
+    @When("^I change story state to Ready$")
+    public void changeStoryStateToReady(){
+
+    }
+
+    @Then("^the state of the story is Ready$")
+    public void verifyStateOfTheStoryIsReady(){
     }
 }

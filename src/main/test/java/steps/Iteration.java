@@ -1,5 +1,6 @@
 package steps;
 
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -36,5 +37,12 @@ public class Iteration {
     public void verifyIterationHasTheNameEntered(){
         assertTrue(mainPage.isIterationNameDisplayed(), iterationName);
         assertEquals(mainPage.getIterationItemName(), iterationName);
+    }
+
+    @After(value = "@createIteration", order = 999)
+    public void deleteIterationProjectAndProduct(){
+        mainPage.deleteProduct();
+        mainPage.logOut();
+        mainPage.closeWindow();
     }
 }

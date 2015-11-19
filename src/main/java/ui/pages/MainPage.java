@@ -16,23 +16,18 @@ import org.openqa.selenium.By;
 public class MainPage extends BasePageObject{
 
     @FindBy(id = "createNewMenuLink")
-    @CacheLookup
     WebElement createNewBtn;
 
     @FindBy(id = "createNewProduct")
-    @CacheLookup
     WebElement createNewProduct;
 
     @FindBy(id = "createNewProject")
-    @CacheLookup
     WebElement createNewProject;
 
     @FindBy(id = "createNewIteration")
-    @CacheLookup
     WebElement createNewIteration;
 
     @FindBy(id = "createNewStory")
-    @CacheLookup
     WebElement createNewStory;
 
     @FindBy(xpath = "//span[contains(@title, 'edit product')]")
@@ -43,6 +38,9 @@ public class MainPage extends BasePageObject{
 
     @FindBy(xpath = "//option[@value='0']")
     WebElement usernameDisplay;
+
+    @FindBy(xpath = "//a[contains(@class, 'node-type-product')]")
+    WebElement productItem;
 
     @FindBy(xpath = "//a[contains(@class, 'node-type-project')]")
     WebElement projectItemName;
@@ -55,6 +53,27 @@ public class MainPage extends BasePageObject{
 
     @FindBy(xpath = "//span[@title='Name']")
     WebElement storyName;
+
+    @FindBy(xpath = "//div[contains(text(), 'Actions')]")
+    WebElement actions;
+
+    @FindBy(xpath = "//a[contains(text(), 'Delete')]")
+    WebElement delete;
+
+    @FindBy(xpath = "//input[@type='checkbox']")
+    WebElement confirmDelete;
+
+    @FindBy(xpath = "//span[contains(text(), 'Ok')]")
+    WebElement okBtn;
+
+    @FindBy(xpath = "//i[@class='dropdown icon']")
+    WebElement logOutdropdown;
+
+    @FindBy(xpath = "//a[contains(@href, 'Logout')]")
+    WebElement logOutBtn;
+
+    @FindBy(xpath = "//h2[contains(text(), 'Nothing selected')]")
+    WebElement nothingSelectedLbl;
 
     By displayProduct = By.xpath("//span[contains(@title, 'edit product')]");
 
@@ -99,6 +118,11 @@ public class MainPage extends BasePageObject{
         return new StoryPage();
     }
 
+    public  void clickLinkProduct(){
+        productItem.click();
+        wait.until(ExpectedConditions.visibilityOf(productNameLabel));
+    }
+
     public IterationEditPage clickLinkIteration(){
         iterationItemName.click();
         wait.until(ExpectedConditions.visibilityOf(iterationName));
@@ -108,6 +132,19 @@ public class MainPage extends BasePageObject{
     public void setEditValue(){
         editValue.click();
         editValue.sendKeys("3");
+    }
+
+    public void deleteProduct(){
+        actions.click();
+        delete.click();
+        confirmDelete.click();
+        okBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(nothingSelectedLbl));
+    }
+
+    public void logOut(){
+        logOutdropdown.click();
+        logOutBtn.click();
     }
 
     public String getUsername(){
@@ -144,5 +181,9 @@ public class MainPage extends BasePageObject{
 
     public Boolean isStoryNameDisplayed(){
         return UIMethods.isElementDisplayed(displayStory);
+    }
+
+    public void closeWindow() {
+        driver.quit();
     }
 }

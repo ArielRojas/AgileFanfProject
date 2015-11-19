@@ -7,6 +7,7 @@ Feature: Iterations
     And I create a project "projectA" inside of the product
     And I select the product
 
+    @createIteration
   Scenario Outline: Create an iteration
     When I create an iteration "<iteration>" inside of the project
     And I select the project

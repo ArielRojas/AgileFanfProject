@@ -17,7 +17,10 @@ public class StoryPage extends BasePageObject {
     @FindBy(xpath = "//input[@id='backloginput']")
     WebElement backlogInput;
 
-    @FindBy(xpath = "//a[contains(text(), 'iteration')]//span[contains(text(), 'in')]")
+    /*@FindBy(xpath = "//a[contains(text(), 'iteration')]//span[contains(text(), 'in')]")
+    WebElement selectIteration;*/
+
+    @FindBy(xpath = "//li[2]/a//span[contains(text(), 'in')]")
     WebElement selectIteration;
 
     @FindBy(xpath = "//input[@type='number']")

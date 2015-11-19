@@ -27,9 +27,6 @@ public class LoginPage extends BasePageObject {
     @FindBy(id = "submitbutton")
     WebElement loginBtn;
 
-    @FindBy(xpath = "//a[contains(text(),'Logout')]")
-    WebElement logoutBtn;
-
     @FindBy(xpath = "//p[@class='login-form--error-title']")
     WebElement errorField;
 
@@ -45,56 +42,90 @@ public class LoginPage extends BasePageObject {
         wait.until(ExpectedConditions.visibilityOf(loginBtn));
     }
 
+    /**
+     *
+     * @param userName
+     * @return
+     */
     private LoginPage setUserNameInput(String userName) {
         userNameInput.clear();
         userNameInput.sendKeys(userName);
         return this;
     }
 
+    /**
+     *
+     * @param password
+     * @return
+     */
     private LoginPage setPasswordInput(String password) {
         passwordInput.clear();
         passwordInput.sendKeys(password);
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     private MainPage clickLoginBtnSuccessful() {
         loginBtn.click();
         return new MainPage();
     }
 
+    /**
+     *
+     * @return
+     */
     public LoginPage clickLoginBtnFailed() {
         loginBtn.click();
         return this;
     }
 
+    /**
+     *
+     * @param userName
+     * @param password
+     */
     private void login(String userName, String password) {
         setUserNameInput(userName);
         setPasswordInput(password);
     }
 
+    /**
+     *
+     * @param userName
+     * @param password
+     * @return
+     */
     public MainPage loginSuccessful(String userName, String password) {
         login(userName, password);
         return clickLoginBtnSuccessful();
     }
 
+    /**
+     *
+     * @param userName
+     * @param password
+     * @return
+     */
     public LoginPage loginFailed(String userName, String password) {
         login(userName, password);
         return clickLoginBtnFailed();
     }
 
-    public LoginPage logOut(){
-        logoutBtn.click();
-        return this;
-    }
-
-    public void CloseWindow() {
-        driver.quit();
-    }
-
+    /**
+     *
+     * @return
+     */
     public String getError(){
         return errorField.getText();
     }
 
+    /**
+     *
+     * @return
+     */
     public Boolean isErrorDisplayed(){
         return UIMethods.isElementDisplayed(error);
     }

@@ -25,10 +25,18 @@ public class BoardPage extends BasePageObject{
     public void waitUntilPageObjectIsLoaded() {
     }
 
+    /**
+     *
+     * @return
+     */
     public String getStateInProgress(){
         return stateInProgress.getText();
     }
 
+    /**
+     *
+     * @return
+     */
     public String getStatePending(){
         return statePending.getText();
     }

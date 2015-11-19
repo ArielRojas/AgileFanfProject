@@ -17,7 +17,7 @@ public class IterationPage extends BasePageObject{
     @FindBy(xpath = "//input[@id = 'projectinput']")
     WebElement projectInput;
 
-    @FindBy(xpath = "//a[contains(text(), 'project')]//span[contains(text(), 'in')]")
+    @FindBy(xpath = "//li//a[contains(text(), 'project')]//span[contains(text(), 'in')]")
     WebElement projectSelect;
 
     @FindBy (xpath = "//span[contains(text(),'Create a new iteration')]")
@@ -36,18 +36,31 @@ public class IterationPage extends BasePageObject{
         wait.until(ExpectedConditions.visibilityOf(titleName));
     }
 
+    /**
+     *
+     * @param iteration
+     * @return
+     */
     public IterationPage setIterationName(String iteration){
         iterationNameInput.clear();
         iterationNameInput.sendKeys(iteration);
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public IterationPage selectProject(){
         projectInput.click();
         projectSelect.click();
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public MainPage clickOk(){
         OkBtn.click();
         return new MainPage();

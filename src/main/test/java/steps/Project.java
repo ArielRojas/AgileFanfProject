@@ -1,5 +1,6 @@
 package steps;
 
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -35,5 +36,12 @@ public class Project {
     public void verifyProjectHasTheNameEntered(){
         assertTrue(mainPage.isProjectNameDisplayed(), projectName);
         assertEquals(mainPage.getProjectItemName(), projectName);
+    }
+
+    @After(value = "@createProject", order = 999)
+    public void deleteProjectAndProduct(){
+        mainPage.deleteProduct();
+        mainPage.logOut();
+        mainPage.closeWindow();
     }
 }

@@ -28,18 +28,31 @@ public class IterationEditPage extends BasePageObject {
     public void waitUntilPageObjectIsLoaded() {
     }
 
+    /**
+     *
+     */
     public void clickStoreState(){
         storeState.click();
     }
 
+    /**
+     *
+     */
     public void clickInProgressState(){
         inProgressState.click();
     }
 
+    /**
+     *
+     */
     public void clickPendingState(){
         pendingState.click();
     }
 
+    /**
+     *
+     * @return
+     */
     public BoardPage clickLinkBoard(){
         linkBoard.click();
         return new BoardPage();

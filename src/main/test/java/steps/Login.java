@@ -1,5 +1,7 @@
 package steps;
 
+import cucumber.api.java.After;
+import org.junit.AfterClass;
 import ui.PageTransporter;
 import ui.pages.LoginPage;
 import cucumber.api.java.en.Given;
@@ -45,5 +47,10 @@ public class Login {
     public void anErrorIsDisplayed(){
         assertTrue(loginPage.isErrorDisplayed(), Error.loginError);
         assertEquals(loginPage.getError(), Error.loginError);
+    }
+
+    @After(value = "@Logout", order = 999)
+    public void logout(){
+        mainPage.logOut();
     }
 }
