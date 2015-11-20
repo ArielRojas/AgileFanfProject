@@ -15,19 +15,19 @@ Feature: Stories
       When I create a story "<story>" inside of the iteration
       Then the story has the name entered
 
-     Examples:
-      |  story   |
-      |  story1  |
+      Examples:
+        |  story   |
+        |  story1  |
 
-  @createStory
-  Scenario Outline: Change the state of one story to In Progress
-    When I create a story "<story>" inside of the iteration
-    And  I change story state to In progress
-    Then the state of the story is In Progress
+    @createStory
+    Scenario Outline: Change the state of one story to In Progress
+      When I create a story "<story>" inside of the iteration
+      And  I change story state to In progress
+      Then the state of the story is In Progress
 
-    Examples:
-      |  story   |
-      |  story1  |
+      Examples:
+        |  story   |
+        |  story1  |
 
   @createStory
   Scenario Outline: Change the state of one story to Pending
@@ -42,7 +42,7 @@ Feature: Stories
   @createStory
   Scenario Outline: Change the state of one story to Bloqued
     When I create a story "<story>" inside of the iteration
-    When I change story state to Bloqued
+    And I change story state to Bloqued
     Then the state of the story is Bloqued
 
     Examples:
@@ -52,7 +52,7 @@ Feature: Stories
   @createStory
   Scenario Outline: Change the state of one story to Bloqued
     When I create a story "<story>" inside of the iteration
-    When I change story state to Ready
+    And I change story state to Ready
     Then the state of the story is Ready
 
     Examples:

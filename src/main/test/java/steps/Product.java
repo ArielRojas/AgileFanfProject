@@ -22,8 +22,8 @@ public class Product {
     public void createProduct(String product){
         productName = product;
         mainPage = new MainPage();
+        mainPage.clickCreateNew();
         productPage = mainPage
-                .clickCreateNew()
                 .clickCreateNewProduct();
         mainPage = productPage
                 .setProductName(product)

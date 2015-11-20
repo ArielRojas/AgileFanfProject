@@ -15,20 +15,20 @@ import org.openqa.selenium.By;
  */
 public class MainPage extends BasePageObject{
 
-    @FindBy(id = "createNewMenuLink")
+    @FindBy(xpath = "//a[@id='createNewMenuLink']")
     WebElement createNewBtn;
 
-    @FindBy(id = "createNewProduct")
+    @FindBy(xpath = "//li[@id='createNewProduct']")
     WebElement createNewProduct;
 
-    @FindBy(id = "createNewProject")
+    @FindBy(xpath = "//ul[@id='createNewMenu']//li[contains(@id, 'createNewProject')]//a[contains(text(), 'Project')]")
     WebElement createNewProject;
 
-    @FindBy(id = "createNewIteration")
+    @FindBy(xpath = "//li[contains(@id, 'createNewIteration')]")
     WebElement createNewIteration;
 
-    @FindBy(id = "createNewStory")
-    WebElement createNewStory;
+    /*@FindBy(xpath = "//li[contains(@id, 'createNewStory')]")
+    WebElement createNewStory;*/
 
     @FindBy(xpath = "//span[contains(@title, 'edit product')]")
     WebElement productNameLabel;
@@ -51,8 +51,8 @@ public class MainPage extends BasePageObject{
     @FindBy(xpath = "//span[contains(@title, 'iteration name')]")
     WebElement iterationName;
 
-    @FindBy(xpath = "//span[@title='Name']")
-    WebElement storyName;
+    /*@FindBy(xpath = "//span[@title='Name']")
+    WebElement storyName;*/
 
     @FindBy(xpath = "//div[contains(text(), 'Actions')]")
     WebElement actions;
@@ -69,11 +69,14 @@ public class MainPage extends BasePageObject{
     @FindBy(xpath = "//i[@class='dropdown icon']")
     WebElement logOutdropdown;
 
-    @FindBy(xpath = "//a[contains(@href, 'Logout')]")
+    @FindBy(xpath = "//div[contains(@class, 'menu transition')]//a[contains(@href, 'Logout')]")
     WebElement logOutBtn;
 
     @FindBy(xpath = "//h2[contains(text(), 'Nothing selected')]")
     WebElement nothingSelectedLbl;
+
+    @FindBy(xpath = "//li[@id='createNewUser']")
+    WebElement userBtn;
 
     By displayProduct = By.xpath("//span[contains(@title, 'edit product')]");
 
@@ -81,7 +84,7 @@ public class MainPage extends BasePageObject{
 
     By displayIteration = By.xpath("//a[contains(@class, 'node-type-iteration')]");
 
-    By displayStory = By.xpath("//span[@title='Name']");
+    //By displayStory = By.xpath("//span[@title='Name']");
 
     public MainPage(){
         PageFactory.initElements(driver, this);
@@ -93,9 +96,9 @@ public class MainPage extends BasePageObject{
         wait.until(ExpectedConditions.visibilityOf(createNewBtn));
     }
 
-    public MainPage clickCreateNew() {
+    public void clickCreateNew() {
         createNewBtn.click();
-        return this;
+        wait.until(ExpectedConditions.visibilityOf(userBtn));
     }
 
     public ProductPage clickCreateNewProduct(){
@@ -113,14 +116,15 @@ public class MainPage extends BasePageObject{
         return new IterationPage();
     }
 
-    public StoryPage clickCreateNewStory(){
+    /*public StoryPage clickCreateNewStory(){
         createNewStory.click();
         return new StoryPage();
-    }
+    }*/
 
-    public  void clickLinkProduct(){
+    public MainPage clickLinkProduct(){
         productItem.click();
         wait.until(ExpectedConditions.visibilityOf(productNameLabel));
+        return this;
     }
 
     public IterationEditPage clickLinkIteration(){
@@ -163,9 +167,9 @@ public class MainPage extends BasePageObject{
         return iterationItemName.getText();
     }
 
-    public String getStoryName(){
+    /*public String getStoryName(){
         return storyName.getText();
-    }
+    }*/
 
     public Boolean isProductNameDisplayed(){
         return UIMethods.isElementDisplayed(displayProduct);
@@ -179,9 +183,9 @@ public class MainPage extends BasePageObject{
         return UIMethods.isElementDisplayed(displayIteration);
     }
 
-    public Boolean isStoryNameDisplayed(){
+    /*public Boolean isStoryNameDisplayed(){
         return UIMethods.isElementDisplayed(displayStory);
-    }
+    }*/
 
     public void closeWindow() {
         driver.quit();

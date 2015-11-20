@@ -22,7 +22,8 @@ public class Project {
     @When("^I create a project \"([^\"]*)\" inside of the product$")
     public void createProject(String project){
         projectName = project;
-        mainPage = new MainPage().clickCreateNew();
+        mainPage = new MainPage();
+        mainPage.clickCreateNew();
         projectPage = mainPage.clickCreateNewProject().setProjectName(project);
     }
 

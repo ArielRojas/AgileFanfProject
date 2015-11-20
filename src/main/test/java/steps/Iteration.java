@@ -22,7 +22,8 @@ public class Iteration {
     @When("^I create an iteration \"([^\"]*)\" inside of the project$")
     public void createIteration(String iteration){
         iterationName = iteration;
-        mainPage = new MainPage().clickCreateNew();
+        mainPage = new MainPage();
+        mainPage.clickCreateNew();
         iterationPage = mainPage.clickCreateNewIteration().setIterationName(iteration);
     }
 

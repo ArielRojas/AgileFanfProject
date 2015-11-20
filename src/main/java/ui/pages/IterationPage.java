@@ -26,6 +26,9 @@ public class IterationPage extends BasePageObject{
     @FindBy(xpath = "//span[contains(text(),'Ok')]")
     WebElement OkBtn;
 
+    @FindBy(xpath = "//a[contains(@class, 'node-type-iteration')]")
+    WebElement iterationItemName;
+
     public IterationPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
@@ -63,6 +66,7 @@ public class IterationPage extends BasePageObject{
      */
     public MainPage clickOk(){
         OkBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(iterationItemName));
         return new MainPage();
     }
 }
