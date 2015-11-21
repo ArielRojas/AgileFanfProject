@@ -58,3 +58,22 @@ Feature: Stories
     Examples:
       |  story   |
       |  story1  |
+
+  @createStory
+  Scenario Outline: Change the state of one story to Done
+    When I create a story "<story>" inside of the iteration
+    And I change story state to Done
+    Then the state of the story is Done
+    Examples:
+      |  story   |
+      |  story1  |
+
+  @createStory
+  Scenario Outline: Change the state of one story to Deferred
+    When I create a story "<story>" inside of the iteration
+    And I change story state to Deferred
+    Then the state of the story is Deferred
+
+    Examples:
+      |  story   |
+      |  story1  |

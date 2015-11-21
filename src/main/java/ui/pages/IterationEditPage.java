@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import ui.BasePageObject;
 
 /**
@@ -42,7 +43,7 @@ public class IterationEditPage extends BasePageObject {
     @FindBy(xpath = "//a[@data-tab='list']")
     WebElement linkList;
 
-    @FindBy(xpath = "//div[contains(@class, 'storyState')]")
+    @FindBy(xpath = "//div[3]//div[contains(@class, 'storyStateNOT_STARTED')]")
     WebElement storeState;
 
     @FindBy(xpath = "//div[contains(@id, 'select2-drop')]//span[contains(@class, 'storyStateSTARTED')]")
@@ -69,6 +70,18 @@ public class IterationEditPage extends BasePageObject {
 
     @FindBy(xpath = "//div[contains(@class, 'storyStateIMPLEMENTED')]")
     WebElement readyOption;
+
+    @FindBy(xpath = "//div[contains(@id, 'select2-drop')]//span[contains(@class, 'storyStateDONE')]")
+    WebElement doneState;
+
+    @FindBy(xpath = "//div[contains(@class, 'storyStateDONE')]")
+    WebElement doneOption;
+
+    @FindBy(xpath = "//div[contains(@id, 'select2-drop')]//span[contains(@class, 'storyStateDEFERRED')]")
+    WebElement deferredState;
+
+    @FindBy(xpath = "//div[contains(@class, 'storyStateDEFERRED')]")
+    WebElement deferredOption;
 
     By displayStory = By.xpath("//div[contains(@class, 'storyState')]");
 
@@ -113,6 +126,14 @@ public class IterationEditPage extends BasePageObject {
         return readyOption.getText();
     }
 
+    public String getDoneState(){
+        return doneOption.getText();
+    }
+
+    public String getDeferredState(){
+        return deferredOption.getText();
+    }
+
     public void clickStoreState(){
         storeState.click();
     }
@@ -131,6 +152,14 @@ public class IterationEditPage extends BasePageObject {
 
     public void clickReadyState(){
         readyState.click();
+    }
+
+    public void clickDoneState(){
+        doneState.click();
+    }
+
+    public void clickDeferredState(){
+        deferredState.click();
     }
 
     public BoardPage clickLinkBoard(){

@@ -1,5 +1,6 @@
 package steps;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -28,6 +29,7 @@ public class Story {
         mainPage = new MainPage();
         iterationEditPage =  mainPage.clickLinkIteration();
         iterationEditPage.createStory(story);
+        mainPage.clickLinkIteration();
     }
 
     @Then("^the story has the name entered$")
@@ -78,6 +80,28 @@ public class Story {
     @Then("^the state of the story is Ready$")
     public void verifyStateOfTheStoryIsReady(){
         assertEquals(iterationEditPage.getReadyState(), "Ready");
+    }
+
+    @And("^I change story state to Done$")
+    public void changeStoryStateToDone(){
+        iterationEditPage.clickStoreState();
+        iterationEditPage.clickDoneState();
+    }
+
+    @Then("^the state of the story is Done$")
+    public void verifyStateOfTheStoryIsDone(){
+        assertEquals(iterationEditPage.getDoneState(), "Done");
+    }
+
+    @And("^I change story state to Deferred$")
+    public void changeStoryStateToDeferred(){
+        iterationEditPage.clickStoreState();
+        iterationEditPage.clickDeferredState();
+    }
+
+    @Then("^the state of the story is Deferred$")
+    public void verifyStateOfTheStoryIsDeferred(){
+        assertEquals(iterationEditPage.getDeferredState(), "Deferred");
     }
 
     @After(value = "@createStory", order = 999)
