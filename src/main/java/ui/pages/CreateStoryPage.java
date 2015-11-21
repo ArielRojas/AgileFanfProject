@@ -9,7 +9,7 @@ import ui.BasePageObject;
 /**
  * Created by ArielWagner on 16/11/2015.
  */
-public class StoryPage extends BasePageObject {
+public class CreateStoryPage extends BasePageObject {
 
     @FindBy(xpath = "//input[@id='storynameinput']")
     WebElement storyNameInput;
@@ -38,7 +38,7 @@ public class StoryPage extends BasePageObject {
     @FindBy(xpath = "//span[contains(text(),'Ok')]")
     WebElement OkBtn;
 
-    public StoryPage(){
+    public CreateStoryPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
     }
@@ -48,20 +48,20 @@ public class StoryPage extends BasePageObject {
         wait.until(ExpectedConditions.visibilityOf(titleName));
     }
 
-    public StoryPage setStoryName(String story){
+    public CreateStoryPage setStoryName(String story){
         storyNameInput.clear();
         storyNameInput.sendKeys(story);
         return this;
     }
 
-    public StoryPage selectIteration(){
+    public CreateStoryPage selectIteration(){
         backlogInput.click();
         selectIteration.click();
         setPoints.sendKeys("3");
         return this;
     }
 
-    public StoryPage selectDueDate(){
+    public CreateStoryPage selectDueDate(){
         openCalendar.click();
         selectDate.click();
         return this;

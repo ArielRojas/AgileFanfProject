@@ -1,6 +1,7 @@
 package ui.pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,18 +10,13 @@ import ui.BasePageObject;
 /**
  * Created by ArielWagner on 12/11/2015.
  */
-public class ProjectPage extends BasePageObject {
+public class CreateProductPage extends BasePageObject {
 
-    @FindBy(xpath = "//input[@id = 'projectnameinput']")
-    WebElement projectNameInput;
+    @FindBy(id = "productnameinput")
+    @CacheLookup
+    WebElement productNameInput;
 
-    @FindBy(xpath = "//input[@id='productinput']")
-    WebElement productInput;
-
-    @FindBy(xpath = "//li[@tabindex='-1']")
-    WebElement productSelect;
-
-    @FindBy (xpath = "//span[contains(text(),'Create a new project')]")
+    @FindBy (xpath = "//span[contains(text(),'Create a new product')]")
     WebElement titleName;
 
     @FindBy(xpath = "//span[contains(text(),'Ok')]")
@@ -29,7 +25,7 @@ public class ProjectPage extends BasePageObject {
     @FindBy(xpath = "//span[contains(@title, 'edit product')]")
     WebElement displayProduct;
 
-    public ProjectPage(){
+    public CreateProductPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
     }
@@ -39,15 +35,9 @@ public class ProjectPage extends BasePageObject {
         wait.until(ExpectedConditions.visibilityOf(titleName));
     }
 
-    public ProjectPage setProjectName(String project){
-        projectNameInput.clear();
-        projectNameInput.sendKeys(project);
-        return this;
-    }
-
-    public ProjectPage selectProduct(){
-        productInput.click();
-        productSelect.click();
+    public CreateProductPage setProductName(String product){
+        productNameInput.clear();
+        productNameInput.sendKeys(product);
         return this;
     }
 

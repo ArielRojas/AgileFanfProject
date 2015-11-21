@@ -1,14 +1,11 @@
 package steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 import ui.pages.BoardPage;
 import ui.pages.MainPage;
-import ui.pages.IterationEditPage;
-import ui.pages.StoryPage;
+import ui.pages.IterationPage;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -19,7 +16,7 @@ import static org.testng.Assert.assertTrue;
 public class Story {
 
     MainPage mainPage;
-    IterationEditPage iterationEditPage;
+    IterationPage iterationPage;
     BoardPage boardPage;
     String storyName;
 
@@ -27,81 +24,81 @@ public class Story {
     public void createStory(String story){
         storyName = story;
         mainPage = new MainPage();
-        iterationEditPage =  mainPage.clickLinkIteration();
-        iterationEditPage.createStory(story);
+        iterationPage =  mainPage.clickLinkIteration();
+        iterationPage.createStory(story);
         mainPage.clickLinkIteration();
     }
 
     @Then("^the story has the name entered$")
     public void verifyStoryHasTheNameEntered(){
-        assertTrue(iterationEditPage.isStoryNameDisplayed(), storyName);
-        assertEquals(iterationEditPage.getStoryName(), storyName);
+        assertTrue(iterationPage.isStoryNameDisplayed(), storyName);
+        assertEquals(iterationPage.getStoryName(), storyName);
     }
 
     @And("^I change story state to In progress$")
     public void changeStoryStateToInProgress(){
-        iterationEditPage.clickStoreState();
-        iterationEditPage.clickInProgressState();
+        iterationPage.clickStoreState();
+        iterationPage.clickInProgressState();
     }
 
     @Then("^the state of the story is In Progress$")
     public void verifyStateOfTheStoryIsInProgress(){
-        assertEquals(iterationEditPage.getInProgressState(), "In Progress");
+        assertEquals(iterationPage.getInProgressState(), "In Progress");
     }
 
     @And("^I change story state to Pending$")
     public void changeStoryStateToPending(){
-        iterationEditPage.clickStoreState();
-        iterationEditPage.clickPendingState();
+        iterationPage.clickStoreState();
+        iterationPage.clickPendingState();
     }
 
     @Then("^the state of the story is Pending$")
     public void verifyStateOfTheStoryIsPending(){
-        assertEquals(iterationEditPage.getPendingState(), "Pending");
+        assertEquals(iterationPage.getPendingState(), "Pending");
     }
 
     @And("^I change story state to Bloqued$")
     public void changeStoryStateToBloqued(){
-        iterationEditPage.clickStoreState();
-        iterationEditPage.clickBloquedState();
+        iterationPage.clickStoreState();
+        iterationPage.clickBloquedState();
     }
 
     @Then("^the state of the story is Bloqued$")
     public void verifyStateOfTheStoryIsBloqued(){
-        assertEquals(iterationEditPage.getBloquedState(), "Blocked");
+        assertEquals(iterationPage.getBloquedState(), "Blocked");
     }
 
     @And("^I change story state to Ready$")
     public void changeStoryStateToReady(){
-        iterationEditPage.clickStoreState();
-        iterationEditPage.clickReadyState();
+        iterationPage.clickStoreState();
+        iterationPage.clickReadyState();
     }
 
     @Then("^the state of the story is Ready$")
     public void verifyStateOfTheStoryIsReady(){
-        assertEquals(iterationEditPage.getReadyState(), "Ready");
+        assertEquals(iterationPage.getReadyState(), "Ready");
     }
 
     @And("^I change story state to Done$")
     public void changeStoryStateToDone(){
-        iterationEditPage.clickStoreState();
-        iterationEditPage.clickDoneState();
+        iterationPage.clickStoreState();
+        iterationPage.clickDoneState();
     }
 
     @Then("^the state of the story is Done$")
     public void verifyStateOfTheStoryIsDone(){
-        assertEquals(iterationEditPage.getDoneState(), "Done");
+        assertEquals(iterationPage.getDoneState(), "Done");
     }
 
     @And("^I change story state to Deferred$")
     public void changeStoryStateToDeferred(){
-        iterationEditPage.clickStoreState();
-        iterationEditPage.clickDeferredState();
+        iterationPage.clickStoreState();
+        iterationPage.clickDeferredState();
     }
 
     @Then("^the state of the story is Deferred$")
     public void verifyStateOfTheStoryIsDeferred(){
-        assertEquals(iterationEditPage.getDeferredState(), "Deferred");
+        assertEquals(iterationPage.getDeferredState(), "Deferred");
     }
 
     @After(value = "@createStory", order = 999)

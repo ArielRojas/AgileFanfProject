@@ -4,7 +4,7 @@ import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import ui.pages.IterationPage;
+import ui.pages.CreateIterationPage;
 import ui.pages.MainPage;
 
 import static org.testng.Assert.assertEquals;
@@ -16,7 +16,7 @@ import static org.testng.Assert.assertTrue;
 public class Iteration {
 
     MainPage mainPage;
-    IterationPage iterationPage;
+    CreateIterationPage createIterationPage;
     String iterationName;
 
     @When("^I create an iteration \"([^\"]*)\" inside of the project$")
@@ -24,13 +24,13 @@ public class Iteration {
         iterationName = iteration;
         mainPage = new MainPage();
         mainPage.clickCreateNew();
-        iterationPage = mainPage.clickCreateNewIteration().setIterationName(iteration);
+        createIterationPage = mainPage.clickCreateNewIteration().setIterationName(iteration);
     }
 
     @And("^I select the project$")
     public void selectProject(){
-        iterationPage = iterationPage.selectProject();
-        mainPage = iterationPage.clickOk();
+        createIterationPage = createIterationPage.selectProject();
+        mainPage = createIterationPage.clickOk();
     }
 
 

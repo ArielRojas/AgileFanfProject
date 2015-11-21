@@ -4,7 +4,7 @@ import cucumber.api.java.After;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import ui.pages.MainPage;
-import ui.pages.ProductPage;
+import ui.pages.CreateProductPage;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -15,7 +15,7 @@ import static org.testng.Assert.assertTrue;
 public class Product {
 
     MainPage mainPage;
-    ProductPage productPage;
+    CreateProductPage createProductPage;
     String productName;
 
     @When("^I create a product \"([^\"]*)\"$")
@@ -23,9 +23,9 @@ public class Product {
         productName = product;
         mainPage = new MainPage();
         mainPage.clickCreateNew();
-        productPage = mainPage
+        createProductPage = mainPage
                 .clickCreateNewProduct();
-        mainPage = productPage
+        mainPage = createProductPage
                 .setProductName(product)
                 .clickOk();
     }

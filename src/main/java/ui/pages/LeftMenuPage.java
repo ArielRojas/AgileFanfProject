@@ -58,24 +58,24 @@ public class LeftMenuPage extends BasePageObject {
         return this;
     }
 
-    public ProductPage clickCreateNewProduct(){
+    public CreateProductPage clickCreateNewProduct(){
         createNewProduct.click();
-        return new ProductPage();
+        return new CreateProductPage();
     }
 
-    public ProjectPage clickCreateNewProject(){
+    public CreateProjectPage clickCreateNewProject(){
         createNewProject.click();
-        return new ProjectPage();
+        return new CreateProjectPage();
     }
 
-    public IterationPage clickCreateNewIteration(){
+    public CreateIterationPage clickCreateNewIteration(){
         createNewIteration.click();
-        return new IterationPage();
+        return new CreateIterationPage();
     }
 
-    public StoryPage clickCreateNewStory(){
+    public CreateStoryPage clickCreateNewStory(){
         createNewStory.click();
-        return new StoryPage();
+        return new CreateStoryPage();
     }
 
     /*public void clickLinkIteration(){

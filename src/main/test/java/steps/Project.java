@@ -5,7 +5,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import ui.pages.MainPage;
-import ui.pages.ProjectPage;
+import ui.pages.CreateProjectPage;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -16,7 +16,7 @@ import static org.testng.Assert.assertTrue;
 public class Project {
 
     MainPage mainPage;
-    ProjectPage projectPage;
+    CreateProjectPage createProjectPage;
     String projectName;
 
     @When("^I create a project \"([^\"]*)\" inside of the product$")
@@ -24,13 +24,13 @@ public class Project {
         projectName = project;
         mainPage = new MainPage();
         mainPage.clickCreateNew();
-        projectPage = mainPage.clickCreateNewProject().setProjectName(project);
+        createProjectPage = mainPage.clickCreateNewProject().setProjectName(project);
     }
 
     @And("^I select the product$")
     public void selectProduct(){
-        projectPage = projectPage.selectProduct();
-        mainPage = projectPage.clickOk();
+        createProjectPage = createProjectPage.selectProduct();
+        mainPage = createProjectPage.clickOk();
     }
 
     @Then("^verify that the project has the name entered$")

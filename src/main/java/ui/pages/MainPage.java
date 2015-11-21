@@ -1,10 +1,8 @@
 package ui.pages;
 
 import framework.UIMethods;
-import org.apache.log4j.chainsaw.Main;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import ui.BasePageObject;
@@ -101,24 +99,24 @@ public class MainPage extends BasePageObject{
         wait.until(ExpectedConditions.visibilityOf(userBtn));
     }
 
-    public ProductPage clickCreateNewProduct(){
+    public CreateProductPage clickCreateNewProduct(){
         createNewProduct.click();
-        return new ProductPage();
+        return new CreateProductPage();
     }
 
-    public ProjectPage clickCreateNewProject(){
+    public CreateProjectPage clickCreateNewProject(){
         createNewProject.click();
-        return new ProjectPage();
+        return new CreateProjectPage();
     }
 
-    public IterationPage clickCreateNewIteration(){
+    public CreateIterationPage clickCreateNewIteration(){
         createNewIteration.click();
-        return new IterationPage();
+        return new CreateIterationPage();
     }
 
-    /*public StoryPage clickCreateNewStory(){
+    /*public CreateStoryPage clickCreateNewStory(){
         createNewStory.click();
-        return new StoryPage();
+        return new CreateStoryPage();
     }*/
 
     public MainPage clickLinkProduct(){
@@ -127,10 +125,10 @@ public class MainPage extends BasePageObject{
         return this;
     }
 
-    public IterationEditPage clickLinkIteration(){
+    public IterationPage clickLinkIteration(){
         iterationItemName.click();
         wait.until(ExpectedConditions.visibilityOf(iterationName));
-        return new IterationEditPage();
+        return new IterationPage();
     }
 
     public void setEditValue(){

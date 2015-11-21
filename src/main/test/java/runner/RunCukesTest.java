@@ -3,8 +3,9 @@ package runner;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 import framework.DriverManager;
-//import org.apache.log4j.Logger;
+import org.apache.log4j.Logger;
 import org.testng.annotations.AfterTest;
+import ui.PageTransporter;
 
 
 @CucumberOptions(
@@ -16,11 +17,12 @@ import org.testng.annotations.AfterTest;
 
 public class RunCukesTest extends AbstractTestNGCucumberTests {
 
-    //private static Logger log = Logger.getLogger("RunCukesTest");
+    private static Logger log = Logger.getLogger("RunCukesTest");
 
     @AfterTest
     public void afterExecution() {
         try {
+            PageTransporter.getInstance().navigateToLoginPage();
         } catch (Exception e) {
         } finally {
             DriverManager.getManager().quitDriver();
