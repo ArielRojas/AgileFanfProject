@@ -33,7 +33,7 @@ public class PageTransporter {
     }
 
     private void initialize() {
-//        log.info("Initialize the page transporter");
+           //log.info("Initialize the page transporter");
     }
 
     private void goToURL(String url) {

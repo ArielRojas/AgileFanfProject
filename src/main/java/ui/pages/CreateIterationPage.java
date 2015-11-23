@@ -64,9 +64,9 @@ public class CreateIterationPage extends BasePageObject{
      *
      * @return
      */
-    public MainPage clickOk(){
+    public ProductPage clickOk(){
         OkBtn.click();
         wait.until(ExpectedConditions.visibilityOf(iterationItemName));
-        return new MainPage();
+        return new ProductPage();
     }
 }

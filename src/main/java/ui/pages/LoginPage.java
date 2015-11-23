@@ -27,6 +27,9 @@ public class LoginPage extends BasePageObject {
     @FindBy(id = "submitbutton")
     WebElement loginBtn;
 
+    @FindBy(xpath = "//option[@value='0']")
+    WebElement usernameDisplay;
+
     @FindBy(xpath = "//p[@class='login-form--error-title']")
     WebElement errorField;
 
@@ -70,6 +73,7 @@ public class LoginPage extends BasePageObject {
      */
     private MainPage clickLoginBtnSuccessful() {
         loginBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(usernameDisplay));
         return new MainPage();
     }
 

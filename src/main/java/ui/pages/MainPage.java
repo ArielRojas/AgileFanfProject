@@ -1,6 +1,7 @@
 package ui.pages;
 
 import framework.UIMethods;
+import org.omg.IOP.ExceptionDetailMessage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.FindBy;
@@ -25,14 +26,8 @@ public class MainPage extends BasePageObject{
     @FindBy(xpath = "//li[contains(@id, 'createNewIteration')]")
     WebElement createNewIteration;
 
-    /*@FindBy(xpath = "//li[contains(@id, 'createNewStory')]")
-    WebElement createNewStory;*/
-
     @FindBy(xpath = "//span[contains(@title, 'edit product')]")
-    WebElement productNameLabel;
-
-    @FindBy(xpath = "//span[@title=''Click to edit value'']")
-    WebElement editValue;
+    WebElement productNameLbl;
 
     @FindBy(xpath = "//option[@value='0']")
     WebElement usernameDisplay;
@@ -47,22 +42,7 @@ public class MainPage extends BasePageObject{
     WebElement iterationItemName;
 
     @FindBy(xpath = "//span[contains(@title, 'iteration name')]")
-    WebElement iterationName;
-
-    /*@FindBy(xpath = "//span[@title='Name']")
-    WebElement storyName;*/
-
-    @FindBy(xpath = "//div[contains(text(), 'Actions')]")
-    WebElement actions;
-
-    @FindBy(xpath = "//a[contains(text(), 'Delete')]")
-    WebElement delete;
-
-    @FindBy(xpath = "//input[@type='checkbox']")
-    WebElement confirmDelete;
-
-    @FindBy(xpath = "//span[contains(text(), 'Ok')]")
-    WebElement okBtn;
+    WebElement iterationNameLbl;
 
     @FindBy(xpath = "//i[@class='dropdown icon']")
     WebElement logOutdropdown;
@@ -70,19 +50,15 @@ public class MainPage extends BasePageObject{
     @FindBy(xpath = "//div[contains(@class, 'menu transition')]//a[contains(@href, 'Logout')]")
     WebElement logOutBtn;
 
-    @FindBy(xpath = "//h2[contains(text(), 'Nothing selected')]")
-    WebElement nothingSelectedLbl;
-
     @FindBy(xpath = "//li[@id='createNewUser']")
     WebElement userBtn;
 
-    By displayProduct = By.xpath("//span[contains(@title, 'edit product')]");
+    @FindBy(id = "submitbutton")
+    WebElement loginBtn;
 
     By displayProject = By.xpath("//a[contains(@class, 'node-type-project')]");
 
     By displayIteration = By.xpath("//a[contains(@class, 'node-type-iteration')]");
-
-    //By displayStory = By.xpath("//span[@title='Name']");
 
     public MainPage(){
         PageFactory.initElements(driver, this);
@@ -114,47 +90,26 @@ public class MainPage extends BasePageObject{
         return new CreateIterationPage();
     }
 
-    /*public CreateStoryPage clickCreateNewStory(){
-        createNewStory.click();
-        return new CreateStoryPage();
-    }*/
-
-    public MainPage clickLinkProduct(){
+    public ProductPage clickLinkProduct(){
         productItem.click();
-        wait.until(ExpectedConditions.visibilityOf(productNameLabel));
-        return this;
+        return new ProductPage();
     }
 
     public IterationPage clickLinkIteration(){
         iterationItemName.click();
-        wait.until(ExpectedConditions.visibilityOf(iterationName));
+        wait.until(ExpectedConditions.visibilityOf(iterationNameLbl));
         return new IterationPage();
-    }
-
-    public void setEditValue(){
-        editValue.click();
-        editValue.sendKeys("3");
-    }
-
-    public void deleteProduct(){
-        actions.click();
-        delete.click();
-        confirmDelete.click();
-        okBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(nothingSelectedLbl));
     }
 
     public void logOut(){
         logOutdropdown.click();
+        wait.until(ExpectedConditions.visibilityOf(logOutBtn));
         logOutBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(loginBtn));
     }
 
     public String getUsername(){
         return usernameDisplay.getText();
-    }
-
-    public String getProductName(){
-        return productNameLabel.getText();
     }
 
     public String getProjectItemName(){
@@ -165,27 +120,11 @@ public class MainPage extends BasePageObject{
         return iterationItemName.getText();
     }
 
-    /*public String getStoryName(){
-        return storyName.getText();
-    }*/
-
-    public Boolean isProductNameDisplayed(){
-        return UIMethods.isElementDisplayed(displayProduct);
-    }
-
     public Boolean isProjectNameDisplayed(){
         return UIMethods.isElementDisplayed(displayProject);
     }
 
     public Boolean isIterationNameDisplayed(){
         return UIMethods.isElementDisplayed(displayIteration);
-    }
-
-    /*public Boolean isStoryNameDisplayed(){
-        return UIMethods.isElementDisplayed(displayStory);
-    }*/
-
-    public void closeWindow() {
-        driver.quit();
     }
 }

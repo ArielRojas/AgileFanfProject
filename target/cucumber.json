@@ -1,0 +1,1385 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 272444700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open to Login page",
+            "match": {
+              "location": "Login.goToLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 16068139200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I login as \"arielwagnerrojas@gmail.com\" with password \"nemo100\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arielwagnerrojas@gmail.com",
+                  "offset": 12
+                },
+                {
+                  "val": "nemo100",
+                  "offset": 55
+                }
+              ],
+              "location": "Login.loginSuccessful(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18721999200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I create a product \"product1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "product1",
+                  "offset": 20
+                }
+              ],
+              "location": "Product.createProduct(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2188778600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I create a project \"projectA\" inside of the product",
+            "match": {
+              "arguments": [
+                {
+                  "val": "projectA",
+                  "offset": 20
+                }
+              ],
+              "location": "Project.createProject(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1109369000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I select the product",
+            "match": {
+              "location": "Project.selectProduct()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2243500800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I create an iteration \"iteration1\" inside of the project",
+            "match": {
+              "arguments": [
+                {
+                  "val": "iteration1",
+                  "offset": 23
+                }
+              ],
+              "location": "Iteration.createIteration(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5472865900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I select the project",
+            "match": {
+              "location": "Iteration.selectProject()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "",
+        "description": "",
+        "id": "stories;;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 23379917700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Story.deleteStory()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 29576250800,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I create a story \"story1\" inside of the iteration",
+            "match": {
+              "arguments": [
+                {
+                  "val": "story1",
+                  "offset": 18
+                }
+              ],
+              "location": "Story.createStory(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 219598100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the story has the name entered",
+            "match": {
+              "location": "Story.verifyStoryHasTheNameEntered()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@story"
+          },
+          {
+            "line": 13,
+            "name": "@createStory"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 93646000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open to Login page",
+            "match": {
+              "location": "Login.goToLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10631192600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I login as \"arielwagnerrojas@gmail.com\" with password \"nemo100\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arielwagnerrojas@gmail.com",
+                  "offset": 12
+                },
+                {
+                  "val": "nemo100",
+                  "offset": 55
+                }
+              ],
+              "location": "Login.loginSuccessful(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17069101300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I create a product \"product1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "product1",
+                  "offset": 20
+                }
+              ],
+              "location": "Product.createProduct(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2282691500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I create a project \"projectA\" inside of the product",
+            "match": {
+              "arguments": [
+                {
+                  "val": "projectA",
+                  "offset": 20
+                }
+              ],
+              "location": "Project.createProject(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3118213700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I select the product",
+            "match": {
+              "location": "Project.selectProduct()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1821879200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I create an iteration \"iteration1\" inside of the project",
+            "match": {
+              "arguments": [
+                {
+                  "val": "iteration1",
+                  "offset": 23
+                }
+              ],
+              "location": "Iteration.createIteration(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5876579200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I select the project",
+            "match": {
+              "location": "Iteration.selectProject()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 30,
+        "name": "Change the state of one story to In Progress",
+        "description": "",
+        "id": "stories;change-the-state-of-one-story-to-in-progress;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 21537827300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Story.deleteStory()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 28807214900,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I create a story \"story1\" inside of the iteration",
+            "match": {
+              "arguments": [
+                {
+                  "val": "story1",
+                  "offset": 18
+                }
+              ],
+              "location": "Story.createStory(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1168723900,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I change story state to In progress",
+            "match": {
+              "location": "Story.changeStoryStateToInProgress()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 143525800,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the state of the story is In Progress",
+            "match": {
+              "location": "Story.verifyStateOfTheStoryIsInProgress()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@story"
+          },
+          {
+            "line": 22,
+            "name": "@createStory"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 111392500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open to Login page",
+            "match": {
+              "location": "Login.goToLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10870228600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I login as \"arielwagnerrojas@gmail.com\" with password \"nemo100\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arielwagnerrojas@gmail.com",
+                  "offset": 12
+                },
+                {
+                  "val": "nemo100",
+                  "offset": 55
+                }
+              ],
+              "location": "Login.loginSuccessful(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16200084800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I create a product \"product1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "product1",
+                  "offset": 20
+                }
+              ],
+              "location": "Product.createProduct(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2282301800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I create a project \"projectA\" inside of the product",
+            "match": {
+              "arguments": [
+                {
+                  "val": "projectA",
+                  "offset": 20
+                }
+              ],
+              "location": "Project.createProject(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1007033600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I select the product",
+            "match": {
+              "location": "Project.selectProduct()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2639138100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I create an iteration \"iteration1\" inside of the project",
+            "match": {
+              "arguments": [
+                {
+                  "val": "iteration1",
+                  "offset": 23
+                }
+              ],
+              "location": "Iteration.createIteration(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5837216700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I select the project",
+            "match": {
+              "location": "Iteration.selectProject()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 40,
+        "name": "Change the state of one story to Pending",
+        "description": "",
+        "id": "stories;change-the-state-of-one-story-to-pending;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 20018529700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Story.deleteStory()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 26471340700,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I create a story \"story1\" inside of the iteration",
+            "match": {
+              "arguments": [
+                {
+                  "val": "story1",
+                  "offset": 18
+                }
+              ],
+              "location": "Story.createStory(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1430858300,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I change story state to Pending",
+            "match": {
+              "location": "Story.changeStoryStateToPending()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 207645600,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "the state of the story is Pending",
+            "match": {
+              "location": "Story.verifyStateOfTheStoryIsPending()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@story"
+          },
+          {
+            "line": 32,
+            "name": "@createStory"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 121921200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open to Login page",
+            "match": {
+              "location": "Login.goToLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8711309100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I login as \"arielwagnerrojas@gmail.com\" with password \"nemo100\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arielwagnerrojas@gmail.com",
+                  "offset": 12
+                },
+                {
+                  "val": "nemo100",
+                  "offset": 55
+                }
+              ],
+              "location": "Login.loginSuccessful(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14499589400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I create a product \"product1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "product1",
+                  "offset": 20
+                }
+              ],
+              "location": "Product.createProduct(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2453971400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I create a project \"projectA\" inside of the product",
+            "match": {
+              "arguments": [
+                {
+                  "val": "projectA",
+                  "offset": 20
+                }
+              ],
+              "location": "Project.createProject(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 985791100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I select the product",
+            "match": {
+              "location": "Project.selectProduct()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2309694500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I create an iteration \"iteration1\" inside of the project",
+            "match": {
+              "arguments": [
+                {
+                  "val": "iteration1",
+                  "offset": 23
+                }
+              ],
+              "location": "Iteration.createIteration(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6965710800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I select the project",
+            "match": {
+              "location": "Iteration.selectProject()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 50,
+        "name": "Change the state of one story to Bloqued",
+        "description": "",
+        "id": "stories;change-the-state-of-one-story-to-bloqued;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 23956968600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Story.deleteStory()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 29557174100,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "I create a story \"story1\" inside of the iteration",
+            "match": {
+              "arguments": [
+                {
+                  "val": "story1",
+                  "offset": 18
+                }
+              ],
+              "location": "Story.createStory(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1400486100,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "I change story state to Bloqued",
+            "match": {
+              "location": "Story.changeStoryStateToBloqued()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 157835700,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the state of the story is Bloqued",
+            "match": {
+              "location": "Story.verifyStateOfTheStoryIsBloqued()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@story"
+          },
+          {
+            "line": 42,
+            "name": "@createStory"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 111838900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open to Login page",
+            "match": {
+              "location": "Login.goToLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11937723200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I login as \"arielwagnerrojas@gmail.com\" with password \"nemo100\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arielwagnerrojas@gmail.com",
+                  "offset": 12
+                },
+                {
+                  "val": "nemo100",
+                  "offset": 55
+                }
+              ],
+              "location": "Login.loginSuccessful(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15898807300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I create a product \"product1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "product1",
+                  "offset": 20
+                }
+              ],
+              "location": "Product.createProduct(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2166711100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I create a project \"projectA\" inside of the product",
+            "match": {
+              "arguments": [
+                {
+                  "val": "projectA",
+                  "offset": 20
+                }
+              ],
+              "location": "Project.createProject(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1375821700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I select the product",
+            "match": {
+              "location": "Project.selectProduct()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3506824700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I create an iteration \"iteration1\" inside of the project",
+            "match": {
+              "arguments": [
+                {
+                  "val": "iteration1",
+                  "offset": 23
+                }
+              ],
+              "location": "Iteration.createIteration(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5577183300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I select the project",
+            "match": {
+              "location": "Iteration.selectProject()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 60,
+        "name": "Change the state of one story to Bloqued",
+        "description": "",
+        "id": "stories;change-the-state-of-one-story-to-bloqued;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 22723264600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Story.deleteStory()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 28102421900,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "I create a story \"story1\" inside of the iteration",
+            "match": {
+              "arguments": [
+                {
+                  "val": "story1",
+                  "offset": 18
+                }
+              ],
+              "location": "Story.createStory(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1276790600,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "I change story state to Ready",
+            "match": {
+              "location": "Story.changeStoryStateToReady()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 135387000,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the state of the story is Ready",
+            "match": {
+              "location": "Story.verifyStateOfTheStoryIsReady()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@story"
+          },
+          {
+            "line": 52,
+            "name": "@createStory"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 74383400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open to Login page",
+            "match": {
+              "location": "Login.goToLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 9997272100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I login as \"arielwagnerrojas@gmail.com\" with password \"nemo100\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arielwagnerrojas@gmail.com",
+                  "offset": 12
+                },
+                {
+                  "val": "nemo100",
+                  "offset": 55
+                }
+              ],
+              "location": "Login.loginSuccessful(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18673414600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I create a product \"product1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "product1",
+                  "offset": 20
+                }
+              ],
+              "location": "Product.createProduct(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2543020800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I create a project \"projectA\" inside of the product",
+            "match": {
+              "arguments": [
+                {
+                  "val": "projectA",
+                  "offset": 20
+                }
+              ],
+              "location": "Project.createProject(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1142448100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I select the product",
+            "match": {
+              "location": "Project.selectProduct()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2441153100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I create an iteration \"iteration1\" inside of the project",
+            "match": {
+              "arguments": [
+                {
+                  "val": "iteration1",
+                  "offset": 23
+                }
+              ],
+              "location": "Iteration.createIteration(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5353934200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I select the project",
+            "match": {
+              "location": "Iteration.selectProject()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 69,
+        "name": "Change the state of one story to Done",
+        "description": "",
+        "id": "stories;change-the-state-of-one-story-to-done;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 28774654200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Story.deleteStory()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 29879660600,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "I create a story \"story1\" inside of the iteration",
+            "match": {
+              "arguments": [
+                {
+                  "val": "story1",
+                  "offset": 18
+                }
+              ],
+              "location": "Story.createStory(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1204271700,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "I change story state to Done",
+            "match": {
+              "location": "Story.changeStoryStateToDone()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 160737700,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "the state of the story is Done",
+            "match": {
+              "location": "Story.verifyStateOfTheStoryIsDone()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@story"
+          },
+          {
+            "line": 62,
+            "name": "@createStory"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 146653100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open to Login page",
+            "match": {
+              "location": "Login.goToLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12461779500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I login as \"arielwagnerrojas@gmail.com\" with password \"nemo100\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arielwagnerrojas@gmail.com",
+                  "offset": 12
+                },
+                {
+                  "val": "nemo100",
+                  "offset": 55
+                }
+              ],
+              "location": "Login.loginSuccessful(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15982882900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I create a product \"product1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "product1",
+                  "offset": 20
+                }
+              ],
+              "location": "Product.createProduct(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2276043500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I create a project \"projectA\" inside of the product",
+            "match": {
+              "arguments": [
+                {
+                  "val": "projectA",
+                  "offset": 20
+                }
+              ],
+              "location": "Project.createProject(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1300191300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I select the product",
+            "match": {
+              "location": "Project.selectProduct()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2732944300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I create an iteration \"iteration1\" inside of the project",
+            "match": {
+              "arguments": [
+                {
+                  "val": "iteration1",
+                  "offset": 23
+                }
+              ],
+              "location": "Iteration.createIteration(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5640884500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I select the project",
+            "match": {
+              "location": "Iteration.selectProject()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 79,
+        "name": "Change the state of one story to Deferred",
+        "description": "",
+        "id": "stories;change-the-state-of-one-story-to-deferred;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 21861167600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Story.deleteStory()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 28356384500,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "I create a story \"story1\" inside of the iteration",
+            "match": {
+              "arguments": [
+                {
+                  "val": "story1",
+                  "offset": 18
+                }
+              ],
+              "location": "Story.createStory(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1264484300,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "I change story state to Deferred",
+            "match": {
+              "location": "Story.changeStoryStateToDeferred()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 155194900,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "the state of the story is Deferred",
+            "match": {
+              "location": "Story.verifyStateOfTheStoryIsDeferred()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@story"
+          },
+          {
+            "line": 71,
+            "name": "@createStory"
+          }
+        ]
+      }
+    ],
+    "name": "Stories",
+    "description": "",
+    "id": "stories",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/scenarios.stories.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@story"
+      }
+    ]
+  }
+]

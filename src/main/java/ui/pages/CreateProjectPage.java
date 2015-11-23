@@ -51,9 +51,9 @@ public class CreateProjectPage extends BasePageObject {
         return this;
     }
 
-    public MainPage clickOk(){
+    public ProductPage clickOk(){
         OkBtn.click();
         wait.until(ExpectedConditions.visibilityOf(displayProduct));
-        return new MainPage();
+        return new ProductPage();
     }
 }
