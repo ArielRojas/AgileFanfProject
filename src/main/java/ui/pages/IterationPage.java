@@ -19,16 +19,16 @@ public class IterationPage extends BasePageObject {
     WebElement nameStoryTextArea;
 
     @FindBy(xpath = "//input[@ng-model = 'value']")
-    WebElement valueTxt;
+    WebElement valueInput;
 
     @FindBy(xpath = "//input[@ng-model = 'points']")
-    WebElement pointsTxt;
+    WebElement pointsInput;
 
     @FindBy(xpath = "//input[contains(@class, 'hasDatepicker')]")
-    WebElement openCalendar;
+    WebElement calendarInput;
 
     @FindBy(xpath = "//a[contains(text(),'29')]")
-    WebElement selectDate;
+    WebElement selectDateOption;
 
     @FindBy(xpath = "//button[contains(text(), 'Save')]")
     WebElement saveBtn;
@@ -37,47 +37,47 @@ public class IterationPage extends BasePageObject {
     WebElement storyNameLbl;
 
     @FindBy(xpath = "//div[contains(@class, 'menu menubar')]//a[@data-tab='board']")
-    WebElement linkBoard;
+    WebElement boardLnk;
 
     @FindBy(xpath = "//a[@data-tab='list']")
-    WebElement linkList;
+    WebElement listLnk;
 
-    @FindBy(xpath = "//div[3]//div[contains(@class, 'storyStateNOT_STARTED')]")
-    WebElement storeState;
+    @FindBy(xpath = "//div[contains(@class, 'storyStateNOT_STARTED')]")
+    WebElement storeStateToolTip;
 
     @FindBy(xpath = "//div[contains(@id, 'select2-drop')]//span[contains(@class, 'storyStateSTARTED')]")
-    WebElement inProgressState;
+    WebElement inProgressStateOption;
 
     @FindBy(xpath = "//div[contains(@class, 'storyStateSTARTED')]")
     WebElement inProgressOption;
 
 
     @FindBy(xpath = "//div[contains(@id, 'select2-drop')]//span[contains(@class, 'storyStatePENDING')]")
-    WebElement pendingState;
+    WebElement pendingStateOption;
 
     @FindBy(xpath = "//div[contains(@class, 'storyStatePENDING')]")
     WebElement pendingOption;
 
     @FindBy(xpath = "//div[contains(@id, 'select2-drop')]//span[contains(@class, 'storyStateBLOCKED')]")
-    WebElement bloquedState;
+    WebElement bloquedStateOption;
 
     @FindBy(xpath = "//div[contains(@class, 'storyStateBLOCKED')]")
     WebElement bloquedOption;
 
     @FindBy(xpath = "//div[contains(@id, 'select2-drop')]//span[contains(@class, 'storyStateIMPLEMENTED')]")
-    WebElement readyState;
+    WebElement readyStateOption;
 
     @FindBy(xpath = "//div[contains(@class, 'storyStateIMPLEMENTED')]")
     WebElement readyOption;
 
     @FindBy(xpath = "//div[contains(@id, 'select2-drop')]//span[contains(@class, 'storyStateDONE')]")
-    WebElement doneState;
+    WebElement doneStateOption;
 
     @FindBy(xpath = "//div[contains(@class, 'storyStateDONE')]")
     WebElement doneOption;
 
     @FindBy(xpath = "//div[contains(@id, 'select2-drop')]//span[contains(@class, 'storyStateDEFERRED')]")
-    WebElement deferredState;
+    WebElement deferredStateOption;
 
     @FindBy(xpath = "//div[contains(@class, 'storyStateDEFERRED')]")
     WebElement deferredOption;
@@ -98,10 +98,10 @@ public class IterationPage extends BasePageObject {
         createStoryBtn.click();
         nameStoryTextArea.clear();
         nameStoryTextArea.sendKeys(story);
-        valueTxt.sendKeys("3");
-        pointsTxt.sendKeys("3");
-        openCalendar.click();
-        selectDate.click();
+        valueInput.sendKeys("3");
+        pointsInput.sendKeys("3");
+        calendarInput.click();
+        selectDateOption.click();
         saveBtn.click();
     }
 
@@ -134,35 +134,35 @@ public class IterationPage extends BasePageObject {
     }
 
     public void clickStoreState(){
-        storeState.click();
+        storeStateToolTip.click();
     }
 
     public void clickInProgressState(){
-        inProgressState.click();
+        inProgressStateOption.click();
     }
 
     public void clickPendingState(){
-        pendingState.click();
+        pendingStateOption.click();
     }
 
     public void clickBloquedState(){
-        bloquedState.click();
+        bloquedStateOption.click();
     }
 
     public void clickReadyState(){
-        readyState.click();
+        readyStateOption.click();
     }
 
     public void clickDoneState(){
-        doneState.click();
+        doneStateOption.click();
     }
 
     public void clickDeferredState(){
-        deferredState.click();
+        deferredStateOption.click();
     }
 
     public BoardPage clickLinkBoard(){
-        linkBoard.click();
+        boardLnk.click();
         return new BoardPage();
     }
 

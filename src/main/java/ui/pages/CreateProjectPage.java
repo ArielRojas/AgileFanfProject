@@ -15,19 +15,19 @@ public class CreateProjectPage extends BasePageObject {
     WebElement projectNameInput;
 
     @FindBy(xpath = "//input[@id='productinput']")
-    WebElement productInput;
+    WebElement productNameInput;
 
     @FindBy(xpath = "//li[@tabindex='-1']")
-    WebElement productSelect;
+    WebElement productSelectOption;
 
     @FindBy (xpath = "//span[contains(text(),'Create a new project')]")
-    WebElement titleName;
+    WebElement createProjectWindowTitleLbl;
 
     @FindBy(xpath = "//span[contains(text(),'Ok')]")
     WebElement OkBtn;
 
     @FindBy(xpath = "//span[contains(@title, 'edit product')]")
-    WebElement displayProduct;
+    WebElement productNameLbl;
 
     public CreateProjectPage(){
         PageFactory.initElements(driver, this);
@@ -36,7 +36,7 @@ public class CreateProjectPage extends BasePageObject {
 
     @Override
     public void waitUntilPageObjectIsLoaded() {
-        wait.until(ExpectedConditions.visibilityOf(titleName));
+        wait.until(ExpectedConditions.visibilityOf(createProjectWindowTitleLbl));
     }
 
     public CreateProjectPage setProjectName(String project){
@@ -46,14 +46,14 @@ public class CreateProjectPage extends BasePageObject {
     }
 
     public CreateProjectPage selectProduct(){
-        productInput.click();
-        productSelect.click();
+        productNameInput.click();
+        productSelectOption.click();
         return this;
     }
 
     public ProductPage clickOk(){
         OkBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(displayProduct));
+        wait.until(ExpectedConditions.visibilityOf(productNameLbl));
         return new ProductPage();
     }
 }

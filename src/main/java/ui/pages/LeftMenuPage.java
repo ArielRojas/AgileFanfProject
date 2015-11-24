@@ -1,8 +1,8 @@
 package ui.pages;
 
+import framework.UIMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,31 +13,32 @@ import ui.BasePageObject;
  */
 public class LeftMenuPage extends BasePageObject {
 
-    @FindBy(id = "createNewMenuLink")
-    @CacheLookup
+    @FindBy(xpath = "//a[@id='createNewMenuLink']")
     WebElement createNewBtn;
 
-    @FindBy(id = "createNewProduct")
-    @CacheLookup
-    WebElement createNewProduct;
+    @FindBy(xpath = "//li[@id='createNewProduct']")
+    WebElement createNewProductBtn;
 
-    @FindBy(id = "createNewProject")
-    @CacheLookup
-    WebElement createNewProject;
+    @FindBy(xpath = "//li[contains(@id, 'createNewProject')]")
+    WebElement createNewProjectBtn;
 
-    @FindBy(id = "createNewIteration")
-    @CacheLookup
-    WebElement createNewIteration;
+    @FindBy(xpath = "//li[contains(@id, 'createNewIteration')]")
+    WebElement createNewIterationBtn;
 
-    @FindBy(id = "createNewStory")
-    @CacheLookup
-    WebElement createNewStory;
+    @FindBy(xpath = "//a[contains(@class, 'node-type-product')]")
+    WebElement productItemLnk;
 
     @FindBy(xpath = "//a[contains(@class, 'node-type-project')]")
-    WebElement projectItemName;
+    WebElement projectItemLnk;
 
     @FindBy(xpath = "//a[contains(@class, 'node-type-iteration')]")
-    WebElement iterationItemName;
+    WebElement iterationItemLnk;
+
+    @FindBy(xpath = "//span[contains(@title, 'iteration name')]")
+    WebElement iterationNameLbl;
+
+    @FindBy(xpath = "//li[@id='createNewUser']")
+    WebElement userBtn;
 
     By displayProject = By.xpath("//a[contains(@class, 'node-type-project')]");
 
@@ -53,34 +54,50 @@ public class LeftMenuPage extends BasePageObject {
         wait.until(ExpectedConditions.visibilityOf(createNewBtn));
     }
 
-    public LeftMenuPage clickCreateNew() {
+    public void clickCreateNew() {
         createNewBtn.click();
-        return this;
+        wait.until(ExpectedConditions.visibilityOf(userBtn));
     }
 
     public CreateProductPage clickCreateNewProduct(){
-        createNewProduct.click();
+        createNewProductBtn.click();
         return new CreateProductPage();
     }
 
     public CreateProjectPage clickCreateNewProject(){
-        createNewProject.click();
+        createNewProjectBtn.click();
         return new CreateProjectPage();
     }
 
     public CreateIterationPage clickCreateNewIteration(){
-        createNewIteration.click();
+        createNewIterationBtn.click();
         return new CreateIterationPage();
     }
 
-    public CreateStoryPage clickCreateNewStory(){
-        createNewStory.click();
-        return new CreateStoryPage();
+    public ProductPage clickLinkProduct(){
+        productItemLnk.click();
+        return new ProductPage();
     }
 
-    /*public void clickLinkIteration(){
-        linkIteration.click();
-        wait.until(ExpectedConditions.visibilityOf(titleIteration));
-    }*/
+    public IterationPage clickLinkIteration(){
+        iterationItemLnk.click();
+        wait.until(ExpectedConditions.visibilityOf(iterationNameLbl));
+        return new IterationPage();
+    }
 
+    public String getProjectItemName(){
+        return projectItemLnk.getText();
+    }
+
+    public String getIterationItemName(){
+        return iterationItemLnk.getText();
+    }
+
+    public Boolean isProjectNameDisplayed(){
+        return UIMethods.isElementDisplayed(displayProject);
+    }
+
+    public Boolean isIterationNameDisplayed(){
+        return UIMethods.isElementDisplayed(displayIteration);
+    }
 }

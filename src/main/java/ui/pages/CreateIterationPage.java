@@ -15,19 +15,19 @@ public class CreateIterationPage extends BasePageObject{
     WebElement iterationNameInput;
 
     @FindBy(xpath = "//input[@id = 'projectinput']")
-    WebElement projectInput;
+    WebElement projectNameInput;
 
     @FindBy(xpath = "//li//a[contains(text(), 'project')]//span[contains(text(), 'in')]")
-    WebElement projectSelect;
+    WebElement projectSelectOption;
 
     @FindBy (xpath = "//span[contains(text(),'Create a new iteration')]")
-    WebElement titleName;
+    WebElement createIterationWindowTitleLbl;
 
     @FindBy(xpath = "//span[contains(text(),'Ok')]")
     WebElement OkBtn;
 
     @FindBy(xpath = "//a[contains(@class, 'node-type-iteration')]")
-    WebElement iterationItemName;
+    WebElement iterationItemNameLnk;
 
     public CreateIterationPage(){
         PageFactory.initElements(driver, this);
@@ -36,7 +36,7 @@ public class CreateIterationPage extends BasePageObject{
 
     @Override
     public void waitUntilPageObjectIsLoaded() {
-        wait.until(ExpectedConditions.visibilityOf(titleName));
+        wait.until(ExpectedConditions.visibilityOf(createIterationWindowTitleLbl));
     }
 
     /**
@@ -55,8 +55,8 @@ public class CreateIterationPage extends BasePageObject{
      * @return
      */
     public CreateIterationPage selectProject(){
-        projectInput.click();
-        projectSelect.click();
+        projectNameInput.click();
+        projectSelectOption.click();
         return this;
     }
 
@@ -66,7 +66,7 @@ public class CreateIterationPage extends BasePageObject{
      */
     public ProductPage clickOk(){
         OkBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(iterationItemName));
+        wait.until(ExpectedConditions.visibilityOf(iterationItemNameLnk));
         return new ProductPage();
     }
 }

@@ -2,13 +2,11 @@ package ui.pages;
 
 import framework.UIMethods;
 import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import ui.BasePageObject;
 
 /**
@@ -28,10 +26,10 @@ public class LoginPage extends BasePageObject {
     WebElement loginBtn;
 
     @FindBy(xpath = "//option[@value='0']")
-    WebElement usernameDisplay;
+    WebElement usernameOption;
 
     @FindBy(xpath = "//p[@class='login-form--error-title']")
-    WebElement errorField;
+    WebElement errorLbl;
 
     By error = By.xpath("//p[@class='login-form--error-title']");
 
@@ -73,7 +71,7 @@ public class LoginPage extends BasePageObject {
      */
     private MainPage clickLoginBtnSuccessful() {
         loginBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(usernameDisplay));
+        wait.until(ExpectedConditions.visibilityOf(usernameOption));
         return new MainPage();
     }
 
@@ -123,7 +121,7 @@ public class LoginPage extends BasePageObject {
      * @return
      */
     public String getError(){
-        return errorField.getText();
+        return errorLbl.getText();
     }
 
     /**

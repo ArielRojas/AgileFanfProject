@@ -2,38 +2,38 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="671959" started-at="2015-11-23T18:14:59Z" finished-at="2015-11-23T18:26:11Z">
+  <suite name="Surefire suite" duration-ms="74458" started-at="2015-11-24T13:52:25Z" finished-at="2015-11-24T13:53:39Z">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesTest@cc285f4]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Surefire test" duration-ms="671959" started-at="2015-11-23T18:14:59Z" finished-at="2015-11-23T18:26:11Z">
+    <test name="Surefire test" duration-ms="74458" started-at="2015-11-24T13:52:25Z" finished-at="2015-11-24T13:53:39Z">
       <class name="runner.RunCukesTest">
-        <test-method status="PASS" signature="beforeExecution()[pri:0, instance:runner.RunCukesTest@cc285f4]" name="beforeExecution" is-config="true" duration-ms="12484" started-at="2015-11-23T14:14:59Z" finished-at="2015-11-23T14:15:12Z">
+        <test-method status="PASS" signature="beforeExecution()[pri:0, instance:runner.RunCukesTest@cc285f4]" name="beforeExecution" is-config="true" duration-ms="12922" started-at="2015-11-24T09:52:25Z" finished-at="2015-11-24T09:52:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeExecution -->
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.RunCukesTest@cc285f4]" name="setUpClass" is-config="true" duration-ms="458" started-at="2015-11-23T14:15:12Z" finished-at="2015-11-23T14:15:12Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.RunCukesTest@cc285f4]" name="setUpClass" is-config="true" duration-ms="494" started-at="2015-11-24T09:52:38Z" finished-at="2015-11-24T09:52:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesTest@cc285f4]" name="feature" duration-ms="655707" started-at="2015-11-23T14:15:13Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2015-11-23T14:26:08Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesTest@cc285f4]" name="feature" duration-ms="60022" started-at="2015-11-24T09:52:39Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2015-11-24T09:53:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Stories]]>
+                <![CDATA[Iterations]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.RunCukesTest@cc285f4]" name="tearDownClass" is-config="true" duration-ms="137" started-at="2015-11-23T14:26:08Z" finished-at="2015-11-23T14:26:08Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.RunCukesTest@cc285f4]" name="tearDownClass" is-config="true" duration-ms="57" started-at="2015-11-24T09:53:39Z" finished-at="2015-11-24T09:53:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method status="PASS" signature="afterExecution()[pri:0, instance:runner.RunCukesTest@cc285f4]" name="afterExecution" is-config="true" duration-ms="2939" started-at="2015-11-23T14:26:08Z" finished-at="2015-11-23T14:26:11Z">
+        <test-method status="PASS" signature="afterExecution()[pri:0, instance:runner.RunCukesTest@cc285f4]" name="afterExecution" is-config="true" duration-ms="811" started-at="2015-11-24T09:53:39Z" finished-at="2015-11-24T09:53:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterExecution -->

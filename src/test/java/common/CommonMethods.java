@@ -1,6 +1,5 @@
 package common;
 
-import org.apache.log4j.chainsaw.Main;
 import ui.pages.LoginPage;
 import ui.pages.MainPage;
 

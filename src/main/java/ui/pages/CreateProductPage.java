@@ -1,7 +1,6 @@
 package ui.pages;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,17 +12,13 @@ import ui.BasePageObject;
 public class CreateProductPage extends BasePageObject {
 
     @FindBy(id = "productnameinput")
-    @CacheLookup
     WebElement productNameInput;
 
     @FindBy (xpath = "//span[contains(text(),'Create a new product')]")
-    WebElement titleName;
+    WebElement createProductWindowTitleLbl;
 
     @FindBy(xpath = "//span[contains(text(),'Ok')]")
     WebElement OkBtn;
-
-    @FindBy(xpath = "//a[contains(@class, 'node-type-product')]")
-    WebElement productItem;
 
     public CreateProductPage(){
         PageFactory.initElements(driver, this);
@@ -32,7 +27,7 @@ public class CreateProductPage extends BasePageObject {
 
     @Override
     public void waitUntilPageObjectIsLoaded() {
-        wait.until(ExpectedConditions.visibilityOf(titleName));
+        wait.until(ExpectedConditions.visibilityOf(createProductWindowTitleLbl));
     }
 
     public CreateProductPage setProductName(String product){

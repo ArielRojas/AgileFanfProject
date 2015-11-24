@@ -17,13 +17,13 @@ public class ProductPage extends BasePageObject{
     WebElement productNameLbl;
 
     @FindBy(xpath = "//div[contains(text(), 'Actions')]")
-    WebElement actions;
+    WebElement actionsDropDown;
 
     @FindBy(xpath = "//a[contains(text(), 'Delete')]")
-    WebElement delete;
+    WebElement deleteBtn;
 
     @FindBy(xpath = "//input[@type='checkbox']")
-    WebElement confirmDelete;
+    WebElement confirmDeleteCheckBox;
 
     @FindBy(xpath = "//span[contains(text(), 'Ok')]")
     WebElement okBtn;
@@ -32,7 +32,7 @@ public class ProductPage extends BasePageObject{
     WebElement nothingSelectedLbl;
 
     @FindBy(xpath = "//a[contains(@class, 'node-type-product')]")
-    WebElement productItem;
+    WebElement productItemLnk;
 
     By displayProduct = By.xpath("//span[contains(@title, 'edit product')]");
 
@@ -43,13 +43,13 @@ public class ProductPage extends BasePageObject{
 
     @Override
     public void waitUntilPageObjectIsLoaded() {
-        wait.until(ExpectedConditions.visibilityOf(productItem));
+        wait.until(ExpectedConditions.visibilityOf(productItemLnk));
     }
 
     public MainPage deleteProduct(){
-        actions.click();
-        delete.click();
-        confirmDelete.click();
+        actionsDropDown.click();
+        deleteBtn.click();
+        confirmDeleteCheckBox.click();
         okBtn.click();
         wait.until(ExpectedConditions.visibilityOf(nothingSelectedLbl));
         return new MainPage();

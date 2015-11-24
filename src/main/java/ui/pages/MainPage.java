@@ -1,7 +1,6 @@
 package ui.pages;
 
 import framework.UIMethods;
-import org.omg.IOP.ExceptionDetailMessage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.FindBy;
@@ -18,34 +17,31 @@ public class MainPage extends BasePageObject{
     WebElement createNewBtn;
 
     @FindBy(xpath = "//li[@id='createNewProduct']")
-    WebElement createNewProduct;
+    WebElement createNewProductBtn;
 
-    @FindBy(xpath = "//ul[@id='createNewMenu']//li[contains(@id, 'createNewProject')]//a[contains(text(), 'Project')]")
-    WebElement createNewProject;
+    @FindBy(xpath = "//li[contains(@id, 'createNewProject')]")
+    WebElement createNewProjectBtn;
 
     @FindBy(xpath = "//li[contains(@id, 'createNewIteration')]")
-    WebElement createNewIteration;
-
-    @FindBy(xpath = "//span[contains(@title, 'edit product')]")
-    WebElement productNameLbl;
+    WebElement createNewIterationBtn;
 
     @FindBy(xpath = "//option[@value='0']")
     WebElement usernameDisplay;
 
     @FindBy(xpath = "//a[contains(@class, 'node-type-product')]")
-    WebElement productItem;
+    WebElement productItemLnk;
 
     @FindBy(xpath = "//a[contains(@class, 'node-type-project')]")
-    WebElement projectItemName;
+    WebElement projectItemLnk;
 
     @FindBy(xpath = "//a[contains(@class, 'node-type-iteration')]")
-    WebElement iterationItemName;
+    WebElement iterationItemLnk;
 
     @FindBy(xpath = "//span[contains(@title, 'iteration name')]")
     WebElement iterationNameLbl;
 
     @FindBy(xpath = "//i[@class='dropdown icon']")
-    WebElement logOutdropdown;
+    WebElement logOutdropDown;
 
     @FindBy(xpath = "//div[contains(@class, 'menu transition')]//a[contains(@href, 'Logout')]")
     WebElement logOutBtn;
@@ -76,33 +72,33 @@ public class MainPage extends BasePageObject{
     }
 
     public CreateProductPage clickCreateNewProduct(){
-        createNewProduct.click();
+        createNewProductBtn.click();
         return new CreateProductPage();
     }
 
     public CreateProjectPage clickCreateNewProject(){
-        createNewProject.click();
+        createNewProjectBtn.click();
         return new CreateProjectPage();
     }
 
     public CreateIterationPage clickCreateNewIteration(){
-        createNewIteration.click();
+        createNewIterationBtn.click();
         return new CreateIterationPage();
     }
 
     public ProductPage clickLinkProduct(){
-        productItem.click();
+        productItemLnk.click();
         return new ProductPage();
     }
 
     public IterationPage clickLinkIteration(){
-        iterationItemName.click();
+        iterationItemLnk.click();
         wait.until(ExpectedConditions.visibilityOf(iterationNameLbl));
         return new IterationPage();
     }
 
     public void logOut(){
-        logOutdropdown.click();
+        logOutdropDown.click();
         wait.until(ExpectedConditions.visibilityOf(logOutBtn));
         logOutBtn.click();
         wait.until(ExpectedConditions.visibilityOf(loginBtn));
@@ -113,11 +109,11 @@ public class MainPage extends BasePageObject{
     }
 
     public String getProjectItemName(){
-        return projectItemName.getText();
+        return projectItemLnk.getText();
     }
 
     public String getIterationItemName(){
-        return iterationItemName.getText();
+        return iterationItemLnk.getText();
     }
 
     public Boolean isProjectNameDisplayed(){

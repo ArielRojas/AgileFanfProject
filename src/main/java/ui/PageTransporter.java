@@ -1,17 +1,8 @@
 package ui;
 
-//import framework.CredentialsManager;
 import framework.DriverManager;
-import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import ui.pages.LoginPage;
-//import ui.admin.pages.LoginTSAdminPage;
-//import ui.monitor.ApplicationsPage;
-//import ui.web.pages.LoginTSWebPage;
-
-//import static framework.selenium.UIMethods.isElementDisplayed;
 
 /**
  * Created by silvia valencia on 4/14/2015.
