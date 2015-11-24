@@ -14,6 +14,6 @@ public class CommonMethods {
     }
     public static void logOut(){
         MainPage mainPage = new MainPage();
-        mainPage.logOut();
+        mainPage.getNavigateBacklogPage().logOut();
     }
 }

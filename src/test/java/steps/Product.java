@@ -6,7 +6,6 @@ import cucumber.api.java.en.When;
 import ui.pages.MainPage;
 import ui.pages.CreateProductPage;
 import ui.pages.ProductPage;
-
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -24,9 +23,9 @@ public class Product {
     public void createProduct(String product){
         productName = product;
         mainPage = new MainPage();
-        mainPage.clickCreateNew();
+        mainPage.getLeftMenuPage().clickCreateNew();
         createProductPage = mainPage
-                .clickCreateNewProduct();
+                .getLeftMenuPage().clickCreateNewProduct();
         productPage = createProductPage
                 .setProductName(product)
                 .clickOk();
@@ -41,6 +40,6 @@ public class Product {
     @After(value = "@createProduct", order = 999)
     public void deleteProject(){
         mainPage = productPage.deleteProduct();
-        mainPage.logOut();
+        mainPage.getNavigateBacklogPage().logOut();
     }
 }

@@ -1,6 +1,9 @@
 package ui.pages;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import ui.BasePageObject;
 
 /**
@@ -8,9 +11,32 @@ import ui.BasePageObject;
  */
 public class NavigateBacklogPage extends BasePageObject{
 
-    @Override
-    public void waitUntilPageObjectIsLoaded() {
+    @FindBy(xpath = "//i[@class='dropdown icon']")
+    WebElement logOutdropDown;
+
+    @FindBy(xpath = "//div[contains(@class, 'menu transition')]//a[contains(@href, 'Logout')]")
+    WebElement logOutBtn;
+
+    @FindBy(id = "submitbutton")
+    WebElement loginBtn;
+
+    @FindBy(xpath = "//span[contains(@ng-if, 'loggedInUser')]")
+    WebElement adminLbl;
+
+    public NavigateBacklogPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
+    }
+
+    @Override
+    public void waitUntilPageObjectIsLoaded() {
+        wait.until(ExpectedConditions.visibilityOf(adminLbl));
+    }
+
+    public void logOut(){
+        logOutdropDown.click();
+        wait.until(ExpectedConditions.visibilityOf(logOutBtn));
+        logOutBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(loginBtn));
     }
 }

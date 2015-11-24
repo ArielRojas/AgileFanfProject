@@ -7,7 +7,6 @@ import cucumber.api.java.en.When;
 import ui.pages.MainPage;
 import ui.pages.CreateProjectPage;
 import ui.pages.ProductPage;
-
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -25,8 +24,8 @@ public class Project {
     public void createProject(String project){
         projectName = project;
         mainPage = new MainPage();
-        mainPage.clickCreateNew();
-        createProjectPage = mainPage.clickCreateNewProject().setProjectName(project);
+        mainPage.getLeftMenuPage().clickCreateNew();
+        createProjectPage = mainPage.getLeftMenuPage().clickCreateNewProject().setProjectName(project);
     }
 
     @And("^I select the product$")
@@ -37,13 +36,13 @@ public class Project {
 
     @Then("^verify that the project has the name entered$")
     public void verifyProjectHasTheNameEntered(){
-        assertTrue(mainPage.isProjectNameDisplayed(), projectName);
-        assertEquals(mainPage.getProjectItemName(), projectName);
+        assertTrue(mainPage.getLeftMenuPage().isProjectNameDisplayed(), projectName);
+        assertEquals(mainPage.getLeftMenuPage().getProjectItemName(), projectName);
     }
 
     @After(value = "@createProject", order = 999)
     public void deleteProjectAndProduct(){
         mainPage = productPage.deleteProduct();
-        mainPage.logOut();
+        mainPage.getNavigateBacklogPage().logOut();
     }
 }

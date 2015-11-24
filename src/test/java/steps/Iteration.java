@@ -7,9 +7,6 @@ import cucumber.api.java.en.When;
 import ui.pages.CreateIterationPage;
 import ui.pages.MainPage;
 import ui.pages.ProductPage;
-
-import java.util.logging.Logger;
-
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -27,8 +24,8 @@ public class Iteration {
     public void createIteration(String iteration){
         iterationName = iteration;
         mainPage = new MainPage();
-        mainPage.clickCreateNew();
-        createIterationPage = mainPage.clickCreateNewIteration().setIterationName(iteration);
+        mainPage.getLeftMenuPage().clickCreateNew();
+        createIterationPage = mainPage.getLeftMenuPage().clickCreateNewIteration().setIterationName(iteration);
     }
 
     @And("^I select the project$")
@@ -40,13 +37,13 @@ public class Iteration {
 
     @Then("^verify that the iteration has the name entered$")
     public void verifyIterationHasTheNameEntered(){
-        assertTrue(mainPage.isIterationNameDisplayed(), iterationName);
-        assertEquals(mainPage.getIterationItemName(), iterationName);
+        assertTrue(mainPage.getLeftMenuPage().isIterationNameDisplayed(), iterationName);
+        assertEquals(mainPage.getLeftMenuPage().getIterationItemName(), iterationName);
     }
 
     @After(value = "@createIteration", order = 999)
     public void deleteIterationProjectAndProduct(){
         mainPage = productPage.deleteProduct();
-        mainPage.logOut();
+        mainPage.getNavigateBacklogPage().logOut();
     }
 }

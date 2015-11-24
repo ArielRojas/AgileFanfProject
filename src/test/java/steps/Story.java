@@ -7,7 +7,6 @@ import ui.pages.BoardPage;
 import ui.pages.MainPage;
 import ui.pages.IterationPage;
 import ui.pages.ProductPage;
-
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -26,9 +25,9 @@ public class Story {
     public void createStory(String story){
         storyName = story;
         mainPage = new MainPage();
-        iterationPage =  mainPage.clickLinkIteration();
+        iterationPage =  mainPage.getLeftMenuPage().clickLinkIteration();
         iterationPage.createStory(story);
-        mainPage.clickLinkIteration();
+        mainPage.getLeftMenuPage().clickLinkIteration();
     }
 
     @Then("^the story has the name entered$")
@@ -105,8 +104,8 @@ public class Story {
 
     @After(value = "@createStory", order = 999)
     public void deleteStory(){
-        productPage = mainPage.clickLinkProduct();
+        productPage = mainPage.getLeftMenuPage().clickLinkProduct();
         mainPage = productPage.deleteProduct();
-        mainPage.logOut();
+        mainPage.getNavigateBacklogPage().logOut();
     }
 }

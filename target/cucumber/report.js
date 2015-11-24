@@ -1,65 +1,65 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/scenarios.iterations.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/scenarios.projects.feature");
 formatter.feature({
   "line": 2,
-  "name": "Iterations",
+  "name": "Projects",
   "description": "",
-  "id": "iterations",
+  "id": "projects",
   "keyword": "Feature",
   "tags": [
     {
       "line": 1,
-      "name": "@Iteration"
+      "name": "@Project"
     }
   ]
 });
 formatter.scenarioOutline({
-  "line": 11,
-  "name": "Create an iteration",
+  "line": 9,
+  "name": "Create a project",
   "description": "",
-  "id": "iterations;create-an-iteration",
+  "id": "projects;create-a-project",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 10,
-      "name": "@createIteration"
+      "line": 8,
+      "name": "@createProject"
     }
   ]
 });
 formatter.step({
-  "line": 12,
-  "name": "I create an iteration \"\u003citeration\u003e\" inside of the project",
+  "line": 10,
+  "name": "I create a project \"\u003cproject\u003e\" inside of the product",
   "keyword": "When "
 });
 formatter.step({
-  "line": 13,
-  "name": "I select the project",
+  "line": 11,
+  "name": "I select the product",
   "keyword": "And "
 });
 formatter.step({
-  "line": 14,
-  "name": "verify that the iteration has the name entered",
+  "line": 12,
+  "name": "verify that the project has the name entered",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 16,
+  "line": 14,
   "name": "",
   "description": "",
-  "id": "iterations;create-an-iteration;",
+  "id": "projects;create-a-project;",
   "rows": [
     {
       "cells": [
-        "iteration"
+        "project"
       ],
-      "line": 17,
-      "id": "iterations;create-an-iteration;;1"
+      "line": 15,
+      "id": "projects;create-a-project;;1"
     },
     {
       "cells": [
-        "iteration1"
+        "projectA"
       ],
-      "line": 18,
-      "id": "iterations;create-an-iteration;;2"
+      "line": 16,
+      "id": "projects;create-a-project;;2"
     }
   ],
   "keyword": "Examples"
@@ -86,21 +86,11 @@ formatter.step({
   "name": "I create a product \"product1\"",
   "keyword": "And "
 });
-formatter.step({
-  "line": 7,
-  "name": "I create a project \"projectA\" inside of the product",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 8,
-  "name": "I select the product",
-  "keyword": "And "
-});
 formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 427265100,
+  "duration": 498302600,
   "status": "passed"
 });
 formatter.match({
@@ -117,7 +107,7 @@ formatter.match({
   "location": "Login.loginSuccessful(String,String)"
 });
 formatter.result({
-  "duration": 11810910900,
+  "duration": 17858242100,
   "status": "passed"
 });
 formatter.match({
@@ -130,8 +120,44 @@ formatter.match({
   "location": "Product.createProduct(String)"
 });
 formatter.result({
-  "duration": 23069455900,
+  "duration": 18719243500,
   "status": "passed"
+});
+formatter.scenario({
+  "line": 16,
+  "name": "Create a project",
+  "description": "",
+  "id": "projects;create-a-project;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 8,
+      "name": "@createProject"
+    },
+    {
+      "line": 1,
+      "name": "@Project"
+    }
+  ]
+});
+formatter.step({
+  "line": 10,
+  "name": "I create a project \"projectA\" inside of the product",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 11,
+  "name": "I select the product",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "verify that the project has the name entered",
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -143,81 +169,25 @@ formatter.match({
   "location": "Project.createProject(String)"
 });
 formatter.result({
-  "duration": 2426473200,
+  "duration": 2341985600,
   "status": "passed"
 });
 formatter.match({
   "location": "Project.selectProduct()"
 });
 formatter.result({
-  "duration": 1287111100,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 18,
-  "name": "Create an iteration",
-  "description": "",
-  "id": "iterations;create-an-iteration;;2",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 10,
-      "name": "@createIteration"
-    },
-    {
-      "line": 1,
-      "name": "@Iteration"
-    }
-  ]
-});
-formatter.step({
-  "line": 12,
-  "name": "I create an iteration \"iteration1\" inside of the project",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "When "
-});
-formatter.step({
-  "line": 13,
-  "name": "I select the project",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 14,
-  "name": "verify that the iteration has the name entered",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "iteration1",
-      "offset": 23
-    }
-  ],
-  "location": "Iteration.createIteration(String)"
-});
-formatter.result({
-  "duration": 2185440100,
+  "duration": 1314372000,
   "status": "passed"
 });
 formatter.match({
-  "location": "Iteration.selectProject()"
+  "location": "Project.verifyProjectHasTheNameEntered()"
 });
 formatter.result({
-  "duration": 5503444700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Iteration.verifyIterationHasTheNameEntered()"
-});
-formatter.result({
-  "duration": 209546300,
+  "duration": 701421400,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12895575500,
+  "duration": 13127806800,
   "status": "passed"
 });
 });
