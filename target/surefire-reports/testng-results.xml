@@ -2,38 +2,46 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="84699" started-at="2015-11-24T16:43:20Z" finished-at="2015-11-24T16:44:45Z">
+  <suite name="Surefire suite" duration-ms="309907" started-at="2015-11-25T18:06:04Z" finished-at="2015-11-25T18:11:14Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesTest@cc285f4]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesTest@2a2d45ba]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Surefire test" duration-ms="84699" started-at="2015-11-24T16:43:20Z" finished-at="2015-11-24T16:44:45Z">
+    <test name="Surefire test" duration-ms="309907" started-at="2015-11-25T18:06:04Z" finished-at="2015-11-25T18:11:14Z">
       <class name="runner.RunCukesTest">
-        <test-method status="PASS" signature="beforeExecution()[pri:0, instance:runner.RunCukesTest@cc285f4]" name="beforeExecution" is-config="true" duration-ms="26876" started-at="2015-11-24T12:43:20Z" finished-at="2015-11-24T12:43:47Z">
+        <test-method status="PASS" signature="beforeExecution()[pri:0, instance:runner.RunCukesTest@2a2d45ba]" name="beforeExecution" is-config="true" duration-ms="11311" started-at="2015-11-25T14:06:04Z" finished-at="2015-11-25T14:06:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeExecution -->
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.RunCukesTest@cc285f4]" name="setUpClass" is-config="true" duration-ms="764" started-at="2015-11-24T12:43:47Z" finished-at="2015-11-24T12:43:48Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.RunCukesTest@2a2d45ba]" name="setUpClass" is-config="true" duration-ms="441" started-at="2015-11-25T14:06:15Z" finished-at="2015-11-25T14:06:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesTest@cc285f4]" name="feature" duration-ms="54840" started-at="2015-11-24T12:43:48Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2015-11-24T12:44:43Z">
+        <test-method status="PASS" signature="beforeFeatureExecution()[pri:0, instance:runner.RunCukesTest@2a2d45ba]" name="beforeFeatureExecution" is-config="true" duration-ms="14393" started-at="2015-11-25T14:06:16Z" finished-at="2015-11-25T14:06:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeFeatureExecution -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesTest@2a2d45ba]" name="feature" duration-ms="281180" started-at="2015-11-25T14:06:30Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2015-11-25T14:11:12Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Projects]]>
+                <![CDATA[Stories]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.RunCukesTest@cc285f4]" name="tearDownClass" is-config="true" duration-ms="132" started-at="2015-11-24T12:44:43Z" finished-at="2015-11-24T12:44:43Z">
+        <test-method status="PASS" signature="afterFeatureExecution()[pri:0, instance:runner.RunCukesTest@2a2d45ba]" name="afterFeatureExecution" is-config="true" duration-ms="1216" started-at="2015-11-25T14:11:12Z" finished-at="2015-11-25T14:11:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterFeatureExecution -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.RunCukesTest@2a2d45ba]" name="tearDownClass" is-config="true" duration-ms="64" started-at="2015-11-25T14:11:13Z" finished-at="2015-11-25T14:11:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method status="PASS" signature="afterExecution()[pri:0, instance:runner.RunCukesTest@cc285f4]" name="afterExecution" is-config="true" duration-ms="1669" started-at="2015-11-24T12:44:43Z" finished-at="2015-11-24T12:44:45Z">
+        <test-method status="PASS" signature="afterExecution()[pri:0, instance:runner.RunCukesTest@2a2d45ba]" name="afterExecution" is-config="true" duration-ms="1129" started-at="2015-11-25T14:11:13Z" finished-at="2015-11-25T14:11:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterExecution -->

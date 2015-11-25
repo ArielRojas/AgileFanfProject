@@ -37,6 +37,5 @@ public class NavigateBacklogPage extends BasePageObject{
         logOutdropDown.click();
         wait.until(ExpectedConditions.visibilityOf(logOutBtn));
         logOutBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(loginBtn));
     }
 }

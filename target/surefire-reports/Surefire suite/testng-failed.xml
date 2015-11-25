@@ -5,10 +5,12 @@
     <classes>
       <class name="runner.RunCukesTest">
         <methods>
+          <include name="beforeFeatureExecution"/>
           <include name="setUpClass"/>
           <include name="afterExecution"/>
           <include name="beforeExecution"/>
           <include name="feature" invocation-numbers="0"/>
+          <include name="afterFeatureExecution"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- runner.RunCukesTest -->

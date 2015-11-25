@@ -8,12 +8,20 @@ import ui.pages.MainPage;
  */
 public class CommonMethods {
 
+    public static boolean isLogin;
+
     public static void logIn(String username, String password){
         LoginPage loginPage = new LoginPage();
-         MainPage mainPage = loginPage.loginSuccessful(username, password);
+        loginPage.loginSuccessful(username, password);
+        isLogin = true;
     }
+
     public static void logOut(){
         MainPage mainPage = new MainPage();
         mainPage.getNavigateBacklogPage().logOut();
+    }
+
+    public static boolean isLogIn(){
+        return isLogin;
     }
 }

@@ -43,7 +43,7 @@ public class ProductPage extends BasePageObject{
 
     @Override
     public void waitUntilPageObjectIsLoaded() {
-        wait.until(ExpectedConditions.visibilityOf(productItemLnk));
+        wait.until(ExpectedConditions.visibilityOf(productNameLbl));
     }
 
     public MainPage deleteProduct(){

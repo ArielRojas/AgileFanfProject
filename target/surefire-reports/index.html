@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="runner.RunCukesTest" hash-for-method="feature(Projects)">feature(Projects)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="runner.RunCukesTest" hash-for-method="feature(Stories)">feature(Stories)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -124,10 +124,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="feature(Projects)">
-                  </a> <!-- feature(Projects) -->
+                  <a name="feature(Stories)">
+                  </a> <!-- feature(Stories) -->
                   <span class="method-name">feature</span>
-                  <span class="parameters">(Projects)</span>
+                  <span class="parameters">(Stories)</span>
                   <em>
 (Runs Cucumber Feature)                  </em>
                 </div> <!-- method-content -->
@@ -146,7 +146,6 @@
   &lt;test name=&quot;Surefire test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;runner.RunCukesTest&quot;/&gt;
-      &lt;class name=&quot;steps.Test&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
 &lt;/suite&gt; &lt;!-- Surefire suite --&gt;
@@ -160,7 +159,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Surefire test (2 classes)</span>
+                <span class="test-name">Surefire test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -198,12 +197,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'runner.RunCukesTest')
-data.setCell(0, 3, 54840);
+data.setCell(0, 3, 281180);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 54 seconds</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -236,19 +235,27 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">26905 ms</span>
+                <span class="method-start">11319 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeFeatureExecution</span>
+                <span class="method-start">11917 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">feature(Projects)</span>
-                <span class="method-start">28053 ms</span>
+                <span class="method-name">feature(Stories)</span>
+                <span class="method-start">26310 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterFeatureExecution</span>
+                <span class="method-start">307492 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">82895 ms</span>
+                <span class="method-start">308711 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">afterExecution</span>
-                <span class="method-start">83029 ms</span>
+                <span class="method-start">308777 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

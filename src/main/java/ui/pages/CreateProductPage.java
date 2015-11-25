@@ -20,6 +20,9 @@ public class CreateProductPage extends BasePageObject {
     @FindBy(xpath = "//span[contains(text(),'Ok')]")
     WebElement OkBtn;
 
+    @FindBy(xpath = "//a[contains(@class, 'node-type-product')]")
+    WebElement productItemLnk;
+
     public CreateProductPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
@@ -38,6 +41,7 @@ public class CreateProductPage extends BasePageObject {
 
     public ProductPage clickOk(){
         OkBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(productItemLnk));
         return new ProductPage();
     }
 }

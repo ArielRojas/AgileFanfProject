@@ -43,6 +43,5 @@ public class Project {
     @After(value = "@createProject", order = 999)
     public void deleteProjectAndProduct(){
         mainPage = productPage.deleteProduct();
-        mainPage.getNavigateBacklogPage().logOut();
     }
 }

@@ -1,13 +1,15 @@
 package runner;
 
+import common.CommonMethods;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 import framework.DriverManager;
 import org.apache.log4j.Logger;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import ui.PageTransporter;
-
 
 @CucumberOptions(
         plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"},
@@ -27,10 +29,26 @@ public class RunCukesTest extends AbstractTestNGCucumberTests {
         }
     }
 
+    @BeforeMethod
+    public void beforeFeatureExecution(){
+        try{
+            CommonMethods.logIn("arielwagnerrojas@gmail.com", "nemo100");
+        } catch(Exception e){
+        }
+    }
+
     @AfterTest
     public void afterExecution() {
         try {
             DriverManager.getManager().quitDriver();
+        } catch (Exception e) {
+        }
+    }
+
+    @AfterMethod
+    public void afterFeatureExecution(){
+        try {
+            CommonMethods.logOut();
         } catch (Exception e) {
         }
     }

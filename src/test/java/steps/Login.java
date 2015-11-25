@@ -1,7 +1,7 @@
 package steps;
 
+import common.CommonMethods;
 import common.Error;
-import cucumber.api.java.After;
 import ui.pages.LoginPage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -27,7 +27,11 @@ public class Login {
     @When("^I login as \"([^\"]*)\" with password \"([^\"]*)\"$")
     public void loginSuccessful(String username, String password){
         user = username;
-        mainPage = loginPage.loginSuccessful(username, password);
+        if(!(CommonMethods.isLogIn())){
+            mainPage = loginPage.loginSuccessful(username, password);
+        }else{
+            mainPage = new MainPage();
+        }
     }
 
     @When("^I login as \"([^\"]*)\" with password \"([^\"]*)\", with one incorrect$")
@@ -44,10 +48,5 @@ public class Login {
     public void anErrorIsDisplayed(){
         assertTrue(loginPage.isErrorDisplayed(), Error.loginError);
         assertEquals(loginPage.getError(), Error.loginError);
-    }
-
-    @After(value = "@Logout", order = 999)
-    public void logout(){
-        mainPage.getNavigateBacklogPage().logOut();
     }
 }

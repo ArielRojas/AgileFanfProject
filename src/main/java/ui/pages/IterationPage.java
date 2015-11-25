@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import ui.BasePageObject;
 
 /**
@@ -36,6 +37,9 @@ public class IterationPage extends BasePageObject {
     @FindBy(xpath = "//span[contains(@title, 'story name')]")
     WebElement storyNameLbl;
 
+    @FindBy(xpath = "//span[contains(@class, 'iterationName')]")
+    WebElement iterationNameLbl;
+
     @FindBy(xpath = "//div[contains(@class, 'menu menubar')]//a[@data-tab='board']")
     WebElement boardLnk;
 
@@ -50,7 +54,6 @@ public class IterationPage extends BasePageObject {
 
     @FindBy(xpath = "//div[contains(@class, 'storyStateSTARTED')]")
     WebElement inProgressOption;
-
 
     @FindBy(xpath = "//div[contains(@id, 'select2-drop')]//span[contains(@class, 'storyStatePENDING')]")
     WebElement pendingStateOption;
@@ -91,7 +94,7 @@ public class IterationPage extends BasePageObject {
 
     @Override
     public void waitUntilPageObjectIsLoaded() {
-
+        wait.until(ExpectedConditions.visibilityOf(iterationNameLbl));
     }
 
     public void createStory(String story) {

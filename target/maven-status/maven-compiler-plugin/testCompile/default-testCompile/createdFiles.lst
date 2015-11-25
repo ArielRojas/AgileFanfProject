@@ -3,7 +3,7 @@ common\CommonMethods.class
 steps\Story.class
 steps\Project.class
 common\Error.class
-steps\Test.class
 steps\Iteration.class
 steps\Login.class
+steps\hooks\GlobalHooks.class
 steps\Product.class

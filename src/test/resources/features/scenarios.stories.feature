@@ -11,7 +11,7 @@ Feature: Stories
       And I select the project
 
     @createStory
-    Scenario Outline:
+    Scenario Outline: Create a story
       When I create a story "<story>" inside of the iteration
       Then the story has the name entered
 
@@ -22,58 +22,18 @@ Feature: Stories
     @createStory
     Scenario Outline: Change the state of one story to In Progress
       When I create a story "<story>" inside of the iteration
-      And  I change story state to In progress
+        And  I change story state to In progress
       Then the state of the story is In Progress
 
       Examples:
         |  story   |
         |  story1  |
 
-  @createStory
-  Scenario Outline: Change the state of one story to Pending
-    When I create a story "<story>" inside of the iteration
-    And I change story state to Pending
-    Then the state of the story is Pending
-
-    Examples:
-      |  story   |
-      |  story1  |
-
-  @createStory
-  Scenario Outline: Change the state of one story to Bloqued
-    When I create a story "<story>" inside of the iteration
-    And I change story state to Bloqued
-    Then the state of the story is Bloqued
-
-    Examples:
-      |  story   |
-      |  story1  |
-
-  @createStory
-  Scenario Outline: Change the state of one story to Bloqued
-    When I create a story "<story>" inside of the iteration
-    And I change story state to Ready
-    Then the state of the story is Ready
-
-    Examples:
-      |  story   |
-      |  story1  |
-
-  @createStory
-  Scenario Outline: Change the state of one story to Done
-    When I create a story "<story>" inside of the iteration
-    And I change story state to Done
-    Then the state of the story is Done
-    Examples:
-      |  story   |
-      |  story1  |
-
-  @createStory
-  Scenario Outline: Change the state of one story to Deferred
-    When I create a story "<story>" inside of the iteration
-    And I change story state to Deferred
-    Then the state of the story is Deferred
-
-    Examples:
-      |  story   |
-      |  story1  |
+    @createStory
+    Scenario Outline: Change the state of one story to Done
+      When I create a story "<story>" inside of the iteration
+        And I change story state to Done
+      Then the state of the story is Done
+      Examples:
+        |  story   |
+        |  story1  |

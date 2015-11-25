@@ -44,6 +44,5 @@ public class Iteration {
     @After(value = "@createIteration", order = 999)
     public void deleteIterationProjectAndProduct(){
         mainPage = productPage.deleteProduct();
-        mainPage.getNavigateBacklogPage().logOut();
     }
 }

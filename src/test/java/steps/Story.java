@@ -106,6 +106,5 @@ public class Story {
     public void deleteStory(){
         productPage = mainPage.getLeftMenuPage().clickLinkProduct();
         mainPage = productPage.deleteProduct();
-        mainPage.getNavigateBacklogPage().logOut();
     }
 }
