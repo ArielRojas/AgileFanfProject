@@ -60,7 +60,7 @@ public class Task {
         assertEquals(storyPage.getInProgressStoryState(), "In Progress");
     }
 
-    @After
+    @After("@Task")
     public void deleteTaskAndProduct(){
         iterationPage = storyPage.clickCloseBtn();
         mainPage = new MainPage();

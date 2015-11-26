@@ -39,7 +39,7 @@ public class BoardPage extends BasePageObject{
     }
 
     /**
-     *
+     *This method return the In Progress state
      * @return
      */
     public String getStateInProgress(){
@@ -47,7 +47,7 @@ public class BoardPage extends BasePageObject{
     }
 
     /**
-     *
+     *This method return the pending state
      * @return
      */
     public String getStatePending(){

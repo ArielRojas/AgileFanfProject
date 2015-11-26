@@ -1,10 +1,8 @@
 package steps;
 
-import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import framework.UIMethods;
 import ui.pages.MainPage;
 import ui.pages.CreateProductPage;
 import ui.pages.ProductPage;

@@ -40,7 +40,6 @@ public class LoginPage extends BasePageObject {
 
     @Override
     public void waitUntilPageObjectIsLoaded() {
-        //wait.until(ExpectedConditions.visibilityOf(loginBtn));
     }
 
     /**

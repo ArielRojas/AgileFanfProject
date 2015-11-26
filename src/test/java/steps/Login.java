@@ -2,6 +2,7 @@ package steps;
 
 import common.CommonMethods;
 import common.Error;
+import cucumber.api.java.Before;
 import ui.pages.LoginPage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -48,5 +49,14 @@ public class Login {
     public void anErrorIsDisplayed(){
         assertTrue(loginPage.isErrorDisplayed(), Error.loginError);
         assertEquals(loginPage.getError(), Error.loginError);
+    }
+
+    @Before("@LoginError")
+    public void logOutUser()
+    {
+        if(CommonMethods.isLogIn())
+        {
+            CommonMethods.logOut();
+        }
     }
 }

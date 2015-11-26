@@ -1,370 +1,241 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/scenarios.tasks.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/scenarios.login.feature");
 formatter.feature({
   "line": 2,
-  "name": "Tasks",
+  "name": "Login",
   "description": "",
-  "id": "tasks",
+  "id": "login",
   "keyword": "Feature",
   "tags": [
     {
       "line": 1,
-      "name": "@Tasks"
+      "name": "@Login"
     }
   ]
 });
 formatter.scenarioOutline({
-  "line": 14,
-  "name": "Create tasks inside of a story",
+  "line": 4,
+  "name": "Enter to AgileFant with a valid account",
   "description": "",
-  "id": "tasks;create-tasks-inside-of-a-story",
+  "id": "login;enter-to-agilefant-with-a-valid-account",
   "type": "scenario_outline",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 15,
-  "name": "I create a task \"\u003ctask\u003e\" inside of a story",
+  "line": 5,
+  "name": "I open to Login page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "I login as \"\u003cusername\u003e\" with password \"\u003cpassword\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 16,
-  "name": "the task has the name entered",
+  "line": 7,
+  "name": "I should login successfully",
   "keyword": "Then "
+});
+formatter.examples({
+  "line": 9,
+  "name": "",
+  "description": "",
+  "id": "login;enter-to-agilefant-with-a-valid-account;",
+  "rows": [
+    {
+      "cells": [
+        "username",
+        "password"
+      ],
+      "line": 10,
+      "id": "login;enter-to-agilefant-with-a-valid-account;;1"
+    },
+    {
+      "cells": [
+        "arielwagnerrojas@gmail.com",
+        "nemo100"
+      ],
+      "line": 11,
+      "id": "login;enter-to-agilefant-with-a-valid-account;;2"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.scenario({
+  "line": 11,
+  "name": "Enter to AgileFant with a valid account",
+  "description": "",
+  "id": "login;enter-to-agilefant-with-a-valid-account;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@Login"
+    }
+  ]
+});
+formatter.step({
+  "line": 5,
+  "name": "I open to Login page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "I login as \"arielwagnerrojas@gmail.com\" with password \"nemo100\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 7,
+  "name": "I should login successfully",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Login.goToLoginPage()"
+});
+formatter.result({
+  "duration": 340479500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "arielwagnerrojas@gmail.com",
+      "offset": 12
+    },
+    {
+      "val": "nemo100",
+      "offset": 55
+    }
+  ],
+  "location": "Login.loginSuccessful(String,String)"
+});
+formatter.result({
+  "duration": 256184600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Login.loginSuccessfully()"
+});
+formatter.result({
+  "duration": 75791700,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 260100,
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "line": 14,
+  "name": "Enter to AgileFant with a invalid account",
+  "description": "",
+  "id": "login;enter-to-agilefant-with-a-invalid-account",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 13,
+      "name": "@LoginError"
+    }
+  ]
+});
+formatter.step({
+  "line": 15,
+  "name": "I open to Login page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 16,
+  "name": "I login as \"\u003cusername\u003e\" with password \"\u003cpassword\u003e\", with one incorrect",
+  "keyword": "When "
 });
 formatter.step({
   "line": 17,
-  "name": "the task is displayed with the state Not Started",
-  "keyword": "And "
+  "name": "should display an error",
+  "keyword": "Then "
 });
 formatter.examples({
   "line": 19,
   "name": "",
   "description": "",
-  "id": "tasks;create-tasks-inside-of-a-story;",
+  "id": "login;enter-to-agilefant-with-a-invalid-account;",
   "rows": [
     {
       "cells": [
-        "task"
+        "username",
+        "password"
       ],
       "line": 20,
-      "id": "tasks;create-tasks-inside-of-a-story;;1"
+      "id": "login;enter-to-agilefant-with-a-invalid-account;;1"
     },
     {
       "cells": [
-        "task1"
+        "arielwagnerrojas@gmail.com",
+        "Client123"
       ],
       "line": 21,
-      "id": "tasks;create-tasks-inside-of-a-story;;2"
+      "id": "login;enter-to-agilefant-with-a-invalid-account;;2"
+    },
+    {
+      "cells": [
+        "test@gmail.com",
+        "nemo100"
+      ],
+      "line": 22,
+      "id": "login;enter-to-agilefant-with-a-invalid-account;;3"
     }
   ],
   "keyword": "Examples"
 });
-formatter.background({
-  "line": 4,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 5,
-  "name": "I open to Login page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "I login as \"arielwagnerrojas@gmail.com\" with password \"nemo100\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 7,
-  "name": "I create a product \"product1\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 8,
-  "name": "I create a project \"projectA\" inside of the product",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 9,
-  "name": "I select the product",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 10,
-  "name": "I create an iteration \"iteration1\" inside of the project",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 11,
-  "name": "I select the project",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 12,
-  "name": "I create a story \"story1\" inside of the iteration",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Login.goToLoginPage()"
-});
-formatter.result({
-  "duration": 391998600,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "arielwagnerrojas@gmail.com",
-      "offset": 12
-    },
-    {
-      "val": "nemo100",
-      "offset": 55
-    }
-  ],
-  "location": "Login.loginSuccessful(String,String)"
-});
-formatter.result({
-  "duration": 294724300,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "product1",
-      "offset": 20
-    }
-  ],
-  "location": "Product.createProduct(String)"
-});
-formatter.result({
-  "duration": 23997371000,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "projectA",
-      "offset": 20
-    }
-  ],
-  "location": "Project.createProject(String)"
-});
-formatter.result({
-  "duration": 1977226700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Project.selectProduct()"
-});
-formatter.result({
-  "duration": 1152474400,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "iteration1",
-      "offset": 23
-    }
-  ],
-  "location": "Iteration.createIteration(String)"
-});
-formatter.result({
-  "duration": 2393782500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Iteration.selectProject()"
-});
-formatter.result({
-  "duration": 12810915800,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "story1",
-      "offset": 18
-    }
-  ],
-  "location": "Story.createStory(String)"
-});
-formatter.result({
-  "duration": 31293064100,
+formatter.before({
+  "duration": 1037955900,
   "status": "passed"
 });
 formatter.scenario({
   "line": 21,
-  "name": "Create tasks inside of a story",
+  "name": "Enter to AgileFant with a invalid account",
   "description": "",
-  "id": "tasks;create-tasks-inside-of-a-story;;2",
+  "id": "login;enter-to-agilefant-with-a-invalid-account;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
       "line": 1,
-      "name": "@Tasks"
+      "name": "@Login"
+    },
+    {
+      "line": 13,
+      "name": "@LoginError"
     }
   ]
 });
 formatter.step({
   "line": 15,
-  "name": "I create a task \"task1\" inside of a story",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "When "
-});
-formatter.step({
-  "line": 16,
-  "name": "the task has the name entered",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 17,
-  "name": "the task is displayed with the state Not Started",
-  "keyword": "And "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "task1",
-      "offset": 17
-    }
-  ],
-  "location": "Task.createTask(String)"
-});
-formatter.result({
-  "duration": 7710711200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Task.verifyTaskHasTheNameEntered()"
-});
-formatter.result({
-  "duration": 134741200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Task.verifyTaskIsDisplayedWithTheStateNotStarted()"
-});
-formatter.result({
-  "duration": 131299600,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 468500,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 23876167300,
-  "status": "passed"
-});
-formatter.scenarioOutline({
-  "line": 23,
-  "name": "Create tasks inside of a story",
-  "description": "",
-  "id": "tasks;create-tasks-inside-of-a-story",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 24,
-  "name": "I create a task \"\u003ctask\u003e\" inside of a story",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 25,
-  "name": "I change task state to Ready",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 26,
-  "name": "the state of the task is Ready",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 27,
-  "name": "the story state should be In Progress",
-  "keyword": "And "
-});
-formatter.examples({
-  "line": 29,
-  "name": "",
-  "description": "",
-  "id": "tasks;create-tasks-inside-of-a-story;",
-  "rows": [
-    {
-      "cells": [
-        "task"
-      ],
-      "line": 30,
-      "id": "tasks;create-tasks-inside-of-a-story;;1"
-    },
-    {
-      "cells": [
-        "task1"
-      ],
-      "line": 31,
-      "id": "tasks;create-tasks-inside-of-a-story;;2"
-    }
-  ],
-  "keyword": "Examples"
-});
-formatter.background({
-  "line": 4,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 5,
   "name": "I open to Login page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 6,
-  "name": "I login as \"arielwagnerrojas@gmail.com\" with password \"nemo100\"",
-  "keyword": "And "
+  "line": 16,
+  "name": "I login as \"arielwagnerrojas@gmail.com\" with password \"Client123\", with one incorrect",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "When "
 });
 formatter.step({
-  "line": 7,
-  "name": "I create a product \"product1\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 8,
-  "name": "I create a project \"projectA\" inside of the product",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 9,
-  "name": "I select the product",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 10,
-  "name": "I create an iteration \"iteration1\" inside of the project",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 11,
-  "name": "I select the project",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 12,
-  "name": "I create a story \"story1\" inside of the iteration",
-  "keyword": "And "
+  "line": 17,
+  "name": "should display an error",
+  "keyword": "Then "
 });
 formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 428000,
+  "duration": 792500,
   "status": "passed"
 });
 formatter.match({
@@ -374,159 +245,101 @@ formatter.match({
       "offset": 12
     },
     {
-      "val": "nemo100",
+      "val": "Client123",
       "offset": 55
     }
   ],
-  "location": "Login.loginSuccessful(String,String)"
+  "location": "Login.loginFailed(String,String)"
 });
 formatter.result({
-  "duration": 339941000,
+  "duration": 3145144000,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "product1",
-      "offset": 20
-    }
-  ],
-  "location": "Product.createProduct(String)"
+  "location": "Login.anErrorIsDisplayed()"
 });
 formatter.result({
-  "duration": 23774203700,
+  "duration": 194930300,
   "status": "passed"
 });
-formatter.match({
-  "arguments": [
-    {
-      "val": "projectA",
-      "offset": 20
-    }
-  ],
-  "location": "Project.createProject(String)"
-});
-formatter.result({
-  "duration": 2318599000,
+formatter.after({
+  "duration": 347500,
   "status": "passed"
 });
-formatter.match({
-  "location": "Project.selectProduct()"
-});
-formatter.result({
-  "duration": 2340496300,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "iteration1",
-      "offset": 23
-    }
-  ],
-  "location": "Iteration.createIteration(String)"
-});
-formatter.result({
-  "duration": 2142559000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Iteration.selectProject()"
-});
-formatter.result({
-  "duration": 13335581700,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "story1",
-      "offset": 18
-    }
-  ],
-  "location": "Story.createStory(String)"
-});
-formatter.result({
-  "duration": 31360117000,
+formatter.before({
+  "duration": 94000,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 31,
-  "name": "Create tasks inside of a story",
+  "line": 22,
+  "name": "Enter to AgileFant with a invalid account",
   "description": "",
-  "id": "tasks;create-tasks-inside-of-a-story;;2",
+  "id": "login;enter-to-agilefant-with-a-invalid-account;;3",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
       "line": 1,
-      "name": "@Tasks"
+      "name": "@Login"
+    },
+    {
+      "line": 13,
+      "name": "@LoginError"
     }
   ]
 });
 formatter.step({
-  "line": 24,
-  "name": "I create a task \"task1\" inside of a story",
+  "line": 15,
+  "name": "I open to Login page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 16,
+  "name": "I login as \"test@gmail.com\" with password \"nemo100\", with one incorrect",
   "matchedColumns": [
-    0
+    0,
+    1
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 25,
-  "name": "I change task state to Ready",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 26,
-  "name": "the state of the task is Ready",
+  "line": 17,
+  "name": "should display an error",
   "keyword": "Then "
 });
-formatter.step({
-  "line": 27,
-  "name": "the story state should be In Progress",
-  "keyword": "And "
+formatter.match({
+  "location": "Login.goToLoginPage()"
+});
+formatter.result({
+  "duration": 3438600,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "task1",
-      "offset": 17
+      "val": "test@gmail.com",
+      "offset": 12
+    },
+    {
+      "val": "nemo100",
+      "offset": 43
     }
   ],
-  "location": "Task.createTask(String)"
+  "location": "Login.loginFailed(String,String)"
 });
 formatter.result({
-  "duration": 6515864300,
+  "duration": 1605771900,
   "status": "passed"
 });
 formatter.match({
-  "location": "Task.changeTaskStateToReady()"
+  "location": "Login.anErrorIsDisplayed()"
 });
 formatter.result({
-  "duration": 5890271600,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Task.verifyStateOfTheTaskIsReady()"
-});
-formatter.result({
-  "duration": 192529600,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Task.verifyStoryStateShouldBeInProgress()"
-});
-formatter.result({
-  "duration": 107339800,
+  "duration": 277904600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 189500,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 23808429900,
+  "duration": 149700,
   "status": "passed"
 });
 });

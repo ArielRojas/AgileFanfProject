@@ -3,15 +3,27 @@
     "line": 2,
     "elements": [
       {
-        "line": 4,
-        "name": "",
+        "line": 11,
+        "name": "Enter to AgileFant with a valid account",
         "description": "",
-        "type": "background",
-        "keyword": "Background",
+        "id": "login;enter-to-agilefant-with-a-valid-account;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 260100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "GlobalHooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 391998600,
+              "duration": 340479500,
               "status": "passed"
             },
             "line": 5,
@@ -23,7 +35,7 @@
           },
           {
             "result": {
-              "duration": 294724300,
+              "duration": 256184600,
               "status": "passed"
             },
             "line": 6,
@@ -41,128 +53,56 @@
               ],
               "location": "Login.loginSuccessful(String,String)"
             },
-            "keyword": "And "
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 23997371000,
+              "duration": 75791700,
               "status": "passed"
             },
             "line": 7,
-            "name": "I create a product \"product1\"",
+            "name": "I should login successfully",
             "match": {
-              "arguments": [
-                {
-                  "val": "product1",
-                  "offset": 20
-                }
-              ],
-              "location": "Product.createProduct(String)"
+              "location": "Login.loginSuccessfully()"
             },
-            "keyword": "And "
-          },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
           {
-            "result": {
-              "duration": 1977226700,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "I create a project \"projectA\" inside of the product",
-            "match": {
-              "arguments": [
-                {
-                  "val": "projectA",
-                  "offset": 20
-                }
-              ],
-              "location": "Project.createProject(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1152474400,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "I select the product",
-            "match": {
-              "location": "Project.selectProduct()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2393782500,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I create an iteration \"iteration1\" inside of the project",
-            "match": {
-              "arguments": [
-                {
-                  "val": "iteration1",
-                  "offset": 23
-                }
-              ],
-              "location": "Iteration.createIteration(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 12810915800,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I select the project",
-            "match": {
-              "location": "Iteration.selectProject()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 31293064100,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "I create a story \"story1\" inside of the iteration",
-            "match": {
-              "arguments": [
-                {
-                  "val": "story1",
-                  "offset": 18
-                }
-              ],
-              "location": "Story.createStory(String)"
-            },
-            "keyword": "And "
+            "line": 1,
+            "name": "@Login"
           }
         ]
       },
       {
+        "before": [
+          {
+            "result": {
+              "duration": 1037955900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Login.logOutUser()"
+            }
+          }
+        ],
         "line": 21,
-        "name": "Create tasks inside of a story",
+        "name": "Enter to AgileFant with a invalid account",
         "description": "",
-        "id": "tasks;create-tasks-inside-of-a-story;;2",
+        "id": "login;enter-to-agilefant-with-a-invalid-account;;2",
         "after": [
           {
             "result": {
-              "duration": 468500,
+              "duration": 347500,
               "status": "passed"
             },
             "match": {
               "location": "GlobalHooks.embedScreenshot(Scenario)"
-            }
-          },
-          {
-            "result": {
-              "duration": 23876167300,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Task.deleteTaskAndProduct()"
             }
           }
         ],
@@ -171,70 +111,10 @@
         "steps": [
           {
             "result": {
-              "duration": 7710711200,
+              "duration": 792500,
               "status": "passed"
             },
             "line": 15,
-            "name": "I create a task \"task1\" inside of a story",
-            "match": {
-              "arguments": [
-                {
-                  "val": "task1",
-                  "offset": 17
-                }
-              ],
-              "location": "Task.createTask(String)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 134741200,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "the task has the name entered",
-            "match": {
-              "location": "Task.verifyTaskHasTheNameEntered()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 131299600,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "the task is displayed with the state Not Started",
-            "match": {
-              "location": "Task.verifyTaskIsDisplayedWithTheStateNotStarted()"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@Tasks"
-          }
-        ]
-      },
-      {
-        "line": 4,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 428000,
-              "status": "passed"
-            },
-            "line": 5,
             "name": "I open to Login page",
             "match": {
               "location": "Login.goToLoginPage()"
@@ -243,11 +123,11 @@
           },
           {
             "result": {
-              "duration": 339941000,
+              "duration": 3145144000,
               "status": "passed"
             },
-            "line": 6,
-            "name": "I login as \"arielwagnerrojas@gmail.com\" with password \"nemo100\"",
+            "line": 16,
+            "name": "I login as \"arielwagnerrojas@gmail.com\" with password \"Client123\", with one incorrect",
             "match": {
               "arguments": [
                 {
@@ -255,134 +135,66 @@
                   "offset": 12
                 },
                 {
-                  "val": "nemo100",
+                  "val": "Client123",
                   "offset": 55
                 }
               ],
-              "location": "Login.loginSuccessful(String,String)"
+              "location": "Login.loginFailed(String,String)"
             },
-            "keyword": "And "
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 23774203700,
+              "duration": 194930300,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I create a product \"product1\"",
+            "line": 17,
+            "name": "should display an error",
             "match": {
-              "arguments": [
-                {
-                  "val": "product1",
-                  "offset": 20
-                }
-              ],
-              "location": "Product.createProduct(String)"
+              "location": "Login.anErrorIsDisplayed()"
             },
-            "keyword": "And "
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Login"
           },
           {
-            "result": {
-              "duration": 2318599000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "I create a project \"projectA\" inside of the product",
-            "match": {
-              "arguments": [
-                {
-                  "val": "projectA",
-                  "offset": 20
-                }
-              ],
-              "location": "Project.createProject(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2340496300,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "I select the product",
-            "match": {
-              "location": "Project.selectProduct()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2142559000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I create an iteration \"iteration1\" inside of the project",
-            "match": {
-              "arguments": [
-                {
-                  "val": "iteration1",
-                  "offset": 23
-                }
-              ],
-              "location": "Iteration.createIteration(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 13335581700,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I select the project",
-            "match": {
-              "location": "Iteration.selectProject()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 31360117000,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "I create a story \"story1\" inside of the iteration",
-            "match": {
-              "arguments": [
-                {
-                  "val": "story1",
-                  "offset": 18
-                }
-              ],
-              "location": "Story.createStory(String)"
-            },
-            "keyword": "And "
+            "line": 13,
+            "name": "@LoginError"
           }
         ]
       },
       {
-        "line": 31,
-        "name": "Create tasks inside of a story",
+        "before": [
+          {
+            "result": {
+              "duration": 94000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Login.logOutUser()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "Enter to AgileFant with a invalid account",
         "description": "",
-        "id": "tasks;create-tasks-inside-of-a-story;;2",
+        "id": "login;enter-to-agilefant-with-a-invalid-account;;3",
         "after": [
           {
             "result": {
-              "duration": 189500,
+              "duration": 149700,
               "status": "passed"
             },
             "match": {
               "location": "GlobalHooks.embedScreenshot(Scenario)"
-            }
-          },
-          {
-            "result": {
-              "duration": 23808429900,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Task.deleteTaskAndProduct()"
             }
           }
         ],
@@ -391,79 +203,76 @@
         "steps": [
           {
             "result": {
-              "duration": 6515864300,
+              "duration": 3438600,
               "status": "passed"
             },
-            "line": 24,
-            "name": "I create a task \"task1\" inside of a story",
+            "line": 15,
+            "name": "I open to Login page",
+            "match": {
+              "location": "Login.goToLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1605771900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I login as \"test@gmail.com\" with password \"nemo100\", with one incorrect",
             "match": {
               "arguments": [
                 {
-                  "val": "task1",
-                  "offset": 17
+                  "val": "test@gmail.com",
+                  "offset": 12
+                },
+                {
+                  "val": "nemo100",
+                  "offset": 43
                 }
               ],
-              "location": "Task.createTask(String)"
+              "location": "Login.loginFailed(String,String)"
             },
             "matchedColumns": [
-              0
+              0,
+              1
             ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 5890271600,
+              "duration": 277904600,
               "status": "passed"
             },
-            "line": 25,
-            "name": "I change task state to Ready",
+            "line": 17,
+            "name": "should display an error",
             "match": {
-              "location": "Task.changeTaskStateToReady()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 192529600,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "the state of the task is Ready",
-            "match": {
-              "location": "Task.verifyStateOfTheTaskIsReady()"
+              "location": "Login.anErrorIsDisplayed()"
             },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 107339800,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "the story state should be In Progress",
-            "match": {
-              "location": "Task.verifyStoryStateShouldBeInProgress()"
-            },
-            "keyword": "And "
           }
         ],
         "tags": [
           {
             "line": 1,
-            "name": "@Tasks"
+            "name": "@Login"
+          },
+          {
+            "line": 13,
+            "name": "@LoginError"
           }
         ]
       }
     ],
-    "name": "Tasks",
+    "name": "Login",
     "description": "",
-    "id": "tasks",
+    "id": "login",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/scenarios.tasks.feature",
+    "uri": "src/test/resources/features/scenarios.login.feature",
     "tags": [
       {
         "line": 1,
-        "name": "@Tasks"
+        "name": "@Login"
       }
     ]
   }

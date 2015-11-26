@@ -17,9 +17,6 @@ public class NavigateBacklogPage extends BasePageObject{
     @FindBy(xpath = "//div[contains(@class, 'menu transition')]//a[contains(@href, 'Logout')]")
     WebElement logOutBtn;
 
-    @FindBy(id = "submitbutton")
-    WebElement loginBtn;
-
     @FindBy(xpath = "//span[contains(@ng-if, 'loggedInUser')]")
     WebElement adminLbl;
 

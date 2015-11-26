@@ -44,6 +44,8 @@ public class LeftMenuPage extends BasePageObject {
 
     By displayIteration = By.xpath("//a[contains(@class, 'node-type-iteration')]");
 
+    By displayCreateProductBtn = By.xpath("//li[@id='createNewProduct']");
+
     public LeftMenuPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
@@ -60,6 +62,7 @@ public class LeftMenuPage extends BasePageObject {
     }
 
     public CreateProductPage clickCreateNewProduct(){
+        wait.until(ExpectedConditions.presenceOfElementLocated(displayCreateProductBtn));
         createNewProductBtn.click();
         return new CreateProductPage();
     }

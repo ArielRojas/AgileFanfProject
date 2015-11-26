@@ -11,6 +11,7 @@ Feature: Tasks
     And I select the project
     And I create a story "story1" inside of the iteration
 
+  @Task
   Scenario Outline: Create tasks inside of a story
     When  I create a task "<task>" inside of a story
     Then the task has the name entered
@@ -20,6 +21,7 @@ Feature: Tasks
       | task  |
       | task1 |
 
+  @Task
   Scenario Outline: Create tasks inside of a story
     When  I create a task "<task>" inside of a story
       And I change task state to Ready

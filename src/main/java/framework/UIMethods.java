@@ -1,19 +1,12 @@
 package framework;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import java.util.concurrent.TimeUnit;
 
 /**
  * Created by ArielWagner on 13/11/2015.
  */
 public class UIMethods {
-
-    public static void doubleClick(WebElement webElement) {
-        Actions action = new Actions(DriverManager.getManager().getDriver());
-        action.doubleClick(webElement);
-        action.perform();
-    }
 
     public static boolean isElementDisplayed(By locator) {
         try {
@@ -28,5 +21,9 @@ public class UIMethods {
             DriverManager.getManager().getDriver().manage().timeouts()
                     .implicitlyWait(10, TimeUnit.SECONDS);
         }
+    }
+
+    public static void refresh() {
+        DriverManager.getManager().getDriver().navigate().refresh();
     }
 }

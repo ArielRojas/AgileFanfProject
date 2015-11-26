@@ -50,10 +50,12 @@ public class RunCukesTest extends AbstractTestNGCucumberTests {
 
     @AfterMethod
     public void afterFeatureExecution(){
-        try {
-            CommonMethods.logOut();
-        } catch (Exception e) {
-            logger.error("Unable to log out", e);
+        if(CommonMethods.isLogIn()) {
+            try {
+                CommonMethods.logOut();
+            } catch (Exception e) {
+                logger.error("Unable to log out", e);
+            }
         }
     }
 }

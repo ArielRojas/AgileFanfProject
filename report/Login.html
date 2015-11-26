@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cucumber-JVM Html Reports - Tag: @Tasks </title>
+    <title>Cucumber-JVM Html Reports - Tag: @Login </title>
     <link rel="stylesheet" href="blue/css/style.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="blue/css/skin/style.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="blue/css/960.css" type="text/css" media="screen" />
@@ -241,7 +241,7 @@ table.data-table td {
     <div id="fullwidth_gradient">
         <div class="container_12">
             <div class="grid_9 heading">
-                <h2>Result for <span style="color:#66CCEE;">@Tasks</span> in Build: 1</h2>
+                <h2>Result for <span style="color:#66CCEE;">@Login</span> in Build: 1</h2>
                             </div>
         </div>
     </div>
@@ -274,18 +274,18 @@ table.data-table td {
     <th id="stats-header-status">Status</th>
 </tr>
                     <tr>
-                        <td><a href="Tasks.html">@Tasks</a></td>
-                        <td>2</td>
-                        <td>2</td>
+                        <td><a href="Login.html">@Login</a></td>
+                        <td>3</td>
+                        <td>3</td>
                         <td>0</td>
-                        <td>7</td>
-                        <td>7</td>
+                        <td>9</td>
+                        <td>9</td>
                         <td >0</td>
                         <td >0</td>
                         <td >0</td>
                         <td >0</td>
                         <td >0</td>
-                        <td style="text-align:right;white-space:nowrap">20s 682ms</td>
+                        <td style="text-align:right;white-space:nowrap">05s 900ms</td>
                         <td style="background-color: #00CE00;">passed</td></tr>
 
                 </table>
@@ -294,33 +294,44 @@ table.data-table td {
 
         <div style="color:black;">
                             <div style="margin-bottom:20px;width:100%">
-                    <div><a href="test-resources-features-scenarios.tasks.feature.html">View Feature File</a></div>
-                <div class="feature-tags"><a href="Tasks.html">@Tasks</a></div>
-                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Create tasks inside of a story</span></div>
-                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I create a task &quot;task1&quot; inside of a story</span><span class="step-duration">07s 710ms</span></div>
+                    <div><a href="test-resources-features-scenarios.login.feature.html">View Feature File</a></div>
+                <div class="feature-tags"><a href="Login.html">@Login</a></div>
+                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Enter to AgileFant with a valid account</span></div>
+                                  <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I open to Login page</span><span class="step-duration">340ms</span></div>
                     
                                     <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">the task has the name entered</span><span class="step-duration">134ms</span></div>
+                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I login as &quot;arielwagnerrojas@gmail.com&quot; with password &quot;nemo100&quot;</span><span class="step-duration">256ms</span></div>
                     
                                     <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">the task is displayed with the state Not Started</span><span class="step-duration">131ms</span></div>
+                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">I should login successfully</span><span class="step-duration">075ms</span></div>
                     
                                     <div class="output-data"></div>
                                 </div>
                             <div style="margin-bottom:20px;width:100%">
-                    <div><a href="test-resources-features-scenarios.tasks.feature.html">View Feature File</a></div>
-                <div class="feature-tags"><a href="Tasks.html">@Tasks</a></div>
-                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Create tasks inside of a story</span></div>
-                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I create a task &quot;task1&quot; inside of a story</span><span class="step-duration">06s 515ms</span></div>
+                    <div><a href="test-resources-features-scenarios.login.feature.html">View Feature File</a></div>
+                <div class="feature-tags"><a href="Login.html">@Login</a>,<a href="LoginError.html">@LoginError</a></div>
+                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Enter to AgileFant with a invalid account</span></div>
+                                  <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I open to Login page</span><span class="step-duration">000ms</span></div>
                     
                                     <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I change task state to Ready</span><span class="step-duration">05s 890ms</span></div>
+                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I login as &quot;arielwagnerrojas@gmail.com&quot; with password &quot;Client123&quot;, with one incorrect</span><span class="step-duration">03s 145ms</span></div>
                     
                                     <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">the state of the task is Ready</span><span class="step-duration">192ms</span></div>
+                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">should display an error</span><span class="step-duration">194ms</span></div>
                     
                                     <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">the story state should be In Progress</span><span class="step-duration">107ms</span></div>
+                                </div>
+                            <div style="margin-bottom:20px;width:100%">
+                    <div><a href="test-resources-features-scenarios.login.feature.html">View Feature File</a></div>
+                <div class="feature-tags"><a href="Login.html">@Login</a>,<a href="LoginError.html">@LoginError</a></div>
+                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Enter to AgileFant with a invalid account</span></div>
+                                  <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I open to Login page</span><span class="step-duration">003ms</span></div>
+                    
+                                    <div class="output-data"></div>
+                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I login as &quot;test@gmail.com&quot; with password &quot;nemo100&quot;, with one incorrect</span><span class="step-duration">01s 605ms</span></div>
+                    
+                                    <div class="output-data"></div>
+                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">should display an error</span><span class="step-duration">277ms</span></div>
                     
                                     <div class="output-data"></div>
                                 </div>
@@ -331,7 +342,7 @@ table.data-table td {
     <div class="container_12">
         <div class="grid_12 hr"></div>
         <div class="grid_12 footer">
-            <p style="text-align:center;"><a href="https://github.com/masterthought/jenkins-cucumber-jvm-reports-plugin-java">Cucumber-JVM Jenkins Report Plugin</a> - version: cucumber-reporting-0.1.0 - 26-11-2015 11:21:36</p>
+            <p style="text-align:center;"><a href="https://github.com/masterthought/jenkins-cucumber-jvm-reports-plugin-java">Cucumber-JVM Jenkins Report Plugin</a> - version: cucumber-reporting-0.1.0 - 26-11-2015 17:30:23</p>
         </div>
     </div>
     <div class="clear"></div>
