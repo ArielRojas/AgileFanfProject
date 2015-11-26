@@ -41,7 +41,7 @@ public class IterationPage extends BasePageObject {
     WebElement iterationNameLbl;
 
     @FindBy(xpath = "//div[contains(@class, 'menu menubar')]//a[@data-tab='board']")
-    WebElement boardLnk;
+    WebElement boardTab;
 
     @FindBy(xpath = "//a[@data-tab='list']")
     WebElement listLnk;
@@ -165,7 +165,7 @@ public class IterationPage extends BasePageObject {
     }
 
     public BoardPage clickLinkBoard(){
-        boardLnk.click();
+        boardTab.click();
         return new BoardPage();
     }
 

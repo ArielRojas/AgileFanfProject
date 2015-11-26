@@ -3,6 +3,7 @@ common\CommonMethods.class
 steps\Story.class
 steps\Project.class
 common\Error.class
+steps\Task.class
 steps\Iteration.class
 steps\Login.class
 steps\hooks\GlobalHooks.class

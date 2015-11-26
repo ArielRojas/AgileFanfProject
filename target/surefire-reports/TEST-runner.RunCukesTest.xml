@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="runner.RunCukesTest" time="281.193" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="runner.RunCukesTest" time="218.546" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="cucumber.options" value="src/test/resources/features/scenarios.stories.feature"/>
+    <property name="cucumber.options" value="src/test/resources/features/scenarios.tasks.feature"/>
     <property name="sun.boot.library.path" value="C:\Java\jdk1.8.0_65\jre\bin"/>
     <property name="java.vm.version" value="25.65-b01"/>
     <property name="user.country.format" value="ES"/>
@@ -45,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Java\jdk1.8.0_65\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dcucumber.options=src/test/resources/features/scenarios.stories.feature"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dcucumber.options=src/test/resources/features/scenarios.tasks.feature"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="user.language.format" value="es"/>
@@ -65,5 +65,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="feature" classname="runner.RunCukesTest" time="281.193"/>
+  <testcase name="feature" classname="runner.RunCukesTest" time="218.546"/>
 </testsuite>

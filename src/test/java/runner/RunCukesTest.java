@@ -19,13 +19,14 @@ import ui.PageTransporter;
 
 public class RunCukesTest extends AbstractTestNGCucumberTests {
 
-    private static Logger log = Logger.getLogger("RunCukesTest");
+    private static Logger logger = Logger.getLogger("RunCukesTest");
 
     @BeforeTest
     public void beforeExecution(){
         try{
             PageTransporter.getInstance().navigateToLoginPage();
         } catch(Exception e){
+            logger.error("Unable to open the LoginPage", e);
         }
     }
 
@@ -34,6 +35,7 @@ public class RunCukesTest extends AbstractTestNGCucumberTests {
         try{
             CommonMethods.logIn("arielwagnerrojas@gmail.com", "nemo100");
         } catch(Exception e){
+            logger.error("Unable to log in", e);
         }
     }
 
@@ -42,6 +44,7 @@ public class RunCukesTest extends AbstractTestNGCucumberTests {
         try {
             DriverManager.getManager().quitDriver();
         } catch (Exception e) {
+            logger.error("Unable to quit the driver", e);
         }
     }
 
@@ -50,6 +53,7 @@ public class RunCukesTest extends AbstractTestNGCucumberTests {
         try {
             CommonMethods.logOut();
         } catch (Exception e) {
+            logger.error("Unable to log out", e);
         }
     }
 }

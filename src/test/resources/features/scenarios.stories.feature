@@ -37,3 +37,13 @@ Feature: Stories
       Examples:
         |  story   |
         |  story1  |
+
+  @createStory
+  Scenario Outline: Change the state of one story to Bloqued
+    When I create a story "<story>" inside of the iteration
+    And I change story state to Ready
+    Then the state of the story is Ready
+
+    Examples:
+      |  story   |
+      |  story1  |

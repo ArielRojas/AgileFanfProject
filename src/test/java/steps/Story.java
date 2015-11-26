@@ -3,7 +3,6 @@ package steps;
 import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import ui.pages.BoardPage;
 import ui.pages.MainPage;
 import ui.pages.IterationPage;
 import ui.pages.ProductPage;
@@ -17,7 +16,6 @@ public class Story {
 
     MainPage mainPage;
     IterationPage iterationPage;
-    BoardPage boardPage;
     ProductPage productPage;
     String storyName;
 

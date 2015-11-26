@@ -1,2 +1,3 @@
 ui\pages\ProductPage.class
 framework\DriverManager.class
+ui\pages\StoryPage.class

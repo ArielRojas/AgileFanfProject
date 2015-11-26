@@ -22,9 +22,6 @@ public class DriverManager {
     }
 
     private void initializeDriver() {
-
-        //System.setProperty("webdriver.chrome.driver", "src/main/tools/chromedriver.exe");
-        //driver = new ChromeDriver();
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, 30, 100);
