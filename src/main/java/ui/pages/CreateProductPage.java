@@ -22,6 +22,9 @@ public class CreateProductPage extends BasePageObject {
     @FindBy(xpath = "//span[contains(text(),'Ok')]")
     WebElement OkBtn;
 
+    /**
+     * This method is the constructor
+     */
     public CreateProductPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
@@ -32,12 +35,21 @@ public class CreateProductPage extends BasePageObject {
         wait.until(ExpectedConditions.visibilityOf(createProductWindowTitleLbl));
     }
 
+    /**
+     * This method allows set the product name
+     * @param product
+     * @return the CreateProduct Page
+     */
     public CreateProductPage setProductName(String product){
         productNameInput.clear();
         productNameInput.sendKeys(product);
         return this;
     }
 
+    /**
+     * This method allows click on Ok button for create a product
+     * @return the Product Page
+     */
     public ProductPage clickOk(){
         OkBtn.click();
         return new ProductPage();

@@ -46,6 +46,9 @@ public class LeftMenuPage extends BasePageObject {
 
     By displayCreateProductBtn = By.xpath("//li[@id='createNewProduct']");
 
+    /**
+     * This method is the constructor
+     */
     public LeftMenuPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
@@ -56,50 +59,89 @@ public class LeftMenuPage extends BasePageObject {
         wait.until(ExpectedConditions.visibilityOf(createNewBtn));
     }
 
+    /**
+     * This method allows press the Create New button
+     */
     public void clickCreateNew() {
         createNewBtn.click();
         wait.until(ExpectedConditions.visibilityOf(userBtn));
     }
 
+    /**
+     * This method allows press the Product option
+     * @return the CreateProduct page
+     */
     public CreateProductPage clickCreateNewProduct(){
         wait.until(ExpectedConditions.presenceOfElementLocated(displayCreateProductBtn));
         createNewProductBtn.click();
         return new CreateProductPage();
     }
 
+    /**
+     * This method allows press the Project option
+     * @return the CreateProject page
+     */
     public CreateProjectPage clickCreateNewProject(){
         createNewProjectBtn.click();
         return new CreateProjectPage();
     }
 
+    /**
+     * This method allows press the Iteration option
+     * @return the CreateIteration page
+     */
     public CreateIterationPage clickCreateNewIteration(){
         createNewIterationBtn.click();
         return new CreateIterationPage();
     }
 
+    /**
+     * This method allows press the product link
+     * @return Product page
+     */
     public ProductPage clickLinkProduct(){
         productItemLnk.click();
         return new ProductPage();
     }
 
+    /**
+     * This method allows press the iteration link
+     * @return the Iteration page
+     */
     public IterationPage clickLinkIteration(){
         iterationItemLnk.click();
         wait.until(ExpectedConditions.visibilityOf(iterationNameLbl));
         return new IterationPage();
     }
 
+    /**
+     * This method allows get the project name
+     * @return the project name
+     */
     public String getProjectItemName(){
         return projectItemLnk.getText();
     }
 
+    /**
+     * This method allows get the iteration name
+     * @return the iteration name
+     */
     public String getIterationItemName(){
         return iterationItemLnk.getText();
     }
 
+    /**
+     * This method allows verify if the project name is displayed
+     * @return false or true
+     */
     public Boolean isProjectNameDisplayed(){
         return UIMethods.isElementDisplayed(displayProject);
     }
 
+    /**
+     * This method allows verify if the iteration name is displayed
+     * @return false or true
+     */
     public Boolean isIterationNameDisplayed(){
         return UIMethods.isElementDisplayed(displayIteration);
     }

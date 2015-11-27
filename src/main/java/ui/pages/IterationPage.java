@@ -87,6 +87,9 @@ public class IterationPage extends BasePageObject {
 
     By displayStory = By.xpath("//div[contains(@class, 'storyState')]");
 
+    /**
+     * This method is the constructor
+     */
     public IterationPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
@@ -97,6 +100,10 @@ public class IterationPage extends BasePageObject {
         wait.until(ExpectedConditions.visibilityOf(iterationNameLbl));
     }
 
+    /**
+     * This method lets create a story
+     * @param story
+     */
     public void createStory(String story) {
         createStoryBtn.click();
         nameStoryTextArea.clear();
@@ -108,67 +115,123 @@ public class IterationPage extends BasePageObject {
         saveBtn.click();
     }
 
+    /**
+     * This method allows get the story name
+     * @return the story name
+     */
     public String getStoryName(){
         return storyNameLbl.getText();
     }
 
+    /**
+     * This method allows get the in progress state
+     * @return the in progress state
+     */
     public String getInProgressState(){
         return inProgressOption.getText();
     }
 
+    /**
+     * This method allows get the pending state
+     * @return the pending state
+     */
     public String getPendingState(){
         return pendingOption.getText();
     }
 
+    /**
+     * This method allows get the bloqued state
+     * @return the bloqued state
+     */
     public String getBloquedState(){
         return bloquedOption.getText();
     }
 
+    /**
+     * This method allows get the ready state
+     * @return the ready state
+     */
     public String getReadyState(){
         return readyOption.getText();
     }
 
+    /**
+     * This method allows get the done state
+     * @return the done state
+     */
     public String getDoneState(){
         return doneOption.getText();
     }
 
+    /**
+     * This method allows get the deferred state
+     * @return the deferred state
+     */
     public String getDeferredState(){
         return deferredOption.getText();
     }
 
+    /**
+     * This method allows press the story state
+     */
     public void clickStoreState(){
         storeStateToolTip.click();
     }
 
+    /**
+     * This method allows press the in progress state for a story
+     */
     public void clickInProgressState(){
         inProgressStateOption.click();
     }
 
+    /**
+     * This method allows press the pending state for a story
+     */
     public void clickPendingState(){
         pendingStateOption.click();
     }
 
+    /**
+     * This method allows press the bloqued state for a story
+     */
     public void clickBloquedState(){
         bloquedStateOption.click();
     }
 
+    /**
+     * This method lets press the ready state for a story
+     */
     public void clickReadyState(){
         readyStateOption.click();
     }
 
+    /**
+     * This method allows press the done state for a story
+     */
     public void clickDoneState(){
         doneStateOption.click();
     }
 
+    /**
+     * This method allows press the deferred state for a story
+     */
     public void clickDeferredState(){
         deferredStateOption.click();
     }
 
+    /**
+     * This method allows press the board tab
+     */
     public BoardPage clickLinkBoard(){
         boardTab.click();
         return new BoardPage();
     }
 
+    /**
+     * This method allows verify if the story name is displayed
+     * @return false or true
+     */
     public Boolean isStoryNameDisplayed(){
         return UIMethods.isElementDisplayed(displayStory);
     }

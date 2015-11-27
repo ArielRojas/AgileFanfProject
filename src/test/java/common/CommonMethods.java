@@ -11,6 +11,11 @@ public class CommonMethods {
     public static boolean isLogin;
     public static boolean isLogOut;
 
+    /**
+     * This method allows log in with an username and password
+     * @param username
+     * @param password
+     */
     public static void logIn(String username, String password){
         LoginPage loginPage = new LoginPage();
         loginPage.loginSuccessful(username, password);
@@ -18,6 +23,9 @@ public class CommonMethods {
         isLogOut =false;
     }
 
+    /**
+     * This method allows log out
+     */
     public static void logOut(){
         MainPage mainPage = new MainPage();
         mainPage.getNavigateBacklogPage().logOut();
@@ -25,11 +33,11 @@ public class CommonMethods {
         isLogOut =true;
     }
 
+    /**
+     * This method allows verify if logged
+     * @return false or true
+     */
     public static boolean isLogIn(){
         return isLogin;
-    }
-
-    public static  boolean isLogOut(){
-        return isLogOut;
     }
 }

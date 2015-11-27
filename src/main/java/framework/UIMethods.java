@@ -8,6 +8,11 @@ import java.util.concurrent.TimeUnit;
  */
 public class UIMethods {
 
+    /**
+     * This method allows verify if an element is displayed
+     * @param locator
+     * @return false or true
+     */
     public static boolean isElementDisplayed(By locator) {
         try {
             DriverManager.getManager().getDriver().manage().timeouts()
@@ -21,9 +26,5 @@ public class UIMethods {
             DriverManager.getManager().getDriver().manage().timeouts()
                     .implicitlyWait(10, TimeUnit.SECONDS);
         }
-    }
-
-    public static void refresh() {
-        DriverManager.getManager().getDriver().navigate().refresh();
     }
 }

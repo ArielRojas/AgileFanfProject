@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Base object used for pages and components
- * Created by silvia valencia on 3/27/2015.
+ * Created by Ariel Rojas on 11/11/2015.
  */
 public abstract class BasePageObject {
     protected WebDriver driver;

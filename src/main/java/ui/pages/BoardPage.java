@@ -17,12 +17,9 @@ public class BoardPage extends BasePageObject{
     @FindBy(xpath = "//div[contains(@class, 'menu menubar')]//a[@data-tab='board']")
     WebElement boardTab;
 
-    @FindBy(xpath = "//div[contains(@class, 'list-card')]//div[contains(@class, 'storyStateSTARTED')]")
-    WebElement stateInProgress;
-
-    @FindBy(xpath = "//div[contains(@class, 'list-card')]//div[contains(@class, 'storyStatePENDING')]")
-    WebElement statePending;
-
+    /**
+     * This method is the constructor
+     */
     public BoardPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
@@ -33,24 +30,12 @@ public class BoardPage extends BasePageObject{
         wait.until(ExpectedConditions.visibilityOf(boardTab));
     }
 
+    /**
+     * This method opens the story card
+     * @return the Story Page
+     */
     public StoryPage clickStoryCard(){
         storyCardContainer.click();
         return new StoryPage();
-    }
-
-    /**
-     *This method return the In Progress state
-     * @return
-     */
-    public String getStateInProgress(){
-        return stateInProgress.getText();
-    }
-
-    /**
-     *This method return the pending state
-     * @return
-     */
-    public String getStatePending(){
-        return statePending.getText();
     }
 }

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Cucumber-JVM Html Reports - Feature: Login </title>
+	<title>Cucumber-JVM Html Reports - Feature: Iterations </title>
 	<link rel="stylesheet" href="blue/css/style.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="blue/css/skin/style.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="blue/css/960.css" type="text/css" media="screen" />
@@ -287,19 +287,19 @@ table.data-table td {
                                         
                     
                     <tr>
-                        <td><a id="stats-Login" href="test-resources-features-scenarios.login.feature.html">Login</a></td>
-                                                <td id="stats-number-scenarios-Login">3</td>
-                        <td id="stats-number-scenarios-passed-Login">3</td>
-                        <td id="stats-number-scenarios-failed-Login">0</td>
-                        <td id="stats-number-steps-Login">9</td>
-                        <td id="stats-number-steps-passed-Login">9</td>
-                        <td id="stats-number-steps-failed-Login"    >0</td>
-                        <td id="stats-number-steps-skipped-Login"   >0</td>
-                        <td id="stats-number-steps-pending-Login"   >0</td>
-                        <td id="stats-number-steps-undefined-Login" >0</td>
-                        <td id="stats-number-steps-missing-Login"   >0</td>
-                        <td id="stats-duration-Login" style="text-align:right;white-space:nowrap">05s 900ms</td>
-                        <td id="stats-status-Login" style="background-color: #00CE00;">passed</td></tr>
+                        <td><a id="stats-Iterations" href="scenarios.iterations.feature.html">Iterations</a></td>
+                                                <td id="stats-number-scenarios-Iterations">1</td>
+                        <td id="stats-number-scenarios-passed-Iterations">1</td>
+                        <td id="stats-number-scenarios-failed-Iterations">0</td>
+                        <td id="stats-number-steps-Iterations">8</td>
+                        <td id="stats-number-steps-passed-Iterations">8</td>
+                        <td id="stats-number-steps-failed-Iterations"    >0</td>
+                        <td id="stats-number-steps-skipped-Iterations"   >0</td>
+                        <td id="stats-number-steps-pending-Iterations"   >0</td>
+                        <td id="stats-number-steps-undefined-Iterations" >0</td>
+                        <td id="stats-number-steps-missing-Iterations"   >0</td>
+                        <td id="stats-duration-Iterations" style="text-align:right;white-space:nowrap">44s 211ms</td>
+                        <td id="stats-status-Iterations" style="background-color: #00CE00;">passed</td></tr>
 
                 </table>
 
@@ -307,41 +307,36 @@ table.data-table td {
 
 		<div style="color:black;">
 
-            <div class="feature-tags"><a href="Login.html">@Login</a></div>
-            <div class="passed"><div class="feature-line"><span class="feature-keyword">Feature:</span> Login</div></div>
+            <div class="feature-tags"><a href="Iteration.html">@Iteration</a></div>
+            <div class="passed"><div class="feature-line"><span class="feature-keyword">Feature:</span> Iterations</div></div>
             
 
-                            <div class="feature-tags"><a href="Login.html">@Login</a></div>
-                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Enter to AgileFant with a valid account</span></div>
-                                  <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I open to Login page</span><span class="step-duration">340ms</span></div>
+                            <div class="feature-tags"></div>
+                <div class="passed"><span class="scenario-keyword">Background: </span></div>
+                                  <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I open to Login page</span><span class="step-duration">01s 047ms</span></div>
                     
                                       <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I login as &quot;arielwagnerrojas@gmail.com&quot; with password &quot;nemo100&quot;</span><span class="step-duration">256ms</span></div>
+                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I login as &quot;arielwagnerrojas@gmail.com&quot; with password &quot;nemo100&quot;</span><span class="step-duration">457ms</span></div>
                     
                                       <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">I should login successfully</span><span class="step-duration">075ms</span></div>
+                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I create a product &quot;product1&quot;</span><span class="step-duration">23s 386ms</span></div>
                     
                                       <div class="output-data"></div>
-                                            <div class="feature-tags"><a href="Login.html">@Login</a>,<a href="LoginError.html">@LoginError</a></div>
-                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Enter to AgileFant with a invalid account</span></div>
-                                  <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I open to Login page</span><span class="step-duration">000ms</span></div>
+                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I create a project &quot;projectA&quot; inside of the product</span><span class="step-duration">02s 240ms</span></div>
                     
                                       <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I login as &quot;arielwagnerrojas@gmail.com&quot; with password &quot;Client123&quot;, with one incorrect</span><span class="step-duration">03s 145ms</span></div>
+                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I select the product</span><span class="step-duration">01s 140ms</span></div>
                     
                                       <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">should display an error</span><span class="step-duration">194ms</span></div>
+                                            <div class="feature-tags"><a href="createIteration.html">@createIteration</a>,<a href="Iteration.html">@Iteration</a></div>
+                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Create an iteration</span></div>
+                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I create an iteration &quot;iteration1&quot; inside of the project</span><span class="step-duration">02s 322ms</span></div>
                     
                                       <div class="output-data"></div>
-                                            <div class="feature-tags"><a href="Login.html">@Login</a>,<a href="LoginError.html">@LoginError</a></div>
-                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Enter to AgileFant with a invalid account</span></div>
-                                  <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I open to Login page</span><span class="step-duration">003ms</span></div>
+                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I select the project</span><span class="step-duration">13s 379ms</span></div>
                     
                                       <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I login as &quot;test@gmail.com&quot; with password &quot;nemo100&quot;, with one incorrect</span><span class="step-duration">01s 605ms</span></div>
-                    
-                                      <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">should display an error</span><span class="step-duration">277ms</span></div>
+                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">verify that the iteration has the name entered</span><span class="step-duration">237ms</span></div>
                     
                                       <div class="output-data"></div>
                             
@@ -352,7 +347,7 @@ table.data-table td {
 	<div class="container_12">
 		<div class="grid_12 hr"></div>
 		<div class="grid_12 footer">
-            <p style="text-align:center;"><a href="https://github.com/masterthought/jenkins-cucumber-jvm-reports-plugin-java">Cucumber-JVM Jenkins Report Plugin</a> - version: cucumber-reporting-0.1.0 - 26-11-2015 17:30:23</p>
+            <p style="text-align:center;"><a href="https://github.com/masterthought/jenkins-cucumber-jvm-reports-plugin-java">Cucumber-JVM Jenkins Report Plugin</a> - version: cucumber-reporting-0.1.0 - 27-11-2015 09:54:52</p>
 		</div>
 	</div>
 	<div class="clear"></div>

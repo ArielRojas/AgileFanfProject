@@ -2,14 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cucumber-JVM Html Reports - Tag: @Login </title>
-    <link rel="stylesheet" href="blue/css/style.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="blue/css/skin/style.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="blue/css/960.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="blue/css/reset.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="blue/css/text.css" type="text/css" media="screen" />
-    <link rel="shortcut icon" href="blue/favicon.ico" />
-
+	<title>Cucumber-JVM Html Reports - Feature: Login </title>
+	<link rel="stylesheet" href="blue/css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="blue/css/skin/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="blue/css/960.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="blue/css/reset.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="blue/css/text.css" type="text/css" media="screen" />
+	<link rel="shortcut icon" href="blue/favicon.ico" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+    
 <style>
 
 .feature-keyword {
@@ -225,33 +228,41 @@ table.data-table td {
 }
 
 </style>
+<style>
+    .CodeMirror-scroll {
+      height: auto;
+      overflow-y: hidden;
+      overflow-x: auto;
+    }
+</style>
+
 </head>
 <body id="top">
-    <div id="fullwidth_header">
-        <div class="container_12">
-            <h1 class="grid_4 logo"><a href="feature-overview.html" class='ie6fix'>Cucumber</a></h1>
-            <div class="grid_6" id="nav">
-                <ul>
-                                        <li><a href="feature-overview.html">Feature Overview</a></li>
-                    <li><a href="tag-overview.html">Tag Overview</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div id="fullwidth_gradient">
-        <div class="container_12">
-            <div class="grid_9 heading">
-                <h2>Result for <span style="color:#66CCEE;">@Login</span> in Build: 1</h2>
-                            </div>
-        </div>
-    </div>
+	<div id="fullwidth_header">
+		<div class="container_12">
+			<h1 class="grid_4 logo"><a href="feature-overview.html" class='ie6fix'>Cucumber</a></h1>
+			<div class="grid_6" id="nav">
+				<ul>
+                    					<li><a href="tag-overview.html">Tag Overview</a></li>
+					<li><a href="feature-overview.html">Feature Overview</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="fullwidth_gradient">
+		<div class="container_12">
+			<div class="grid_9 heading">
+				<h2 id="feature-title">Feature Result for Build: 1</h2>
+			</div>
+		</div>
+	</div>
 
-    <div class="container_12">
-        <div class="grid_12">
+	<div class="container_12">
+		<div class="grid_12">
 
             <div>
                 <table class="stats-table">
-                    <tr>
+                                            <tr>
     <th></th>
     <th id="stats-header-scenarios" colspan="3">Scenarios</th>
     <th id="stats-header-steps" colspan="7">Steps</th>
@@ -273,77 +284,76 @@ table.data-table td {
     <th id="stats-header-duration">Duration</th>
     <th id="stats-header-status">Status</th>
 </tr>
+                                        
+                    
                     <tr>
-                        <td><a href="Login.html">@Login</a></td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>0</td>
-                        <td>9</td>
-                        <td>9</td>
-                        <td >0</td>
-                        <td >0</td>
-                        <td >0</td>
-                        <td >0</td>
-                        <td >0</td>
-                        <td style="text-align:right;white-space:nowrap">06s 849ms</td>
-                        <td style="background-color: #00CE00;">passed</td></tr>
+                        <td><a id="stats-Login" href="scenarios.login.feature.html">Login</a></td>
+                                                <td id="stats-number-scenarios-Login">3</td>
+                        <td id="stats-number-scenarios-passed-Login">3</td>
+                        <td id="stats-number-scenarios-failed-Login">0</td>
+                        <td id="stats-number-steps-Login">9</td>
+                        <td id="stats-number-steps-passed-Login">9</td>
+                        <td id="stats-number-steps-failed-Login"    >0</td>
+                        <td id="stats-number-steps-skipped-Login"   >0</td>
+                        <td id="stats-number-steps-pending-Login"   >0</td>
+                        <td id="stats-number-steps-undefined-Login" >0</td>
+                        <td id="stats-number-steps-missing-Login"   >0</td>
+                        <td id="stats-duration-Login" style="text-align:right;white-space:nowrap">06s 849ms</td>
+                        <td id="stats-status-Login" style="background-color: #00CE00;">passed</td></tr>
 
                 </table>
 
             </div>
 
-        <div style="color:black;">
-                            <div style="margin-bottom:20px;width:100%">
-                    <div><a href="scenarios.login.feature.html">View Feature File</a></div>
-                <div class="feature-tags"><a href="Login.html">@Login</a></div>
+		<div style="color:black;">
+
+            <div class="feature-tags"><a href="Login.html">@Login</a></div>
+            <div class="passed"><div class="feature-line"><span class="feature-keyword">Feature:</span> Login</div></div>
+            
+
+                            <div class="feature-tags"><a href="Login.html">@Login</a></div>
                 <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Enter to AgileFant with a valid account</span></div>
                                   <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I open to Login page</span><span class="step-duration">000ms</span></div>
                     
-                                    <div class="output-data"></div>
+                                      <div class="output-data"></div>
                                   <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I login as &quot;arielwagnerrojas@gmail.com&quot; with password &quot;nemo100&quot;</span><span class="step-duration">01s 451ms</span></div>
                     
-                                    <div class="output-data"></div>
+                                      <div class="output-data"></div>
                                   <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">I should login successfully</span><span class="step-duration">125ms</span></div>
                     
-                                    <div class="output-data"></div>
-                                </div>
-                            <div style="margin-bottom:20px;width:100%">
-                    <div><a href="scenarios.login.feature.html">View Feature File</a></div>
-                <div class="feature-tags"><a href="Login.html">@Login</a>,<a href="LoginError.html">@LoginError</a></div>
+                                      <div class="output-data"></div>
+                                            <div class="feature-tags"><a href="Login.html">@Login</a>,<a href="LoginError.html">@LoginError</a></div>
                 <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Enter to AgileFant with a invalid account</span></div>
                                   <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I open to Login page</span><span class="step-duration">000ms</span></div>
                     
-                                    <div class="output-data"></div>
+                                      <div class="output-data"></div>
                                   <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I login as &quot;arielwagnerrojas@gmail.com&quot; with password &quot;Client123&quot;, with one incorrect</span><span class="step-duration">02s 901ms</span></div>
                     
-                                    <div class="output-data"></div>
+                                      <div class="output-data"></div>
                                   <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">should display an error</span><span class="step-duration">346ms</span></div>
                     
-                                    <div class="output-data"></div>
-                                </div>
-                            <div style="margin-bottom:20px;width:100%">
-                    <div><a href="scenarios.login.feature.html">View Feature File</a></div>
-                <div class="feature-tags"><a href="Login.html">@Login</a>,<a href="LoginError.html">@LoginError</a></div>
+                                      <div class="output-data"></div>
+                                            <div class="feature-tags"><a href="Login.html">@Login</a>,<a href="LoginError.html">@LoginError</a></div>
                 <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Enter to AgileFant with a invalid account</span></div>
                                   <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I open to Login page</span><span class="step-duration">000ms</span></div>
                     
-                                    <div class="output-data"></div>
+                                      <div class="output-data"></div>
                                   <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I login as &quot;test@gmail.com&quot; with password &quot;nemo100&quot;, with one incorrect</span><span class="step-duration">01s 844ms</span></div>
                     
-                                    <div class="output-data"></div>
+                                      <div class="output-data"></div>
                                   <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">should display an error</span><span class="step-duration">178ms</span></div>
                     
-                                    <div class="output-data"></div>
-                                </div>
-                </div>
-    </div>
+                                      <div class="output-data"></div>
+                            
+	</div>
+	</div>
 
 
-    <div class="container_12">
-        <div class="grid_12 hr"></div>
-        <div class="grid_12 footer">
+	<div class="container_12">
+		<div class="grid_12 hr"></div>
+		<div class="grid_12 footer">
             <p style="text-align:center;"><a href="https://github.com/masterthought/jenkins-cucumber-jvm-reports-plugin-java">Cucumber-JVM Jenkins Report Plugin</a> - version: cucumber-reporting-0.1.0 - 27-11-2015 09:54:53</p>
-        </div>
-    </div>
-    <div class="clear"></div>
+		</div>
+	</div>
+	<div class="clear"></div>
 </body>

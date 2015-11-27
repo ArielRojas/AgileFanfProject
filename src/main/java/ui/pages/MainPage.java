@@ -20,6 +20,9 @@ public class MainPage extends BasePageObject{
     @FindBy(xpath = "//option[@value='0']")
     WebElement usernameOption;
 
+    /**
+     * This method is the constructor
+     */
     public MainPage(){
         leftMenuPage = new LeftMenuPage();
         navigateBacklogPage = new NavigateBacklogPage();
@@ -32,14 +35,26 @@ public class MainPage extends BasePageObject{
         wait.until(ExpectedConditions.visibilityOf(createNewBtn));
     }
 
+    /**
+     * This method allows get the username
+     * @return the username
+     */
     public String getUsername(){
         return usernameOption.getText();
     }
 
+    /**
+     * This method allows get the LeftMenu page
+     * @return the LeftMenu page
+     */
     public LeftMenuPage getLeftMenuPage(){
         return leftMenuPage;
     }
 
+    /**
+     * This method allows get the NavigateBacklog page
+     * @return the NavigateBacklog page
+     */
     public NavigateBacklogPage getNavigateBacklogPage(){
         return navigateBacklogPage;
     }

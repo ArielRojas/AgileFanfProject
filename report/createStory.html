@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cucumber-JVM Html Reports - Tag: @LoginError </title>
+    <title>Cucumber-JVM Html Reports - Tag: @createStory </title>
     <link rel="stylesheet" href="blue/css/style.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="blue/css/skin/style.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="blue/css/960.css" type="text/css" media="screen" />
@@ -241,7 +241,7 @@ table.data-table td {
     <div id="fullwidth_gradient">
         <div class="container_12">
             <div class="grid_9 heading">
-                <h2>Result for <span style="color:#66CCEE;">@LoginError</span> in Build: 1</h2>
+                <h2>Result for <span style="color:#66CCEE;">@createStory</span> in Build: 1</h2>
                             </div>
         </div>
     </div>
@@ -274,18 +274,18 @@ table.data-table td {
     <th id="stats-header-status">Status</th>
 </tr>
                     <tr>
-                        <td><a href="LoginError.html">@LoginError</a></td>
-                        <td>1</td>
-                        <td>1</td>
+                        <td><a href="createStory.html">@createStory</a></td>
+                        <td>4</td>
+                        <td>4</td>
                         <td>0</td>
-                        <td>3</td>
-                        <td>3</td>
+                        <td>11</td>
+                        <td>11</td>
                         <td >0</td>
                         <td >0</td>
                         <td >0</td>
                         <td >0</td>
                         <td >0</td>
-                        <td style="text-align:right;white-space:nowrap">03s 247ms</td>
+                        <td style="text-align:right;white-space:nowrap">02m 03s 041ms</td>
                         <td style="background-color: #00CE00;">passed</td></tr>
 
                 </table>
@@ -294,16 +294,55 @@ table.data-table td {
 
         <div style="color:black;">
                             <div style="margin-bottom:20px;width:100%">
-                    <div><a href="scenarios.login.feature.html">View Feature File</a></div>
-                <div class="feature-tags"><a href="Login.html">@Login</a>,<a href="LoginError.html">@LoginError</a></div>
-                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Enter to AgileFant with a invalid account</span></div>
-                                  <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I open to Login page</span><span class="step-duration">000ms</span></div>
+                    <div><a href="scenarios.stories.feature.html">View Feature File</a></div>
+                <div class="feature-tags"><a href="story.html">@story</a>,<a href="createStory.html">@createStory</a></div>
+                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Create a story</span></div>
+                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I create a story &quot;story1&quot; inside of the iteration</span><span class="step-duration">29s 163ms</span></div>
                     
                                     <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I login as &quot;arielwagnerrojas@gmail.com&quot; with password &quot;Client123&quot;, with one incorrect</span><span class="step-duration">02s 901ms</span></div>
+                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">the story has the name entered</span><span class="step-duration">297ms</span></div>
                     
                                     <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">should display an error</span><span class="step-duration">346ms</span></div>
+                                </div>
+                            <div style="margin-bottom:20px;width:100%">
+                    <div><a href="scenarios.stories.feature.html">View Feature File</a></div>
+                <div class="feature-tags"><a href="story.html">@story</a>,<a href="createStory.html">@createStory</a></div>
+                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Change the state of one story to In Progress</span></div>
+                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I create a story &quot;story1&quot; inside of the iteration</span><span class="step-duration">30s 008ms</span></div>
+                    
+                                    <div class="output-data"></div>
+                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I change story state to In progress</span><span class="step-duration">01s 488ms</span></div>
+                    
+                                    <div class="output-data"></div>
+                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">the state of the story is In Progress</span><span class="step-duration">106ms</span></div>
+                    
+                                    <div class="output-data"></div>
+                                </div>
+                            <div style="margin-bottom:20px;width:100%">
+                    <div><a href="scenarios.stories.feature.html">View Feature File</a></div>
+                <div class="feature-tags"><a href="story.html">@story</a>,<a href="createStory.html">@createStory</a></div>
+                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Change the state of one story to Done</span></div>
+                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I create a story &quot;story1&quot; inside of the iteration</span><span class="step-duration">29s 696ms</span></div>
+                    
+                                    <div class="output-data"></div>
+                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I change story state to Done</span><span class="step-duration">01s 296ms</span></div>
+                    
+                                    <div class="output-data"></div>
+                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">the state of the story is Done</span><span class="step-duration">199ms</span></div>
+                    
+                                    <div class="output-data"></div>
+                                </div>
+                            <div style="margin-bottom:20px;width:100%">
+                    <div><a href="scenarios.stories.feature.html">View Feature File</a></div>
+                <div class="feature-tags"><a href="story.html">@story</a>,<a href="createStory.html">@createStory</a></div>
+                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Change the state of one story to Bloqued</span></div>
+                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I create a story &quot;story1&quot; inside of the iteration</span><span class="step-duration">29s 641ms</span></div>
+                    
+                                    <div class="output-data"></div>
+                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I change story state to Ready</span><span class="step-duration">01s 017ms</span></div>
+                    
+                                    <div class="output-data"></div>
+                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">the state of the story is Ready</span><span class="step-duration">123ms</span></div>
                     
                                     <div class="output-data"></div>
                                 </div>

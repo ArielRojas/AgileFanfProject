@@ -6,7 +6,7 @@ import ui.pages.LoginPage;
 import org.apache.log4j.Logger;
 
 /**
- * Created by silvia valencia on 4/14/2015.
+ * Created by Ariel Rojas on 11/11/2015.
  */
 public class PageTransporter {
     private WebDriver driver = DriverManager.getManager().getDriver();

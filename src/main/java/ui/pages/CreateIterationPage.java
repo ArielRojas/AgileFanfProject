@@ -29,6 +29,9 @@ public class CreateIterationPage extends BasePageObject{
     @FindBy(xpath = "//a[contains(@class, 'node-type-iteration')]")
     WebElement iterationItemNameLnk;
 
+    /**
+     * This method is the constructor
+     */
     public CreateIterationPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
@@ -40,9 +43,9 @@ public class CreateIterationPage extends BasePageObject{
     }
 
     /**
-     *
+     * This method set the iteration name
      * @param iteration
-     * @return
+     * @return the CreateIteration Page
      */
     public CreateIterationPage setIterationName(String iteration){
         iterationNameInput.clear();
@@ -51,8 +54,8 @@ public class CreateIterationPage extends BasePageObject{
     }
 
     /**
-     *
-     * @return
+     * This method selects the project
+     * @return the CreateIteration Page
      */
     public CreateIterationPage selectProject(){
         projectNameInput.click();
@@ -61,8 +64,8 @@ public class CreateIterationPage extends BasePageObject{
     }
 
     /**
-     *
-     * @return
+     * This method allows click the Ok button for create an iteration
+     * @return the Product Page
      */
     public ProductPage clickOk(){
         OkBtn.click();

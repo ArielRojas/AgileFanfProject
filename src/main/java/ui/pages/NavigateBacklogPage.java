@@ -20,6 +20,9 @@ public class NavigateBacklogPage extends BasePageObject{
     @FindBy(xpath = "//span[contains(@ng-if, 'loggedInUser')]")
     WebElement adminLbl;
 
+    /**
+     * This method is the constructor
+     */
     public NavigateBacklogPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
@@ -30,6 +33,9 @@ public class NavigateBacklogPage extends BasePageObject{
         wait.until(ExpectedConditions.visibilityOf(adminLbl));
     }
 
+    /**
+     * This method allows log out
+     */
     public void logOut(){
         logOutdropDown.click();
         wait.until(ExpectedConditions.visibilityOf(logOutBtn));

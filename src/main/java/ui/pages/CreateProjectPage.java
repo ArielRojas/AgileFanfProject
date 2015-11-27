@@ -32,6 +32,9 @@ public class CreateProjectPage extends BasePageObject {
     @FindBy(xpath = "//span[contains(@title, 'edit product')]")
     WebElement productNameLbl;
 
+    /**
+     * This method is the constructor
+     */
     public CreateProjectPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
@@ -42,18 +45,31 @@ public class CreateProjectPage extends BasePageObject {
         wait.until(ExpectedConditions.visibilityOf(createProjectWindowTitleLbl));
     }
 
+    /**
+     * This method allows set the project name
+     * @param project
+     * @return the CreateProject page
+     */
     public CreateProjectPage setProjectName(String project){
         projectNameInput.clear();
         projectNameInput.sendKeys(project);
         return this;
     }
 
+    /**
+     * This method allows select the product to relate with the project
+     * @return the CreateProject page
+     */
     public CreateProjectPage selectProduct(){
         productNameInput.click();
         productSelectOption.click();
         return this;
     }
 
+    /**
+     * This method allows click on Ok button for create a project
+     * @return Product page
+     */
     public ProductPage clickOk(){
         OkBtn.click();
         wait.until(ExpectedConditions.visibilityOf(productNameLbl));

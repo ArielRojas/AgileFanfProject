@@ -33,6 +33,9 @@ public class ProductPage extends BasePageObject{
 
     By displayProduct = By.xpath("//span[contains(@title, 'edit product')]");
 
+    /**
+     * This method is the constructor
+     */
     public ProductPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
@@ -43,6 +46,10 @@ public class ProductPage extends BasePageObject{
         wait.until(ExpectedConditions.visibilityOf(productNameLbl));
     }
 
+    /**
+     * This method allows delete the product
+     * @return the Main page
+     */
     public MainPage deleteProduct(){
         actionsDropDown.click();
         deleteBtn.click();
@@ -52,10 +59,18 @@ public class ProductPage extends BasePageObject{
         return new MainPage();
     }
 
+    /**
+     * This method allows get the product name
+     * @return the product name
+     */
     public String getProductName(){
         return productNameLbl.getText();
     }
 
+    /**
+     * This method allows verify if the product name is displayed
+     * @return false or true
+     */
     public Boolean isProductNameDisplayed(){
         return UIMethods.isElementDisplayed(displayProduct);
     }

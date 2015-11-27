@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import ui.BasePageObject;
 
 /**
- * Created by silvia valencia on 3/24/2015.
+ * Created by Ariel Rojas on 11/11/2015.
  */
 public class LoginPage extends BasePageObject {
 
@@ -33,6 +33,9 @@ public class LoginPage extends BasePageObject {
 
     By error = By.xpath("//p[@class='login-form--error-title']");
 
+    /**
+     * This method is the constructor
+     */
     public LoginPage() {
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
@@ -43,9 +46,9 @@ public class LoginPage extends BasePageObject {
     }
 
     /**
-     *
+     * This method sets the username
      * @param userName
-     * @return
+     * @return the Login page
      */
     private LoginPage setUserNameInput(String userName) {
         userNameInput.clear();
@@ -54,9 +57,9 @@ public class LoginPage extends BasePageObject {
     }
 
     /**
-     *
+     * This method sets the password
      * @param password
-     * @return
+     * @return the Login page
      */
     private LoginPage setPasswordInput(String password) {
         passwordInput.clear();
@@ -65,8 +68,8 @@ public class LoginPage extends BasePageObject {
     }
 
     /**
-     *
-     * @return
+     * This method allows press the logIn button having a valid account
+     * @return the Main page
      */
     private MainPage clickLoginBtnSuccessful() {
         loginBtn.click();
@@ -75,7 +78,7 @@ public class LoginPage extends BasePageObject {
     }
 
     /**
-     *
+     * This method allows press the LogIn button, having a invalid account
      * @return
      */
     public LoginPage clickLoginBtnFailed() {
@@ -84,7 +87,7 @@ public class LoginPage extends BasePageObject {
     }
 
     /**
-     *
+     * This method allows set the username and password
      * @param userName
      * @param password
      */
@@ -94,7 +97,7 @@ public class LoginPage extends BasePageObject {
     }
 
     /**
-     *
+     * This method allows submit the username and password to login method, having a valid account
      * @param userName
      * @param password
      * @return
@@ -105,7 +108,7 @@ public class LoginPage extends BasePageObject {
     }
 
     /**
-     *
+     * This method allows submit the username and password to login method, having a invalid account
      * @param userName
      * @param password
      * @return
@@ -116,16 +119,16 @@ public class LoginPage extends BasePageObject {
     }
 
     /**
-     *
-     * @return
+     * This method allows get the error message
+     * @return the error message
      */
     public String getError(){
         return errorLbl.getText();
     }
 
     /**
-     *
-     * @return
+     * This method allows verify if the error message is displayed
+     * @return false or true
      */
     public Boolean isErrorDisplayed(){
         return UIMethods.isElementDisplayed(error);

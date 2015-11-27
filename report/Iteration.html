@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cucumber-JVM Html Reports - Tag: @LoginError </title>
+    <title>Cucumber-JVM Html Reports - Tag: @Iteration </title>
     <link rel="stylesheet" href="blue/css/style.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="blue/css/skin/style.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="blue/css/960.css" type="text/css" media="screen" />
@@ -241,7 +241,7 @@ table.data-table td {
     <div id="fullwidth_gradient">
         <div class="container_12">
             <div class="grid_9 heading">
-                <h2>Result for <span style="color:#66CCEE;">@LoginError</span> in Build: 1</h2>
+                <h2>Result for <span style="color:#66CCEE;">@Iteration</span> in Build: 1</h2>
                             </div>
         </div>
     </div>
@@ -274,7 +274,7 @@ table.data-table td {
     <th id="stats-header-status">Status</th>
 </tr>
                     <tr>
-                        <td><a href="LoginError.html">@LoginError</a></td>
+                        <td><a href="Iteration.html">@Iteration</a></td>
                         <td>1</td>
                         <td>1</td>
                         <td>0</td>
@@ -285,7 +285,7 @@ table.data-table td {
                         <td >0</td>
                         <td >0</td>
                         <td >0</td>
-                        <td style="text-align:right;white-space:nowrap">03s 247ms</td>
+                        <td style="text-align:right;white-space:nowrap">15s 938ms</td>
                         <td style="background-color: #00CE00;">passed</td></tr>
 
                 </table>
@@ -294,16 +294,16 @@ table.data-table td {
 
         <div style="color:black;">
                             <div style="margin-bottom:20px;width:100%">
-                    <div><a href="scenarios.login.feature.html">View Feature File</a></div>
-                <div class="feature-tags"><a href="Login.html">@Login</a>,<a href="LoginError.html">@LoginError</a></div>
-                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Enter to AgileFant with a invalid account</span></div>
-                                  <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I open to Login page</span><span class="step-duration">000ms</span></div>
+                    <div><a href="scenarios.iterations.feature.html">View Feature File</a></div>
+                <div class="feature-tags"><a href="createIteration.html">@createIteration</a>,<a href="Iteration.html">@Iteration</a></div>
+                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Create an iteration</span></div>
+                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I create an iteration &quot;iteration1&quot; inside of the project</span><span class="step-duration">02s 322ms</span></div>
                     
                                     <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I login as &quot;arielwagnerrojas@gmail.com&quot; with password &quot;Client123&quot;, with one incorrect</span><span class="step-duration">02s 901ms</span></div>
+                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I select the project</span><span class="step-duration">13s 379ms</span></div>
                     
                                     <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">should display an error</span><span class="step-duration">346ms</span></div>
+                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">verify that the iteration has the name entered</span><span class="step-duration">237ms</span></div>
                     
                                     <div class="output-data"></div>
                                 </div>
