@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Cucumber-JVM Html Reports - Feature: Projects </title>
+	<title>Cucumber-JVM Html Reports - Feature: Board </title>
 	<link rel="stylesheet" href="blue/css/style.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="blue/css/skin/style.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="blue/css/960.css" type="text/css" media="screen" />
@@ -287,19 +287,19 @@ table.data-table td {
                                         
                     
                     <tr>
-                        <td><a id="stats-Projects" href="scenarios.projects.feature.html">Projects</a></td>
-                                                <td id="stats-number-scenarios-Projects">1</td>
-                        <td id="stats-number-scenarios-passed-Projects">1</td>
-                        <td id="stats-number-scenarios-failed-Projects">0</td>
-                        <td id="stats-number-steps-Projects">6</td>
-                        <td id="stats-number-steps-passed-Projects">6</td>
-                        <td id="stats-number-steps-failed-Projects"    >0</td>
-                        <td id="stats-number-steps-skipped-Projects"   >0</td>
-                        <td id="stats-number-steps-pending-Projects"   >0</td>
-                        <td id="stats-number-steps-undefined-Projects" >0</td>
-                        <td id="stats-number-steps-missing-Projects"   >0</td>
-                        <td id="stats-duration-Projects" style="text-align:right;white-space:nowrap">32s 449ms</td>
-                        <td id="stats-status-Projects" style="background-color: #00CE00;">passed</td></tr>
+                        <td><a id="stats-Board" href="scenarios.board.feature.html">Board</a></td>
+                                                <td id="stats-number-scenarios-Board">1</td>
+                        <td id="stats-number-scenarios-passed-Board">1</td>
+                        <td id="stats-number-scenarios-failed-Board">0</td>
+                        <td id="stats-number-steps-Board">9</td>
+                        <td id="stats-number-steps-passed-Board">9</td>
+                        <td id="stats-number-steps-failed-Board"    >0</td>
+                        <td id="stats-number-steps-skipped-Board"   >0</td>
+                        <td id="stats-number-steps-pending-Board"   >0</td>
+                        <td id="stats-number-steps-undefined-Board" >0</td>
+                        <td id="stats-number-steps-missing-Board"   >0</td>
+                        <td id="stats-duration-Board" style="text-align:right;white-space:nowrap">03s 557ms</td>
+                        <td id="stats-status-Board" style="background-color: #00CE00;">passed</td></tr>
 
                 </table>
 
@@ -307,30 +307,39 @@ table.data-table td {
 
 		<div style="color:black;">
 
-            <div class="feature-tags"><a href="Project.html">@Project</a></div>
-            <div class="passed"><div class="feature-line"><span class="feature-keyword">Feature:</span> Projects</div></div>
+            <div class="feature-tags"><a href="Board.html">@Board</a></div>
+            <div class="passed"><div class="feature-line"><span class="feature-keyword">Feature:</span> Board</div></div>
             
 
                             <div class="feature-tags"></div>
                 <div class="passed"><span class="scenario-keyword">Background: </span></div>
-                                  <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I open to Login page</span><span class="step-duration">000ms</span></div>
+                                  <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I open to Login page</span><span class="step-duration">722ms</span></div>
                     
                                       <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I login as &quot;arielwagnerrojas@gmail.com&quot; with password &quot;nemo100&quot;</span><span class="step-duration">345ms</span></div>
+                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I login as &quot;arielwagnerrojas@gmail.com&quot; with password &quot;nemo100&quot;</span><span class="step-duration">211ms</span></div>
                     
                                       <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I create a product &quot;product1&quot;</span><span class="step-duration">27s 186ms</span></div>
+                                            <div class="feature-tags"><a href="createBoard.html">@createBoard</a>,<a href="Board.html">@Board</a></div>
+                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Create a new board</span></div>
+                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I create a board &quot;scrum board&quot;</span><span class="step-duration">02s 621ms</span></div>
                     
                                       <div class="output-data"></div>
-                                            <div class="feature-tags"><a href="createProject.html">@createProject</a>,<a href="Project.html">@Project</a></div>
-                <div class="passed"><span class="scenario-keyword">Scenario Outline: </span> <span class="scenario-name">Create a project</span></div>
-                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I create a project &quot;projectA&quot; inside of the product</span><span class="step-duration">02s 640ms</span></div>
+                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I create the &quot;Product Backlog&quot; column inside of the board</span><span class="step-duration">000ms</span></div>
                     
                                       <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I select the product</span><span class="step-duration">01s 465ms</span></div>
+                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I create the &quot;Scrum Backlog&quot; column inside of the board</span><span class="step-duration">000ms</span></div>
                     
                                       <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">verify that the project has the name entered</span><span class="step-duration">811ms</span></div>
+                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I create the &quot;Current&quot; column inside of the board</span><span class="step-duration">000ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">I create the &quot;Done&quot; column inside of the board</span><span class="step-duration">000ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">the board should have the name placed</span><span class="step-duration">000ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                                  <div class="passed"><span class="step-keyword">And  </span><span class="step-name">the board should have the columns created</span><span class="step-duration">000ms</span></div>
                     
                                       <div class="output-data"></div>
                             

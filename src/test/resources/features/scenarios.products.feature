@@ -1,8 +1,8 @@
 @Product
 Feature: Products
   Background:
-    And I open to Login page
-    And I login as "arielwagnerrojas@gmail.com" with password "nemo100"
+    Given I open to Login page
+      And I login as "arielwagnerrojas@gmail.com" with password "nemo100"
 
     @createProduct
   Scenario Outline: Create a product

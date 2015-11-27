@@ -10,15 +10,13 @@ Feature: TasksFilter
       And I select the project
 
   @TaskFilter
-  Scenario Outline: Create tasks for an iteration
+  Scenario Outline: Filter a task
     When  I create the task "<task1>" for an iteration
-    And I create the task "<task2>" for the same iteration
-    And I create the task "<task3>" for the same iteration
-    And I filter the name of a task "<task1>" in the tasks filter
+      And I create the task "<task2>" for the same iteration
+      And I create the task "<task3>" for the same iteration
+      And I filter the name of a task "<task1>" in the tasks filter
     Then the task displayed should be the entered in the tasks filter
 
     Examples:
       | task1 | task2 | task3 |
       | task1 | task2 | task3 |
-
-

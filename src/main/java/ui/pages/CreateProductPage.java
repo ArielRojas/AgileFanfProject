@@ -55,7 +55,7 @@ public class CreateProductPage extends BasePageObject {
      */
     public ProductPage clickOk(){
         OkBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(productItemLnk));
+        //wait.until(ExpectedConditions.visibilityOf(productItemLnk));
         return new ProductPage();
     }
 }

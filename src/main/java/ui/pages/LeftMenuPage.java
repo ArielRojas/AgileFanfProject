@@ -25,6 +25,9 @@ public class LeftMenuPage extends BasePageObject {
     @FindBy(xpath = "//li[contains(@id, 'createNewIteration')]")
     WebElement createNewIterationBtn;
 
+    @FindBy(xpath = "//li[contains(@id, 'createNewBoard')]")
+    WebElement createNewBoardBtn;
+
     @FindBy(xpath = "//a[contains(@class, 'node-type-product')]")
     WebElement productItemLnk;
 
@@ -112,6 +115,15 @@ public class LeftMenuPage extends BasePageObject {
         iterationItemLnk.click();
         wait.until(ExpectedConditions.visibilityOf(iterationNameLbl));
         return new IterationPage();
+    }
+
+    /**
+     * This method allows press the create new board button
+     * @return CreateBoard page
+     */
+    public CreateBoardPage clickCreateNewBoard(){
+        createNewBoardBtn.click();
+        return new CreateBoardPage();
     }
 
     /**
