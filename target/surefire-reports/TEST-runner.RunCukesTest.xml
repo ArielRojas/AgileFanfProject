@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="runner.RunCukesTest" time="54.734" tests="6" errors="0" skipped="0" failures="0">
+<testsuite name="runner.RunCukesTest" time="103.942" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="cucumber.options" value="src/test/resources/features"/>
+    <property name="cucumber.options" value="src/test/resources/features/scenarios.tasks.filter.feature"/>
     <property name="sun.boot.library.path" value="C:\Java\jdk1.8.0_65\jre\bin"/>
     <property name="java.vm.version" value="25.65-b01"/>
     <property name="user.country.format" value="ES"/>
@@ -45,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Java\jdk1.8.0_65\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dcucumber.options=src/test/resources/features"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dcucumber.options=src/test/resources/features/scenarios.tasks.filter.feature"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="user.language.format" value="es"/>
@@ -65,10 +65,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="feature" classname="runner.RunCukesTest" time="54.734"/>
-  <testcase name="feature" classname="runner.RunCukesTest" time="8.373"/>
-  <testcase name="feature" classname="runner.RunCukesTest" time="33.925"/>
-  <testcase name="feature" classname="runner.RunCukesTest" time="39.009"/>
-  <testcase name="feature" classname="runner.RunCukesTest" time="372.016"/>
-  <testcase name="feature" classname="runner.RunCukesTest" time="208.167"/>
+  <testcase name="feature" classname="runner.RunCukesTest" time="103.942"/>
 </testsuite>

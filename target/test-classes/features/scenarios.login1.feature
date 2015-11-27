@@ -18,5 +18,6 @@ Feature: TasksFilter
     Then the task name displayed should be the entered in the tasks filter
 
     Examples:
-    | task1 | task2 | task3 |
-    | task1 | task2 | task3 |
+      | task1 | task2 | task3 |
+      | task1 | task2 | task3 |
+

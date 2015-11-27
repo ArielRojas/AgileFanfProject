@@ -85,7 +85,24 @@ public class IterationPage extends BasePageObject {
     @FindBy(xpath = "//div[contains(@class, 'storyStateDEFERRED')]")
     WebElement deferredOption;
 
+    @FindBy(xpath = "//input[@placeholder='Task name']")
+    WebElement searchTaskByName;
+
+    @FindBy(xpath = "//div[contains(text(), 'Create task')]")
+    WebElement createTaskBtn;
+
+    @FindBy(xpath = "//textarea[@id='addTaskName']")
+    WebElement taskNameInput;
+
+    @FindBy(xpath = "//input[contains(@ng-model, 'effortLeft')]")
+    WebElement effortLeftInput;
+
+    @FindBy(xpath = "//div[contains(text(), 'Save')]")
+    WebElement saveTaskBtn;
+
     By displayStory = By.xpath("//div[contains(@class, 'storyState')]");
+
+    String taskNameLocator = null;
 
     /**
      * This method is the constructor
@@ -226,6 +243,36 @@ public class IterationPage extends BasePageObject {
     public BoardPage clickLinkBoard(){
         boardTab.click();
         return new BoardPage();
+    }
+
+    /**
+     * This method allows filter by task name
+     * @param task
+     */
+    public void filterByTaskName(String task){
+        searchTaskByName.sendKeys(task);
+        taskNameLocator = "//span[contains(text(), '"+ task +"')]";
+    }
+
+    /**
+     * This method allows create a task
+     * @param task
+     */
+    public void createTask(String task){
+        createTaskBtn.click();
+        taskNameInput.sendKeys(task);
+        effortLeftInput.sendKeys("1");
+        saveTaskBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(taskNameInput));
+    }
+
+    /**
+     * This method allows get the task name
+     * @return
+     */
+    public String getTaskName(){
+        By TaskNameLbl = By.xpath(taskNameLocator);
+        return driver.findElement(TaskNameLbl).getText();
     }
 
     /**

@@ -1,5 +1,6 @@
 package steps;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -60,10 +61,40 @@ public class Task {
         assertEquals(storyPage.getInProgressStoryState(), "In Progress");
     }
 
+    @When("^I create the task \"([^\"]*)\" for an iteration$")
+    public void createTheTaskForAnIteration(String task){
+        mainPage = new MainPage();
+        iterationPage = mainPage.getLeftMenuPage().clickLinkIteration();
+        iterationPage.createTask(task);
+    }
+
+    @And("^I create the task \"([^\"]*)\" for the same iteration$")
+    public void createTheTaskForTheSameIteration(String task){
+        iterationPage.createTask(task);
+    }
+
+    @And("^I filter the name of a task \"([^\"]*)\" in the tasks filter$")
+    public void filterTheNameOfATaskInTheTasksFilter(String task){
+        this.task = task;
+        iterationPage = mainPage.getLeftMenuPage().clickLinkIteration();
+        iterationPage.filterByTaskName(task);
+    }
+
+    @Then("^the task displayed should be the entered in the tasks filter$")
+    public void verifyTaskNameDisplayedShouldBeTheEnteredInTheTasksFilter(){
+        assertEquals(iterationPage.getTaskName(), task);
+    }
+
     @After("@Task")
     public void deleteTaskAndProduct(){
         iterationPage = storyPage.clickCloseBtn();
         mainPage = new MainPage();
+        productPage = mainPage.getLeftMenuPage().clickLinkProduct();
+        mainPage = productPage.deleteProduct();
+    }
+
+    @After("@TaskFilter")
+    public void deleteTasksAndProduct(){
         productPage = mainPage.getLeftMenuPage().clickLinkProduct();
         mainPage = productPage.deleteProduct();
     }

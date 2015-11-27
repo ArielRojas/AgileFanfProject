@@ -9,7 +9,7 @@
           <include name="setUpClass"/>
           <include name="afterExecution"/>
           <include name="beforeExecution"/>
-          <include name="feature" invocation-numbers="0 4 5"/>
+          <include name="feature" invocation-numbers="0"/>
           <include name="afterFeatureExecution"/>
           <include name="tearDownClass"/>
         </methods>

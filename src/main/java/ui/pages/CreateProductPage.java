@@ -16,6 +16,9 @@ public class CreateProductPage extends BasePageObject {
     @CacheLookup
     WebElement productNameInput;
 
+    @FindBy(xpath = "//a[contains(@class, 'node-type-product')]")
+    WebElement productItemLnk;
+
     @FindBy (xpath = "//span[contains(text(),'Create a new product')]")
     WebElement createProductWindowTitleLbl;
 
@@ -52,6 +55,7 @@ public class CreateProductPage extends BasePageObject {
      */
     public ProductPage clickOk(){
         OkBtn.click();
+        wait.until(ExpectedConditions.visibilityOf(productItemLnk));
         return new ProductPage();
     }
 }
