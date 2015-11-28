@@ -20,6 +20,9 @@ public class CreateBoardPage extends BasePageObject {
     @FindBy(xpath = "//span[contains(text(), 'Ok')]")
     WebElement okBtn;
 
+    /**
+     * This method is constructor
+     */
     public CreateBoardPage(){
         PageFactory.initElements(driver, this);
         waitUntilPageObjectIsLoaded();
@@ -30,6 +33,11 @@ public class CreateBoardPage extends BasePageObject {
         wait.until(ExpectedConditions.visibilityOf(createBoardWindowTitle));
     }
 
+    /**
+     * This method allows create a board
+     * @param board
+     * @return Main page
+     */
     public MainPage createBoard(String board){
         boardNameInput.sendKeys(board);
         okBtn.click();

@@ -37,7 +37,7 @@ public class Product {
         assertEquals(productPage.getProductName(), productName);
     }
 
-    @After(value = "@createProduct", order = 999)
+    @After("@createProduct")
     public void deleteProject(){
         mainPage = productPage.deleteProduct();
     }

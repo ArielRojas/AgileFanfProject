@@ -1,5 +1,6 @@
 package ui.pages;
 
+import Common.Constants;
 import framework.UIMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -42,9 +43,6 @@ public class IterationPage extends BasePageObject {
 
     @FindBy(xpath = "//div[contains(@class, 'menu menubar')]//a[@data-tab='board']")
     WebElement boardTab;
-
-    @FindBy(xpath = "//a[@data-tab='list']")
-    WebElement listLnk;
 
     @FindBy(xpath = "//div[contains(@class, 'storyStateNOT_STARTED')]")
     WebElement storeStateToolTip;
@@ -125,8 +123,8 @@ public class IterationPage extends BasePageObject {
         createStoryBtn.click();
         nameStoryTextArea.clear();
         nameStoryTextArea.sendKeys(story);
-        valueInput.sendKeys("3");
-        pointsInput.sendKeys("3");
+        valueInput.sendKeys(Constants.STORY_VALUE);
+        pointsInput.sendKeys(Constants.STORY_POINTS);
         calendarInput.click();
         selectDateOption.click();
         saveBtn.click();
@@ -261,14 +259,14 @@ public class IterationPage extends BasePageObject {
     public void createTask(String task){
         createTaskBtn.click();
         taskNameInput.sendKeys(task);
-        effortLeftInput.sendKeys("1");
+        effortLeftInput.sendKeys(Constants.TASK_EFFORT);
         saveTaskBtn.click();
         wait.until(ExpectedConditions.visibilityOf(taskNameInput));
     }
 
     /**
      * This method allows get the task name
-     * @return
+     * @return task name
      */
     public String getTaskName(){
         By TaskNameLbl = By.xpath(taskNameLocator);

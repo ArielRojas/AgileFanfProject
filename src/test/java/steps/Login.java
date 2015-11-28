@@ -1,7 +1,7 @@
 package steps;
 
 import common.CommonMethods;
-import common.Error;
+import common.Constants;
 import cucumber.api.java.Before;
 import ui.pages.LoginPage;
 import cucumber.api.java.en.Given;
@@ -47,8 +47,8 @@ public class Login {
 
     @Then("^should display an error$")
     public void anErrorIsDisplayed(){
-        assertTrue(loginPage.isErrorDisplayed(), Error.loginError);
-        assertEquals(loginPage.getError(), Error.loginError);
+        assertTrue(loginPage.isErrorDisplayed(), Constants.LOGIN_ERROR);
+        assertEquals(loginPage.getError(), Constants.LOGIN_ERROR);
     }
 
     @Before("@LoginError")

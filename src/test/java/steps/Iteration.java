@@ -41,7 +41,7 @@ public class Iteration {
         assertEquals(mainPage.getLeftMenuPage().getIterationItemName(), iterationName);
     }
 
-    @After(value = "@createIteration", order = 999)
+    @After("@createIteration")
     public void deleteIterationProjectAndProduct(){
         mainPage = productPage.deleteProduct();
     }

@@ -1,4 +1,6 @@
+common\Constants.class
 ui\pages\ProductPage.class
+ui\pages\EditBoardPage.class
 framework\DriverManager.class
 ui\pages\StoryPage.class
 ui\pages\CreateBoardPage.class

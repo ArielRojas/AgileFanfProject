@@ -40,7 +40,7 @@ public class Project {
         assertEquals(mainPage.getLeftMenuPage().getProjectItemName(), projectName);
     }
 
-    @After(value = "@createProject", order = 999)
+    @After("@createProject")
     public void deleteProjectAndProduct(){
         mainPage = productPage.deleteProduct();
     }

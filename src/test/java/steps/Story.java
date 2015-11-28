@@ -100,7 +100,7 @@ public class Story {
         assertEquals(iterationPage.getDeferredState(), "Deferred");
     }
 
-    @After(value = "@createStory", order = 999)
+    @After("@createStory")
     public void deleteStory(){
         productPage = mainPage.getLeftMenuPage().clickLinkProduct();
         mainPage = productPage.deleteProduct();

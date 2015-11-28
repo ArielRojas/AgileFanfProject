@@ -37,11 +37,20 @@ public class LeftMenuPage extends BasePageObject {
     @FindBy(xpath = "//a[contains(@class, 'node-type-iteration')]")
     WebElement iterationItemLnk;
 
-    @FindBy(xpath = "//span[contains(@title, 'iteration name')]")
-    WebElement iterationNameLbl;
-
     @FindBy(xpath = "//li[@id='createNewUser']")
     WebElement userBtn;
+
+    @FindBy(xpath = "//h3[@id='menuAccordion-products']")
+    WebElement backlogMenu;
+
+    @FindBy(xpath = "//h3[@id='menuAccordion-boards']")
+    WebElement boardMenu;
+
+    @FindBy(xpath = "//a[contains(@class, 'node-type-board')]")
+    WebElement boardLnk;
+
+    @FindBy(xpath = "//span[contains(@title, 'iteration name')]")
+    WebElement iterationNameLbl;
 
     By displayProject = By.xpath("//a[contains(@class, 'node-type-project')]");
 
@@ -113,6 +122,7 @@ public class LeftMenuPage extends BasePageObject {
      */
     public IterationPage clickLinkIteration(){
         iterationItemLnk.click();
+        wait.until(ExpectedConditions.visibilityOf(iterationItemLnk));
         wait.until(ExpectedConditions.visibilityOf(iterationNameLbl));
         return new IterationPage();
     }
@@ -124,6 +134,30 @@ public class LeftMenuPage extends BasePageObject {
     public CreateBoardPage clickCreateNewBoard(){
         createNewBoardBtn.click();
         return new CreateBoardPage();
+    }
+
+    /**
+     * This method allows press the Boards menu
+     */
+    public void clickBoardsMenu(){
+        boardMenu.click();
+    }
+
+    /**
+     * This method allows press the Backlogs menu
+     */
+    public void clickBacklogsMenu(){
+        backlogMenu.click();
+    }
+
+    /**
+     * This method allows click the board link
+     * @return EditBoard page
+     */
+    public EditBoardPage clickBoardLink(){
+        boardLnk.click();
+        wait.until(ExpectedConditions.visibilityOf(boardLnk));
+        return new EditBoardPage();
     }
 
     /**

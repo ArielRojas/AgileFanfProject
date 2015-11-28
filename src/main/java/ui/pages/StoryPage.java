@@ -1,5 +1,6 @@
 package ui.pages;
 
+import Common.Constants;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -76,7 +77,7 @@ public class StoryPage extends BasePageObject{
     public void createTask(String task){
         createTaskBtn.click();
         taskNameInput.sendKeys(task);
-        effortLeftInput.sendKeys("1");
+        effortLeftInput.sendKeys(Constants.TASK_EFFORT);
         saveBtn.click();
         wait.until(ExpectedConditions.visibilityOf(taskNameLbl));
     }

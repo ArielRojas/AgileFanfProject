@@ -105,7 +105,7 @@ formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 722828800,
+  "duration": 344915800,
   "status": "passed"
 });
 formatter.match({
@@ -122,7 +122,7 @@ formatter.match({
   "location": "Login.loginSuccessful(String,String)"
 });
 formatter.result({
-  "duration": 211906400,
+  "duration": 247700800,
   "status": "passed"
 });
 formatter.scenario({
@@ -191,7 +191,7 @@ formatter.match({
   "location": "Board.createBoard(String)"
 });
 formatter.result({
-  "duration": 2621897300,
+  "duration": 13205412200,
   "status": "passed"
 });
 formatter.match({
@@ -204,7 +204,7 @@ formatter.match({
   "location": "Board.createColumnInsideOfTheBoard(String)"
 });
 formatter.result({
-  "duration": 99900,
+  "duration": 2547730300,
   "status": "passed"
 });
 formatter.match({
@@ -217,7 +217,7 @@ formatter.match({
   "location": "Board.createColumnInsideOfTheBoard(String)"
 });
 formatter.result({
-  "duration": 64400,
+  "duration": 2687960000,
   "status": "passed"
 });
 formatter.match({
@@ -230,7 +230,7 @@ formatter.match({
   "location": "Board.createColumnInsideOfTheBoard(String)"
 });
 formatter.result({
-  "duration": 103500,
+  "duration": 2820741400,
   "status": "passed"
 });
 formatter.match({
@@ -243,25 +243,29 @@ formatter.match({
   "location": "Board.createColumnInsideOfTheBoard(String)"
 });
 formatter.result({
-  "duration": 95700,
+  "duration": 2454082500,
   "status": "passed"
 });
 formatter.match({
   "location": "Board.verifyBoardShouldHaveTheNamePlaced()"
 });
 formatter.result({
-  "duration": 46900,
+  "duration": 137965400,
   "status": "passed"
 });
 formatter.match({
   "location": "Board.verifyBoardShouldHaveTheColumnsCreated()"
 });
 formatter.result({
-  "duration": 91100,
+  "duration": 551478000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 437700,
+  "duration": 900000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 11297869900,
   "status": "passed"
 });
 formatter.uri("scenarios.iterations.feature");
@@ -366,7 +370,7 @@ formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 1032400,
+  "duration": 1164200,
   "status": "passed"
 });
 formatter.match({
@@ -383,7 +387,7 @@ formatter.match({
   "location": "Login.loginSuccessful(String,String)"
 });
 formatter.result({
-  "duration": 255198900,
+  "duration": 1312043000,
   "status": "passed"
 });
 formatter.match({
@@ -396,7 +400,7 @@ formatter.match({
   "location": "Product.createProduct(String)"
 });
 formatter.result({
-  "duration": 27004481900,
+  "duration": 28093653000,
   "status": "passed"
 });
 formatter.match({
@@ -409,14 +413,14 @@ formatter.match({
   "location": "Project.createProject(String)"
 });
 formatter.result({
-  "duration": 2607512300,
+  "duration": 2098870100,
   "status": "passed"
 });
 formatter.match({
   "location": "Project.selectProduct()"
 });
 formatter.result({
-  "duration": 1277840000,
+  "duration": 1172582900,
   "status": "passed"
 });
 formatter.scenario({
@@ -465,29 +469,29 @@ formatter.match({
   "location": "Iteration.createIteration(String)"
 });
 formatter.result({
-  "duration": 2375311000,
+  "duration": 2494021100,
   "status": "passed"
 });
 formatter.match({
   "location": "Iteration.selectProject()"
 });
 formatter.result({
-  "duration": 14646156900,
+  "duration": 18400616100,
   "status": "passed"
 });
 formatter.match({
   "location": "Iteration.verifyIterationHasTheNameEntered()"
 });
 formatter.result({
-  "duration": 262673900,
+  "duration": 188264400,
   "status": "passed"
 });
 formatter.after({
-  "duration": 167500,
+  "duration": 109600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12089294500,
+  "duration": 10460358700,
   "status": "passed"
 });
 formatter.uri("scenarios.login.feature");
@@ -589,7 +593,7 @@ formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 351700,
+  "duration": 272500,
   "status": "passed"
 });
 formatter.match({
@@ -606,18 +610,18 @@ formatter.match({
   "location": "Login.loginSuccessful(String,String)"
 });
 formatter.result({
-  "duration": 1212068200,
+  "duration": 1050413800,
   "status": "passed"
 });
 formatter.match({
   "location": "Login.loginSuccessfully()"
 });
 formatter.result({
-  "duration": 89253900,
+  "duration": 202100800,
   "status": "passed"
 });
 formatter.after({
-  "duration": 134300,
+  "duration": 144200,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -683,7 +687,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 1411285100,
+  "duration": 1147718200,
   "status": "passed"
 });
 formatter.scenario({
@@ -727,7 +731,7 @@ formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 416200,
+  "duration": 463700,
   "status": "passed"
 });
 formatter.match({
@@ -744,22 +748,22 @@ formatter.match({
   "location": "Login.loginFailed(String,String)"
 });
 formatter.result({
-  "duration": 3311909400,
+  "duration": 3214146600,
   "status": "passed"
 });
 formatter.match({
   "location": "Login.anErrorIsDisplayed()"
 });
 formatter.result({
-  "duration": 297830600,
+  "duration": 179650800,
   "status": "passed"
 });
 formatter.after({
-  "duration": 166100,
+  "duration": 201700,
   "status": "passed"
 });
 formatter.before({
-  "duration": 79000,
+  "duration": 59000,
   "status": "passed"
 });
 formatter.scenario({
@@ -803,7 +807,7 @@ formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 283300,
+  "duration": 247000,
   "status": "passed"
 });
 formatter.match({
@@ -820,18 +824,18 @@ formatter.match({
   "location": "Login.loginFailed(String,String)"
 });
 formatter.result({
-  "duration": 2187136400,
+  "duration": 1578388800,
   "status": "passed"
 });
 formatter.match({
   "location": "Login.anErrorIsDisplayed()"
 });
 formatter.result({
-  "duration": 308902400,
+  "duration": 264409600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 297100,
+  "duration": 169400,
   "status": "passed"
 });
 formatter.uri("scenarios.products.feature");
@@ -916,7 +920,7 @@ formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 435800,
+  "duration": 310300,
   "status": "passed"
 });
 formatter.match({
@@ -933,7 +937,7 @@ formatter.match({
   "location": "Login.loginSuccessful(String,String)"
 });
 formatter.result({
-  "duration": 293630500,
+  "duration": 1942860600,
   "status": "passed"
 });
 formatter.scenario({
@@ -977,22 +981,22 @@ formatter.match({
   "location": "Product.createProduct(String)"
 });
 formatter.result({
-  "duration": 26748743400,
+  "duration": 30136417400,
   "status": "passed"
 });
 formatter.match({
   "location": "Product.verifyProductHasTheNameEntered()"
 });
 formatter.result({
-  "duration": 246251200,
+  "duration": 435560700,
   "status": "passed"
 });
 formatter.after({
-  "duration": 125500,
+  "duration": 121600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 10639511700,
+  "duration": 10090105800,
   "status": "passed"
 });
 formatter.uri("scenarios.projects.feature");
@@ -1087,7 +1091,7 @@ formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 430100,
+  "duration": 493900,
   "status": "passed"
 });
 formatter.match({
@@ -1104,7 +1108,7 @@ formatter.match({
   "location": "Login.loginSuccessful(String,String)"
 });
 formatter.result({
-  "duration": 345845500,
+  "duration": 1405016500,
   "status": "passed"
 });
 formatter.match({
@@ -1117,7 +1121,7 @@ formatter.match({
   "location": "Product.createProduct(String)"
 });
 formatter.result({
-  "duration": 27186318300,
+  "duration": 29704450300,
   "status": "passed"
 });
 formatter.scenario({
@@ -1166,29 +1170,29 @@ formatter.match({
   "location": "Project.createProject(String)"
 });
 formatter.result({
-  "duration": 2640335600,
+  "duration": 2154734000,
   "status": "passed"
 });
 formatter.match({
   "location": "Project.selectProduct()"
 });
 formatter.result({
-  "duration": 1465030600,
+  "duration": 1103129300,
   "status": "passed"
 });
 formatter.match({
   "location": "Project.verifyProjectHasTheNameEntered()"
 });
 formatter.result({
-  "duration": 811467800,
+  "duration": 795958700,
   "status": "passed"
 });
 formatter.after({
-  "duration": 172700,
+  "duration": 8994197300,
   "status": "passed"
 });
 formatter.after({
-  "duration": 11534515500,
+  "duration": 131100,
   "status": "passed"
 });
 formatter.uri("scenarios.stories.feature");
@@ -1298,7 +1302,7 @@ formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 334700,
+  "duration": 324400,
   "status": "passed"
 });
 formatter.match({
@@ -1315,7 +1319,7 @@ formatter.match({
   "location": "Login.loginSuccessful(String,String)"
 });
 formatter.result({
-  "duration": 1600858800,
+  "duration": 1263459100,
   "status": "passed"
 });
 formatter.match({
@@ -1328,7 +1332,7 @@ formatter.match({
   "location": "Product.createProduct(String)"
 });
 formatter.result({
-  "duration": 26830774700,
+  "duration": 28779804500,
   "status": "passed"
 });
 formatter.match({
@@ -1341,14 +1345,14 @@ formatter.match({
   "location": "Project.createProject(String)"
 });
 formatter.result({
-  "duration": 2512085800,
+  "duration": 2609846500,
   "status": "passed"
 });
 formatter.match({
   "location": "Project.selectProduct()"
 });
 formatter.result({
-  "duration": 1295351300,
+  "duration": 1298021900,
   "status": "passed"
 });
 formatter.match({
@@ -1361,14 +1365,14 @@ formatter.match({
   "location": "Iteration.createIteration(String)"
 });
 formatter.result({
-  "duration": 2619983600,
+  "duration": 2647481000,
   "status": "passed"
 });
 formatter.match({
   "location": "Iteration.selectProject()"
 });
 formatter.result({
-  "duration": 15533711200,
+  "duration": 19124869000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1412,22 +1416,22 @@ formatter.match({
   "location": "Story.createStory(String)"
 });
 formatter.result({
-  "duration": 29516542800,
+  "duration": 28758864000,
   "status": "passed"
 });
 formatter.match({
   "location": "Story.verifyStoryHasTheNameEntered()"
 });
 formatter.result({
-  "duration": 279812000,
+  "duration": 256436400,
   "status": "passed"
 });
 formatter.after({
-  "duration": 119300,
+  "duration": 122600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 20926564100,
+  "duration": 19067129600,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -1528,7 +1532,7 @@ formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 316400,
+  "duration": 2877600,
   "status": "passed"
 });
 formatter.match({
@@ -1545,7 +1549,7 @@ formatter.match({
   "location": "Login.loginSuccessful(String,String)"
 });
 formatter.result({
-  "duration": 501080600,
+  "duration": 407164400,
   "status": "passed"
 });
 formatter.match({
@@ -1558,7 +1562,7 @@ formatter.match({
   "location": "Product.createProduct(String)"
 });
 formatter.result({
-  "duration": 25761339700,
+  "duration": 28926063000,
   "status": "passed"
 });
 formatter.match({
@@ -1571,14 +1575,14 @@ formatter.match({
   "location": "Project.createProject(String)"
 });
 formatter.result({
-  "duration": 2733008500,
+  "duration": 2130691200,
   "status": "passed"
 });
 formatter.match({
   "location": "Project.selectProduct()"
 });
 formatter.result({
-  "duration": 1364741900,
+  "duration": 1145676600,
   "status": "passed"
 });
 formatter.match({
@@ -1591,14 +1595,14 @@ formatter.match({
   "location": "Iteration.createIteration(String)"
 });
 formatter.result({
-  "duration": 2960652100,
+  "duration": 2452280100,
   "status": "passed"
 });
 formatter.match({
   "location": "Iteration.selectProject()"
 });
 formatter.result({
-  "duration": 14928439300,
+  "duration": 18937489600,
   "status": "passed"
 });
 formatter.scenario({
@@ -1647,29 +1651,29 @@ formatter.match({
   "location": "Story.createStory(String)"
 });
 formatter.result({
-  "duration": 30248978900,
+  "duration": 27859199900,
   "status": "passed"
 });
 formatter.match({
   "location": "Story.changeStoryStateToInProgress()"
 });
 formatter.result({
-  "duration": 1543462400,
+  "duration": 1015400300,
   "status": "passed"
 });
 formatter.match({
   "location": "Story.verifyStateOfTheStoryIsInProgress()"
 });
 formatter.result({
-  "duration": 97095400,
+  "duration": 153021600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 164600,
+  "duration": 154700,
   "status": "passed"
 });
 formatter.after({
-  "duration": 18321758300,
+  "duration": 20021841100,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -1770,7 +1774,7 @@ formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 279400,
+  "duration": 313800,
   "status": "passed"
 });
 formatter.match({
@@ -1787,7 +1791,7 @@ formatter.match({
   "location": "Login.loginSuccessful(String,String)"
 });
 formatter.result({
-  "duration": 637708600,
+  "duration": 290231500,
   "status": "passed"
 });
 formatter.match({
@@ -1800,7 +1804,7 @@ formatter.match({
   "location": "Product.createProduct(String)"
 });
 formatter.result({
-  "duration": 24968127900,
+  "duration": 28564774300,
   "status": "passed"
 });
 formatter.match({
@@ -1813,14 +1817,14 @@ formatter.match({
   "location": "Project.createProject(String)"
 });
 formatter.result({
-  "duration": 2840519800,
+  "duration": 2414269300,
   "status": "passed"
 });
 formatter.match({
   "location": "Project.selectProduct()"
 });
 formatter.result({
-  "duration": 1405091900,
+  "duration": 1127139100,
   "status": "passed"
 });
 formatter.match({
@@ -1833,14 +1837,14 @@ formatter.match({
   "location": "Iteration.createIteration(String)"
 });
 formatter.result({
-  "duration": 2292141200,
+  "duration": 2318724400,
   "status": "passed"
 });
 formatter.match({
   "location": "Iteration.selectProject()"
 });
 formatter.result({
-  "duration": 14864008500,
+  "duration": 19410070800,
   "status": "passed"
 });
 formatter.scenario({
@@ -1889,29 +1893,29 @@ formatter.match({
   "location": "Story.createStory(String)"
 });
 formatter.result({
-  "duration": 29250738700,
+  "duration": 30739559600,
   "status": "passed"
 });
 formatter.match({
   "location": "Story.changeStoryStateToDone()"
 });
 formatter.result({
-  "duration": 1317147700,
+  "duration": 1469394000,
   "status": "passed"
 });
 formatter.match({
   "location": "Story.verifyStateOfTheStoryIsDone()"
 });
 formatter.result({
-  "duration": 205480400,
+  "duration": 138682800,
   "status": "passed"
 });
 formatter.after({
-  "duration": 151800,
+  "duration": 200800,
   "status": "passed"
 });
 formatter.after({
-  "duration": 19863002900,
+  "duration": 18220412600,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -2012,7 +2016,7 @@ formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 531300,
+  "duration": 252000,
   "status": "passed"
 });
 formatter.match({
@@ -2029,7 +2033,7 @@ formatter.match({
   "location": "Login.loginSuccessful(String,String)"
 });
 formatter.result({
-  "duration": 544146300,
+  "duration": 203194500,
   "status": "passed"
 });
 formatter.match({
@@ -2042,7 +2046,7 @@ formatter.match({
   "location": "Product.createProduct(String)"
 });
 formatter.result({
-  "duration": 25022405200,
+  "duration": 27747554700,
   "status": "passed"
 });
 formatter.match({
@@ -2055,14 +2059,14 @@ formatter.match({
   "location": "Project.createProject(String)"
 });
 formatter.result({
-  "duration": 2570725400,
+  "duration": 2171260700,
   "status": "passed"
 });
 formatter.match({
   "location": "Project.selectProduct()"
 });
 formatter.result({
-  "duration": 1391403000,
+  "duration": 1334148800,
   "status": "passed"
 });
 formatter.match({
@@ -2075,14 +2079,14 @@ formatter.match({
   "location": "Iteration.createIteration(String)"
 });
 formatter.result({
-  "duration": 2451433800,
+  "duration": 1925971800,
   "status": "passed"
 });
 formatter.match({
   "location": "Iteration.selectProject()"
 });
 formatter.result({
-  "duration": 15687409300,
+  "duration": 18647054000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2131,29 +2135,29 @@ formatter.match({
   "location": "Story.createStory(String)"
 });
 formatter.result({
-  "duration": 30963748900,
+  "duration": 27624459000,
   "status": "passed"
 });
 formatter.match({
   "location": "Story.changeStoryStateToReady()"
 });
 formatter.result({
-  "duration": 1203658100,
+  "duration": 1473875300,
   "status": "passed"
 });
 formatter.match({
   "location": "Story.verifyStateOfTheStoryIsReady()"
 });
 formatter.result({
-  "duration": 126037000,
+  "duration": 160462000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 165700,
+  "duration": 205500,
   "status": "passed"
 });
 formatter.after({
-  "duration": 20594523500,
+  "duration": 18087833400,
   "status": "passed"
 });
 formatter.uri("scenarios.tasks.feature");
@@ -2273,7 +2277,7 @@ formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 334000,
+  "duration": 239800,
   "status": "passed"
 });
 formatter.match({
@@ -2290,7 +2294,7 @@ formatter.match({
   "location": "Login.loginSuccessful(String,String)"
 });
 formatter.result({
-  "duration": 307149400,
+  "duration": 1304189200,
   "status": "passed"
 });
 formatter.match({
@@ -2303,7 +2307,7 @@ formatter.match({
   "location": "Product.createProduct(String)"
 });
 formatter.result({
-  "duration": 26164523400,
+  "duration": 28167263000,
   "status": "passed"
 });
 formatter.match({
@@ -2316,14 +2320,14 @@ formatter.match({
   "location": "Project.createProject(String)"
 });
 formatter.result({
-  "duration": 2298860200,
+  "duration": 2591693100,
   "status": "passed"
 });
 formatter.match({
   "location": "Project.selectProduct()"
 });
 formatter.result({
-  "duration": 1346712200,
+  "duration": 1253435500,
   "status": "passed"
 });
 formatter.match({
@@ -2336,14 +2340,14 @@ formatter.match({
   "location": "Iteration.createIteration(String)"
 });
 formatter.result({
-  "duration": 2823482400,
+  "duration": 2351836700,
   "status": "passed"
 });
 formatter.match({
   "location": "Iteration.selectProject()"
 });
 formatter.result({
-  "duration": 15460543700,
+  "duration": 19541796400,
   "status": "passed"
 });
 formatter.match({
@@ -2356,7 +2360,7 @@ formatter.match({
   "location": "Story.createStory(String)"
 });
 formatter.result({
-  "duration": 29577558100,
+  "duration": 29398427000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2405,29 +2409,29 @@ formatter.match({
   "location": "Task.createTask(String)"
 });
 formatter.result({
-  "duration": 7478642600,
+  "duration": 6946031700,
   "status": "passed"
 });
 formatter.match({
   "location": "Task.verifyTaskHasTheNameEntered()"
 });
 formatter.result({
-  "duration": 182648100,
+  "duration": 126119100,
   "status": "passed"
 });
 formatter.match({
   "location": "Task.verifyTaskIsDisplayedWithTheStateNotStarted()"
 });
 formatter.result({
-  "duration": 119749500,
+  "duration": 85694400,
   "status": "passed"
 });
 formatter.after({
-  "duration": 22998235600,
+  "duration": 18742455900,
   "status": "passed"
 });
 formatter.after({
-  "duration": 110800,
+  "duration": 130300,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -2538,7 +2542,7 @@ formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 288000,
+  "duration": 243600,
   "status": "passed"
 });
 formatter.match({
@@ -2555,7 +2559,7 @@ formatter.match({
   "location": "Login.loginSuccessful(String,String)"
 });
 formatter.result({
-  "duration": 231537500,
+  "duration": 276442300,
   "status": "passed"
 });
 formatter.match({
@@ -2568,7 +2572,7 @@ formatter.match({
   "location": "Product.createProduct(String)"
 });
 formatter.result({
-  "duration": 24055334700,
+  "duration": 29841687000,
   "status": "passed"
 });
 formatter.match({
@@ -2581,14 +2585,14 @@ formatter.match({
   "location": "Project.createProject(String)"
 });
 formatter.result({
-  "duration": 2714362600,
+  "duration": 2534649100,
   "status": "passed"
 });
 formatter.match({
   "location": "Project.selectProduct()"
 });
 formatter.result({
-  "duration": 1264509200,
+  "duration": 1320465900,
   "status": "passed"
 });
 formatter.match({
@@ -2601,14 +2605,14 @@ formatter.match({
   "location": "Iteration.createIteration(String)"
 });
 formatter.result({
-  "duration": 2503810900,
+  "duration": 2503988600,
   "status": "passed"
 });
 formatter.match({
   "location": "Iteration.selectProject()"
 });
 formatter.result({
-  "duration": 15301015400,
+  "duration": 19279705700,
   "status": "passed"
 });
 formatter.match({
@@ -2621,7 +2625,7 @@ formatter.match({
   "location": "Story.createStory(String)"
 });
 formatter.result({
-  "duration": 27289320900,
+  "duration": 28699257100,
   "status": "passed"
 });
 formatter.scenario({
@@ -2675,36 +2679,36 @@ formatter.match({
   "location": "Task.createTask(String)"
 });
 formatter.result({
-  "duration": 5235812300,
+  "duration": 6885185200,
   "status": "passed"
 });
 formatter.match({
   "location": "Task.changeTaskStateToReady()"
 });
 formatter.result({
-  "duration": 4633006100,
+  "duration": 6534386200,
   "status": "passed"
 });
 formatter.match({
   "location": "Task.verifyStateOfTheTaskIsReady()"
 });
 formatter.result({
-  "duration": 251597400,
+  "duration": 101751900,
   "status": "passed"
 });
 formatter.match({
   "location": "Task.verifyStoryStateShouldBeInProgress()"
 });
 formatter.result({
-  "duration": 98214300,
+  "duration": 120268400,
   "status": "passed"
 });
 formatter.after({
-  "duration": 17322594000,
+  "duration": 20408464400,
   "status": "passed"
 });
 formatter.after({
-  "duration": 101500,
+  "duration": 126200,
   "status": "passed"
 });
 formatter.uri("scenarios.tasks.filter.feature");
@@ -2833,7 +2837,7 @@ formatter.match({
   "location": "Login.goToLoginPage()"
 });
 formatter.result({
-  "duration": 194100,
+  "duration": 693500,
   "status": "passed"
 });
 formatter.match({
@@ -2850,7 +2854,7 @@ formatter.match({
   "location": "Login.loginSuccessful(String,String)"
 });
 formatter.result({
-  "duration": 755214000,
+  "duration": 1364065400,
   "status": "passed"
 });
 formatter.match({
@@ -2863,7 +2867,7 @@ formatter.match({
   "location": "Product.createProduct(String)"
 });
 formatter.result({
-  "duration": 25114837200,
+  "duration": 28485587300,
   "status": "passed"
 });
 formatter.match({
@@ -2876,14 +2880,14 @@ formatter.match({
   "location": "Project.createProject(String)"
 });
 formatter.result({
-  "duration": 2402172000,
+  "duration": 2736188700,
   "status": "passed"
 });
 formatter.match({
   "location": "Project.selectProduct()"
 });
 formatter.result({
-  "duration": 1422610600,
+  "duration": 1479393200,
   "status": "passed"
 });
 formatter.match({
@@ -2896,14 +2900,14 @@ formatter.match({
   "location": "Iteration.createIteration(String)"
 });
 formatter.result({
-  "duration": 2544123100,
+  "duration": 2310086300,
   "status": "passed"
 });
 formatter.match({
   "location": "Iteration.selectProject()"
 });
 formatter.result({
-  "duration": 16025868700,
+  "duration": 18917500000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2971,7 +2975,7 @@ formatter.match({
   "location": "Task.createTheTaskForAnIteration(String)"
 });
 formatter.result({
-  "duration": 16165328400,
+  "duration": 14822294500,
   "status": "passed"
 });
 formatter.match({
@@ -2984,7 +2988,7 @@ formatter.match({
   "location": "Task.createTheTaskForTheSameIteration(String)"
 });
 formatter.result({
-  "duration": 2412674700,
+  "duration": 1883204900,
   "status": "passed"
 });
 formatter.match({
@@ -2997,7 +3001,7 @@ formatter.match({
   "location": "Task.createTheTaskForTheSameIteration(String)"
 });
 formatter.result({
-  "duration": 1172911100,
+  "duration": 1714307800,
   "status": "passed"
 });
 formatter.match({
@@ -3010,22 +3014,22 @@ formatter.match({
   "location": "Task.filterTheNameOfATaskInTheTasksFilter(String)"
 });
 formatter.result({
-  "duration": 13128746300,
+  "duration": 13878976100,
   "status": "passed"
 });
 formatter.match({
   "location": "Task.verifyTaskNameDisplayedShouldBeTheEnteredInTheTasksFilter()"
 });
 formatter.result({
-  "duration": 100335300,
+  "duration": 131509400,
   "status": "passed"
 });
 formatter.after({
-  "duration": 20058712200,
+  "duration": 19167755800,
   "status": "passed"
 });
 formatter.after({
-  "duration": 193800,
+  "duration": 120600,
   "status": "passed"
 });
 });
