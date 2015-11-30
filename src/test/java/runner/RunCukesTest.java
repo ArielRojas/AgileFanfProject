@@ -1,6 +1,7 @@
 package runner;
 
 import common.CommonMethods;
+import common.Constants;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 import framework.DriverManager;
@@ -33,7 +34,7 @@ public class RunCukesTest extends AbstractTestNGCucumberTests {
     @BeforeMethod
     public void beforeFeatureExecution(){
         try{
-            CommonMethods.logIn("arielwagnerrojas@gmail.com", "nemo100");
+            CommonMethods.logIn(Constants.USERNAME, Constants.PASSWORD);
         } catch(Exception e){
             logger.error("Unable to log in", e);
         }
