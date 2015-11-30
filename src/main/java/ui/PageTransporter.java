@@ -1,6 +1,7 @@
 package ui;
 
 import framework.DriverManager;
+import framework.UIMethods;
 import org.openqa.selenium.WebDriver;
 import ui.pages.LoginPage;
 import org.apache.log4j.Logger;
@@ -10,7 +11,7 @@ import org.apache.log4j.Logger;
  */
 public class PageTransporter {
     private WebDriver driver = DriverManager.getManager().getDriver();
-    private String baseLoginURL = "https://cloud.agilefant.com/global/static/login/index.html";
+    private String baseLoginURL = UIMethods.getProperty("baseLoginURL");
     private static PageTransporter instance;
     private static Logger log = Logger.getLogger("PageTransporter");
 

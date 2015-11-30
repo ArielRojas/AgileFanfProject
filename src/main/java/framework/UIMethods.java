@@ -1,6 +1,10 @@
 package framework;
 
 import org.openqa.selenium.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -16,7 +20,7 @@ public class UIMethods {
     public static boolean isElementDisplayed(By locator) {
         try {
             DriverManager.getManager().getDriver().manage().timeouts()
-                    .implicitlyWait(10, TimeUnit.SECONDS);
+                    .implicitlyWait(Integer.parseInt(getProperty("implicitWait")), TimeUnit.SECONDS);
             DriverManager.getManager().getDriver().findElement(locator);
             return true;
         } catch (NoSuchElementException e) {
@@ -24,7 +28,30 @@ public class UIMethods {
             return false;
         } finally {
             DriverManager.getManager().getDriver().manage().timeouts()
-                    .implicitlyWait(10, TimeUnit.SECONDS);
+                    .implicitlyWait(Integer.parseInt(getProperty("implicitWait")), TimeUnit.SECONDS);
         }
     }
+
+    /**
+     * This method allows get the properties of the config file
+     * @param property
+     * @return a property
+     */
+    public static String getProperty(String property){
+        Properties config = new Properties();
+        FileInputStream file;
+        try {
+            file = new FileInputStream("src/main/resources/config.properties");
+            config.load(file);
+            String configProperty = config.getProperty(property);
+            return configProperty;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 }

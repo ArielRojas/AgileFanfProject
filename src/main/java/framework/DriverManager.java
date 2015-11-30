@@ -23,7 +23,9 @@ public class DriverManager {
     private void initializeDriver() {
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, 30, 100);
+        wait = new WebDriverWait(driver,
+                Integer.parseInt(UIMethods.getProperty("explicitWait")),
+                Integer.parseInt(UIMethods.getProperty("webDriverWeb_sleep")));
     }
 
     public static DriverManager getManager() {
