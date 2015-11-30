@@ -1,7 +1,7 @@
 package ui;
 
 import framework.DriverManager;
-import framework.UIMethods;
+import Common.UIMethods;
 import org.openqa.selenium.WebDriver;
 import ui.pages.LoginPage;
 import org.apache.log4j.Logger;

@@ -1,6 +1,6 @@
 package ui.pages;
 
-import framework.UIMethods;
+import Common.UIMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

@@ -1,5 +1,6 @@
-package framework;
+package Common;
 
+import framework.DriverManager;
 import org.openqa.selenium.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
